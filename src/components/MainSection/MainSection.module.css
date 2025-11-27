@@ -1,0 +1,73 @@
+.mainSection{
+    width: 100%;
+    height: 100dvh;
+    padding: 148px 48px 20px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    justify-content: space-between;
+    cursor: url('./images/cursor-circle.svg') 10 10, auto;
+}
+
+.mainTitleBlock{
+    width: 100%;
+    padding: 0 48px;
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+}
+.titleRow{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.titleRow > p,
+.titleRow > div > p{
+    font-feature-settings: 'ss10' on;
+    font-family: "TA Modern Times", sans-serif;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 88px; /* 122.222% */
+    letter-spacing: 0.72px;
+    text-transform: uppercase;
+}
+.titleImg{
+    width: 184px;
+    height: 64px;
+    border-radius: 320px;
+    overflow: hidden;
+}
+.titleImg > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.classType{
+    display: flex;
+    padding-right: 18px;
+    align-items: center;
+    gap: 18px;
+    position: relative;
+}
+.titleRow > div > span{
+    position: absolute;
+    right: -2.1px;
+    top: 19px;
+}
+.mainSectionBottom {
+    padding-left: 48px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-end;
+}
+.mainSectionBottom > p{
+    max-width: 352px;
+    margin-bottom: 20px;
+}
+.bottomBtns{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}

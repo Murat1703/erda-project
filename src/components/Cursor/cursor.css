@@ -1,0 +1,18 @@
+#cursor{
+    position: fixed;
+    stroke: #A77A4E;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    pointer-events: none!important;      /* ВАЖНО: не мешает кликам */
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+#cursor *{
+    pointer-events: none!important;
+}
+.cursor__inner{
+    background: transparent;
+}

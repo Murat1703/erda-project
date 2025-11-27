@@ -1,0 +1,23 @@
+.btn{
+    display: flex;
+    padding: 11px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 320px;
+}
+.btn > p{
+    color: var(--btn-text-color);
+}
+.mainBtn{
+    background: var(--btn-bg);
+}
+.mainBtn:hover{
+    background: var(--btn-hover-bg);;
+}
+.callBtn{
+    background: var(--btn-opacity-bg);
+}
+.callBtn:hover{
+    background: var(--btn-opacity-hover-bg);
+}

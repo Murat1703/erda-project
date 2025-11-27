@@ -1,0 +1,31 @@
+.mapZoomBtn{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border-radius: 32px;
+    background: var(--Dark-D100, #1D1D1B);
+    backdrop-filter: blur(16px);
+    /* padding: 10px 16px; */
+}
+.gmnoprint{
+    display: none;
+}
+button.gm-control-active{
+    display: none;
+}
+
+@media (max-width: 768px){
+   .zoom-control-wrapper{
+        right: 10px!important;
+        gap: 5px!important;
+        margin-top: auto!important;
+        bottom: 20px!important
+   }
+   .mapZoomBtn{
+    width: 48px;
+    height: 48px;
+   }
+}

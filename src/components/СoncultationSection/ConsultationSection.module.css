@@ -1,0 +1,82 @@
+.consultationWrapper{
+    background: rgba(163, 159, 145, 0.24);
+}
+.consultationInnner{
+    display: flex;
+    align-items: center;
+    gap: 104px;
+    padding: 96px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 520px;
+}
+.consultationTitle{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.consultationTitle > h3{
+    color: var(--Dark-D100, #1D1D1B);
+    font-family: "PT Serif", sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 48px; /* 120% */
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 32px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+.inputItems{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+}
+.inputItems > input{
+    display: flex;
+    padding: 14px 0;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-bottom: 1px solid rgba(29, 29, 27, 0.14);
+    background: #D5D3C8;
+}
+.inputItems > input:focus{
+    border-bottom: 1px solid var(--border-hover-color);
+}
+.bottom{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+}
+.bottom > p{
+    color: var(--Dark-D100, #1D1D1B);
+    text-align: right;
+    font-family: "Graphik LCG", sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px; /* 127.273% */
+    letter-spacing: 0.22px;
+    flex: 1 0 0;
+}
+.bottom > button{
+    display: flex;
+    padding: 11px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 320px;
+    background: var(--Dark-D100, #1D1D1B);
+    color: var(--btn-text-color);
+}

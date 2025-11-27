@@ -1,0 +1,10 @@
+.title{
+    font-feature-settings: 'ss10' on;
+    font-family: "TA Modern Times", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 72px; /* 112.5% */
+    letter-spacing: 2.56px;
+    text-transform: uppercase;
+}

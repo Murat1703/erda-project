@@ -1,0 +1,103 @@
+.advantagesWrapper{
+    padding-left: 96px;
+}
+.advantagesInner{
+    display: flex;
+    flex-direction: column;
+    gap: 112px;
+}
+.advantagesSectionTitle{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.advantagesContent{
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+.left{
+    display: flex;
+    width: 544px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.textRow{
+    display: flex;
+    padding: 64px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+    border-bottom: 1px solid var(--Alpha-AD12, rgba(29, 29, 27, 0.12));
+}
+.textRow > h3{
+    font-family: "PT Serif", sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 48px; /* 120% */
+}
+.textRow > p{
+    max-width: 520px;
+}
+.imagesRow{
+    display: flex;
+    padding: 72px 0;
+    align-items: flex-start;
+    gap: 80px;
+    align-self: stretch;
+    border-bottom: 1px solid var(--Alpha-AD12, rgba(29, 29, 27, 0.12));
+}
+.imagesRow > .left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1 0 0;
+}
+.imgWrapper {
+    width: 169px;
+    height: 96px;
+    flex-shrink: 0;
+    position: relative;
+}
+.imgWrapper > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.advSticky{
+    width: 720px;
+    height: 810px;
+    position: sticky;
+    top:0;    
+}
+.advSticky > img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.advSticky > div:nth-child(1){
+    position: absolute;
+    display: flex;
+    width: 364px;
+    height: 83px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex-shrink: 0;
+    left: 48px;
+    top: 88px;
+    z-index: 3;
+}
+.advSticky > div:nth-child(1) > p:nth-child(1){
+    color: #1D1D1B;
+    text-align: center;
+    font-family: "PT Serif", sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 48px; /* 120% */
+}

@@ -1,0 +1,23 @@
+.menuWrapper{
+    display: flex;
+    padding: 8px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 24px;
+    background: var(--Dark-D80, #30302E);
+    position: fixed;
+    top: 58px;
+    z-index: 100;
+}
+.menuWrapper > li{
+    display: flex;
+    padding: 12px 0;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-bottom: 1px solid var(--Alpha-AL8, rgba(235, 233, 225, 0.08));
+    color: var(--text-color-light);
+    align-items: flex-start;
+}
