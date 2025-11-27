@@ -1,0 +1,72 @@
+.plansWrapper{}
+.plansInner{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    padding: 120px 0;
+}
+.plansTitleBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+.plansTitleBlock{
+    text-align: center;
+}
+.plansContent{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+.plansSectionFilters{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+    padding-right: 96px;
+}
+.filter{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.filter:nth-child(1){
+    flex: 1 0 0;
+}
+.plansContent{
+    padding-left: 96px;;
+}
+.bcSelect{
+    display: flex;
+    padding: 12px 16px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 32px;
+    border: 1px solid var(--Alpha-AD16, rgba(29, 29, 27, 0.16));
+    backdrop-filter: blur(16px);
+    width: 100%;
+}
+.filterTabs{
+    display: flex;
+    padding: 2px;
+    align-items: center;
+    gap: 2px;
+    align-self: stretch;
+    border-radius: 320px;
+    border: 1px solid var(--Alpha-AD16, rgba(29, 29, 27, 0.16));
+    backdrop-filter: blur(50px);
+}
+.filterTab{
+    display: flex;
+    padding: 10px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+    border-radius: 32px;
+    /* background: #1D1D1B; */
+}
