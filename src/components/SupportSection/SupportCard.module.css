@@ -1,0 +1,16 @@
+.supportCard{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1 0 0;
+    align-items: center;
+}
+
+@media (max-width: 960px){
+    .supportCard{
+        padding: 20px 0;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+}

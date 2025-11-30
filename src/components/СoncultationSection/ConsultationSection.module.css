@@ -80,3 +80,41 @@
     background: var(--Dark-D100, #1D1D1B);
     color: var(--btn-text-color);
 }
+
+@media (max-width: 960px){
+    .consultationWrapper{
+        display: block;
+    }
+    .consultationInnner{
+        padding: 56px 20px;
+        gap: 48px;
+        flex-direction: column;
+    }
+    .left{
+        width: 100%;
+    }
+    .consultationTitle{
+        flex-wrap: wrap;
+    }
+    .consultationTitle > h3{
+        font-size: 32px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 32px; /* 100% */
+    }
+    .inputItems{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .inputItems > input{
+        width: 100%;
+        padding: 14px 0;
+    }
+    .bottom{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .bottom > p{
+        text-align: left;
+    }
+}

@@ -145,3 +145,13 @@ button{
   --border-hover-color: rgba(29, 29, 27, 0.32);
   --eyebrow-color:#A39F91;
 }
+
+@media (max-width: 960px){
+  section{
+    display: none;
+  }
+  *,p{
+    font-size: 13px;
+    line-height: 22px;
+  }
+}

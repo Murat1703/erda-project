@@ -25,7 +25,7 @@
     align-items: center;
     width: 100%;
     gap: 24px;
-    padding-right: 96px;
+    padding: 0 96px;
 }
 .filter{
     display: flex;
@@ -36,7 +36,7 @@
     flex: 1 0 0;
 }
 .plansContent{
-    padding-left: 96px;;
+    /* padding-left: 96px;; */
 }
 .bcSelect{
     display: flex;
@@ -69,9 +69,340 @@
     flex: 1 0 0;
     border-radius: 32px;
 }
+.filterTab:hover{
+    background: rgba(29, 29, 27, 0.12);
+}
 .active{
     background: #1D1D1B;
 }
 .filterTab.active > p{
     color: var(--text-color-light);
+}
+.filterTab.active:hover{
+    background: #1D1D1B;
+}
+.filter:nth-last-child(1) {
+    flex: 1 0 0;
+}
+.filter:nth-last-child(1) > div{
+    display: flex;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 32px;
+    border: 1px solid var(--Alpha-AD16, rgba(29, 29, 27, 0.16));
+    backdrop-filter: blur(16px);
+    position: relative;
+}
+.filter:nth-last-child(1) > div > p{
+    flex: 1 0 0;
+}
+.filter:nth-last-child(1) > div > p:nth-child(3){
+    text-align: right;
+}
+.filter:nth-last-child(1) > div > span{
+    width: 1px ;
+    height: 22px;
+    background: var(--Alpha-AD16, rgba(29, 29, 27, 0.16));
+}
+
+.filter:nth-last-child(1) > div > input{
+    position: absolute;
+    bottom: -4px;    
+    border: none;
+    /* border-bottom: 1px solid #1D1D1B; */
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: calc(100% - 24px)
+
+}
+.filter:nth-last-child(1) > div > input::-webkit-slider-thumb {
+    position: relative;
+    z-index: 1;
+    width: 24px;
+    height: 9px;
+    z-index: 2;
+    border-radius: 50%;
+    border-radius: 12px;
+    background: var(--Dark-D100, #1D1D1B);
+    -webkit-appearance: none;
+}
+.filter:nth-last-child(1) > div > input:nth-child(5){
+    right: 24px;;
+}
+.filter:nth-last-child(1) > div > input:nth-child(4){
+    left: 24px;
+}
+.filter:nth-last-child(1) > div > span:nth-last-child(1){
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    width: calc(100% - 48px);
+    bottom: 0px;
+    height: 1px;
+    background: #1D1D1B;
+}
+.businessFilter{
+    position: relative;
+    bottom: 0;
+}
+.businessFilter.opened{
+    position: relative;
+    /* z-index: -1; */
+    cursor: pointer;
+}
+.businessCenter{
+    opacity: 0;
+    bottom: -210px;
+    /* height: 0; */
+    z-index: -1000;
+    display: flex;
+    padding: 8px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    background: #1D1D1B;
+    border-radius: 24px;
+    width: 100%;
+    position: absolute;
+}
+.businessCenter.opened{
+    height: auto;
+    opacity: 1;
+    position: absolute;
+    z-index: 100;
+}
+.businessCenter > li{
+    list-style: none;
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    align-self: stretch;
+    color: var(--text-color-light);
+}
+.businessCenter > li:hover{
+    background: var(--Alpha-AL8, rgba(235, 233, 225, 0.08));
+}
+.plansList{
+    height: 660px;
+    padding-left: 96px;
+    position: relative;
+}
+.plansList > div:nth-child(1){
+    height: 100%;
+    /* padding-left: 96px; */
+}
+.plansList > div > div:nth-child(1){
+    height: 586px;
+}
+.plansList > div > div:nth-child(2){
+    bottom: 0;
+    /* width: 100%; */
+    padding-right: 96px;
+}
+.planItemCard{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    /* width: 288px; */
+    padding: 48px 24px 40px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+    background: var(--Alpha-AW24, rgba(255, 255, 255, 0.24));
+}
+.planItemImg{
+    width: 100%;
+    height: 260px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+}
+.planItemImg > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.planItemDescription{
+    display: flex;
+    min-width: 220px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+.squareWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+.squareWrapper > p{
+    font-family: "PT Serif", sans-serif;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 32px; /* 106.667% */
+}
+.planItemDescription > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+.planItemDescription > ul > li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+}
+.planItemDescription > ul > li > span:nth-child(1){
+    width: 110px;
+    opacity: .4;
+}
+.planItemDescription > ul > li > span:nth-child(2){
+    flex: 1 0 0;
+    text-align: right;
+}
+.planItemCard{
+    cursor: pointer;
+}
+.planItemCard:hover{
+    background: var(--Alpha-A48, rgba(255, 255, 255, 0.48));
+}
+.plansShowMoreBtn{
+    margin: 0 auto;
+    max-width: 274px;
+    display: flex;
+    padding: 11px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 320px;
+    background: var(--Dark-D100, #1D1D1B);
+}
+.plansShowMoreBtn > p{
+    color: var(--text-color-light);
+}
+.plansSliderControl{
+    position: absolute;
+    z-index: 10;
+    left: 72px;
+    top: 50%;
+    width: calc(100% - 72px);
+    height: 52px;
+    margin-top: -26px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 96px;                                           
+}
+.plansSliderControl > button{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    width: 52px;
+    height: 52px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    background: #B5B4AC;
+}
+.plansSliderControl > button:hover{
+    background: var(--text-color);
+}
+.planItemCard:hover .planLink{
+    opacity: 1;
+    z-index: 10;
+    color: var(--text-color-light);
+}
+.planLink{
+    opacity: 0;
+    z-index: -10;
+    position: absolute;
+    border-radius: 320px;
+    background: var(--Dark-D100, #1D1D1B);
+    display: flex;
+    padding: 11px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    color: var(--text-color-light);
+    top: 156px;
+    left: 50%;
+    margin-left: -62px;
+}
+.planLink:hover{
+    color: var(--text-color-light);
+}
+
+@media (max-width: 960px){
+    .plansWrapper{
+        display: block;
+    }
+    .plansInner{
+        padding: 96px 0;
+        gap: 56px;
+    }
+    .plansTitleBlock{
+        text-align: left;
+        gap: 20px;
+        width: 100%;
+        padding: 0 20px;
+        align-items: flex-start;
+    }
+    .plansSectionFilters{
+        padding: 0 20px;
+    }
+    .filter{
+        display: none;
+    }
+    .businessFilter{
+        display: flex;
+    }
+    .plansContent{
+        gap: 32px;
+    }
+    .plansList{
+        height: 580px;
+        padding-left: 20px;
+    }
+    .planItemCard{
+        padding: 24px;
+    }
+    .planItemDescription{
+        gap: 18px;
+    }
+    .squareWrapper > p{
+        font-size: 26px;
+        line-height: 26px;
+    }
+    .plansList > div > div:nth-child(1){
+        height: 540px;
+    }
+    .plansList > div > div:nth-child(2){
+        padding-right: 20px;
+        bottom: 0;
+        /* position: relative; */
+    }
+    .plansSliderControl{
+        display: none;
+    }
+
 }

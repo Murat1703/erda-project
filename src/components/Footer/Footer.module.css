@@ -1,0 +1,193 @@
+.footer{
+    background: #242421;
+}
+.footerInner{
+    display: flex;
+    padding: 64px 96px 48px 96px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 56px;
+}
+.top{
+    display: flex;
+    padding-bottom: 56px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 176px;
+    align-self: stretch;
+    border-bottom: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.16));
+}
+.top > div:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+}
+.socialBtns{
+    display: flex;
+    flex: 1 0 0;
+    align-items: center;
+    gap: 12px;
+}
+.socialBtns > a{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 320px;
+    border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.16));
+}
+.footerLogo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.topBtn{
+    flex: 1 0 0;
+    display: flex;
+    justify-content:end;
+    align-items: flex-end;
+    gap: 8px;
+}
+.topBtn > a{
+    display: flex;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 320px;
+    border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.16));
+}
+
+.top > .addressFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+.top > .addressFooter > div:nth-child(1),
+.top > .addressFooter > div:nth-child(3){
+    flex: 1 0 0;
+}
+.top > .addressFooter > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.top > .addressFooter > div:nth-child(2) > p:nth-child(3){
+    opacity: .4;
+}
+.top > .addressFooter > div:nth-child(3){
+    justify-content: end;
+    display: flex;
+    align-items: flex-end;
+}
+.top > .addressFooter > div  > a, 
+.top > .addressFooter > div  > p{
+    color: var(--text-color-light);
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+}
+.bottom > p:nth-child(1){
+    color: var(--Alpha-AL40, rgba(235, 233, 225, 0.40));
+    font-family: "Graphik LCG", sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 145.455% */
+}
+.bottom > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch; 
+}
+.bottom > div > p{
+    font-size: 14px;
+    color: var(--Light-L80, #E5E3DA);
+}
+.bottom > div > a{
+    color: var(--Alpha-AL40, rgba(235, 233, 225, 0.40));
+}
+.bottom > div > a > span{
+    color: var(--Light-L80, #E5E3DA);
+}
+.mobileFooterLogo{
+    display: none!important;
+}
+.mobileLinks{
+    display: none;
+}
+.footer.contactsFooter{
+    display: none;
+}
+
+@media (max-width: 960px){
+    .footer.contactsFooter{
+        display: block;
+        padding-top: 394px;
+    }
+    .footerInner{
+        padding: 48px 20px;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 40px;
+    }
+    .top{
+        gap: 40px;
+    }
+    .top > div:nth-child(1) > div:nth-child(2){
+        display: none;
+    }
+    .mobileFooterLogo{
+        display: flex!important;
+    }
+    .top > div:nth-child(2){
+        /* display: flex; */
+        justify-content: start;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .addressFooter{
+        flex-direction: column;
+        gap: 40px;;
+        /* display: grid!important;
+        grid-template-rows: repeat(2, auto); */
+    }
+    .addressFooter > div:nth-child(2){
+        order: 1;
+    }
+    .addressFooter > div:nth-child(1){
+        display: none;
+    }
+    .addressFooter > div:nth-child(1), 
+    .addressFooter > div:nth-child(3){
+        order: 2;
+        display: none!important;
+    }
+    .mobileLinks{
+        display: flex;
+        width: 100%;
+        order: 3;
+        justify-content: space-between;
+    }
+    .mobileLinks > div >a {
+        color: var(--text-color-light);
+    }
+    .bottom > div{
+        flex-direction: column;
+        gap: 16px;
+    }
+
+}

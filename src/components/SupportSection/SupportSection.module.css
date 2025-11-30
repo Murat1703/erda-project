@@ -1,0 +1,112 @@
+.supportSectionInner{
+    display: flex;
+    width: 100%;
+    padding: 120px 0 80px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+.supportSectionTop{
+    display: flex;
+    flex-direction: column;
+    width: 624px;
+    height: 206px;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+.supportSectionTop > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+}
+.supportSectionTop > div:nth-child(1) > h2{
+    font-size: 56px;
+    line-height: 52px;
+}
+.supportSectionTop > p{
+    text-align: center;
+    flex: 1 0 0;
+}
+.supportSectionBottom{
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+}
+.vacancyBtn{
+    background: var(--Accent-A100, #A39F91)!important;
+}
+.vacancyBtn:hover{
+    background: #A39F91;
+}
+.btn:hover{
+    color: var(--text-color-lights);
+}
+.btn{
+    display: flex;
+    padding: 11px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 320px;
+    color:   var(--text-color-light);
+    background: var(--text-color);
+}
+.supportSectionBottom > div > a:nth-child(1){
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 133.333% */
+    color: var(--text-color);
+}
+.supportSectionBottom > div > a:nth-child(2){
+    color: var(--text-color-light);
+}
+@media (max-width: 960px){
+    .supportSection{
+        display:block;
+    }
+    .supportSectionInner{
+        padding: 96px 0 96px 0;
+        gap: 32px;
+    }
+    .supportSectionTop{
+        width: 100%;
+        padding: 0 20px;
+        align-items: flex-start;
+        text-align: left;
+        gap: 32px;
+    }
+    .supportSectionTop > div:nth-child(1){
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .supportSectionTop > div:nth-child(1) > h2{
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 40px; /* 117.647% */
+        letter-spacing: 0.68px;    
+    }
+    .supportSectionTop > p{
+        text-align: left;
+    }
+    .supportSectionBottom{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+    .supportSectionBottom > div > a:nth-child(1){
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 133.333% */
+        flex:  1 0 0;
+    }
+    .btn{
+        padding: 9px 24px;
+        width: 170px;
+    }
+}

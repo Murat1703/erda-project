@@ -71,7 +71,7 @@
     width: 720px;
     height: 810px;
     position: sticky;
-    top:0;    
+    top:96px;    
 }
 .advSticky > img{
     position: absolute;
@@ -100,4 +100,67 @@
     font-style: italic;
     font-weight: 400;
     line-height: 48px; /* 120% */
+}
+
+@media (max-width: 960px){
+    .advantagesWrapper{
+        display: block;
+        padding-left: 0;
+    }
+    .advantagesInner{
+        gap: 56px;
+    }
+    .advantagesSectionTitle{
+        gap: 20px;
+        width: 100%;
+        padding: 0 20px;
+    }
+    .advantagesContent{
+        flex-direction: column-reverse;
+        gap : 0;
+    }
+    .advSticky{
+        position: relative;
+        width: 100%;
+        height: 240px;
+        top: 0;    
+    }
+    .advSticky > div:nth-child(1){
+        width: calc(100% - 40px);
+        left: 20px;
+        right: 20px;
+        gap: 16px;
+        top: 32px;
+    }
+    .advSticky > div:nth-child(1) > p:nth-child(1){
+        font-size: 28px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 32px; /* 114.286% */
+    }
+    .left{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .textRow{
+        padding: 32px 0;
+        gap: 16px;
+    }
+    .textRow > h3{ 
+        font-size: 28px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 32px; /* 114.286% */
+    }
+    .imagesRow{
+        padding: 48px 0;
+        gap: 56px;
+    }
+    .imagesRow > .left{
+        padding: 0;
+    }
+    .imgWrapper {
+        width: 100%;
+        height: 80px;
+    }
 }

@@ -89,3 +89,48 @@
     height: 100%;
     object-fit: cover;
 }
+
+@media (max-width: 960px){
+    .archSectionWrapper{
+        /* padding: 96px 0; */
+        display: block;
+    }
+    .archSectionInner{
+        padding: 96px 0 96px 20px;
+        flex-direction: column;
+        gap: 56px;
+    }
+    .archTitleBlock{
+        width: 100%;
+        padding-right: 20px;
+    }
+    .archTitleBlock > div:nth-child(1){
+        width: 100%;
+        gap: 20px;
+        position: relative;
+    }
+    .archTitleBlock > div:nth-child(1) > svg{
+        position: absolute;
+    }
+    .archTitleBlock > div:nth-child(2){
+        display:  none;
+    }
+    .archSlider > div > div > div:nth-child(1),
+    .archSlider > div > div > div:nth-child(3),
+    .archSlider > div > div > div:nth-child(5),
+    .archSlider > div > div > div:nth-child(7),
+    .archSlider > div > div > div:nth-child(9),
+    .archSlider > div > div > div:nth-child(11)
+    {
+        gap: 32px;
+    }
+    .sliderText{
+        gap: 24px;
+    }
+    .sliderText > h3{
+        font-size: 22px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 28px; /* 127.273% */
+    }
+}

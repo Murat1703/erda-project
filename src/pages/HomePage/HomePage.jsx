@@ -1,12 +1,15 @@
+import { SupportSection } from '../../components/SupportSection'
 import { AdvantagesSection } from '../../components/AdvantagesSection'
 import { ArchSection } from '../../components/ArchSection'
 import { Cursor } from '../../components/Cursor'
+import { DeveloperSection } from '../../components/DeveloperSection'
 import { LocationSection } from '../../components/LocationSection'
 import { MainSection } from '../../components/MainSection'
 import { PlansSection } from '../../components/PlansSection'
 import { Preface } from '../../components/Preface'
 import { ConsultationSection } from '../../components/СoncultationSection'
 import cls from './HomePage.module.css'
+import { Footer } from '../../components/Footer'
 
 export const HomePage = () =>{
     return(
@@ -18,6 +21,8 @@ export const HomePage = () =>{
             <ArchSection />
             <ConsultationSection />
             <PlansSection />
+            <DeveloperSection />
+            <SupportSection />
         </div>
     )
 }

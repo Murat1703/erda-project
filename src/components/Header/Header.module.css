@@ -2,9 +2,38 @@ header{
     position: fixed;
     width: 100%;
     top: 0;
-    border-bottom: 0.6px solid var(--Alpha-AD12, rgba(29, 29, 27, 0.12));
-    background: var(--Light-L80, #E5E3DA);
     z-index: 100;
+}
+.header{
+    background: var(--Light-L80, #E5E3DA);
+    border-bottom: 0.6px solid var(--Alpha-AD12, rgba(29, 29, 27, 0.12))
+}
+.darkHeader{
+    border-bottom: 0.6px solid var(--Alpha-AD12, rgba(29, 29, 27, 0.12));
+    background: rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(16px);
+}
+.darkHeader > nav > .left > button > p{
+    color: var(--text-color-light);
+}
+.darkHeader > nav > .left > button svg path{
+    fill: var(--text-color-light);
+    stroke: var(--text-color-light);
+}
+.darkHeader > nav > .logo > svg path{
+    fill: var(--text-color-light);
+}
+.darkHeader > nav > .right > a, .darkHeader > nav > .right > button> p{
+    color: var(--text-color-light);
+}
+.darkHeader > nav > .right > button> svg path{
+    fill: var(--text-color-light);
+}
+.darkHeader > nav > .mobileContacts > a{
+    color: var(--text-color-light);
+}
+.darkHeader > nav > .mobileContacts > a svg path  {
+    stroke: var(--text-color-light);
 }
 header > nav{
     width: 100%;
@@ -45,4 +74,38 @@ header > nav > .left{
     display: flex;
     align-items: center;
     gap: 8px;
+}
+.mobileContacts{
+    display: none;
+}
+
+@media (max-width: 960px){
+    header > nav{
+        padding: 18px 20px 14px 20px;
+    }
+    .projectsBtn, .menuBtn > p{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .mobileContacts{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 48px;
+        flex: 1 0 0;
+    }
+    header> nav{
+        align-items: center;
+        gap: 32px;
+    }
+    header> nav > .left{
+        flex: 0;
+    }
+    .mobileContacts > a{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 }

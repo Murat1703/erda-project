@@ -67,8 +67,18 @@ export const ArchSection = () =>{
                         <Swiper
                             spaceBetween={84}
                             slidesPerView={2.4}
-                            onSlideChange={() => console.log('slide change')}
-                            onSwiper={(swiper) => console.log(swiper)}
+                            breakpoints={{
+                                0: {
+                                    slidesPerView: 1.3,
+                                    spaceBetween: 40,
+                                },
+                                960: {
+                                    slidesPerView: 2.4,
+                                    spaceBetween: 84,
+                                }
+                            }}
+                            // onSlideChange={() => console.log('slide change')}
+                            // onSwiper={(swiper) => console.log(swiper)}
                         >
                             <SwiperSlide>
                                 <div className={cls.imgWrapper}>

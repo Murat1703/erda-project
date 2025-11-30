@@ -5,6 +5,7 @@ import { Routes, Route} from 'react-router-dom'
 import { Header } from './components/Header'
 import { ContactsPage } from './pages/ContactsPage'
 import { Cursor } from './components/Cursor'
+import { Footer } from './components/Footer'
 
 function App() {
   const [projectsOpen, setProjectsOpen] = useState(false);
@@ -44,6 +45,8 @@ function App() {
         <Route path="/contacts" element={<ContactsPage />} />
 
       </Routes>
+
+      <Footer />
 
     </div>
     </>

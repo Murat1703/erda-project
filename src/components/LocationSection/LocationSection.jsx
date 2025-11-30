@@ -26,7 +26,7 @@ const containerStyle = {
 
 
 
-  const customMapStyles = [
+const customMapStyles = [
     {
         "featureType": "all",
         "elementType": "labels.text.fill",
@@ -308,9 +308,9 @@ const containerStyle = {
     cursor: 'pointer',
   };
   
-      const { isLoaded } = useLoadScript({
-      googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY, // замени на свой ключ
-    });
+const { isLoaded } = useLoadScript({
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY
+});
 
     const mapRef = useRef(null);
     const [zoom, setZoom] = useState(15);

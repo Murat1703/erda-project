@@ -8,3 +8,12 @@
     letter-spacing: 2.56px;
     text-transform: uppercase;
 }
+
+@media (max-width: 960px){
+    .title{
+        font-size: 34px;
+        font-weight: 350;
+        line-height: 40px; /* 117.647% */
+        letter-spacing: 0.68px;
+    }
+}

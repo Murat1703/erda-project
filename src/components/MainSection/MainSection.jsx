@@ -3,6 +3,8 @@ import cls from './MainSection.module.css'
 import img1 from './images/ca3838f118c56703133177f24bb1c3523af6d9ae.png'
 import img2 from './images/2c607706eddfebcddb119930448dbd061279aa40.jpg'
 import img3 from './images/f3553da3a3f5284be1699962b8e628b2d175c08f.jpg'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 
 export const MainSection = () =>{
@@ -49,6 +51,82 @@ export const MainSection = () =>{
                     </div>
                 </div>
             </div>
+            <div className={cls.mobileTitleBlock}>
+                <div className={cls.mobileTitle}>
+                    <div className={cls.mobileTitleRow}>
+                        <p>создаем <span>деловое</span></p>
+                    </div>
+                    <div className={cls.mobileTitleRow}>
+                        <p><span>пространство</span></p>
+                    </div>
+                    <div className={cls.mobileTitleRow}>
+                        <p><span className={cls.classTypeMobile}>A
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
+                                <path d="M5.5 0L6.79837 3.81966H11L7.60079 6.18035L8.89921 10L5.5 7.6393L2.10081 10L3.39919 6.18035L0 3.81966H4.20163L5.5 0Z" fill="#A39C82"/>
+                            </svg></span></p>
+                        <p><span>класса</span></p>
+                        <p>для</p>
+                    </div>
+                    <div className={cls.mobileTitleRow}>
+                        <p>комфортной</p>
+                    </div>
+                    <div className={cls.mobileTitleRow}>
+                        <p>и продуктивной</p>
+                    </div>
+                    <div className={cls.mobileTitleRow}>
+                        <p>работы</p>
+                    </div>
+                </div>
+                <p>Продажа и аренда офисных пространств в собственных БЦ в Алматы любого масштаба и уровня. Сервис 5* и современное High End оборудование.</p>
+            </div>
+            <div className={cls.mobileSlider}>
+                <Swiper 
+                    slidesPerView={1.4}
+                    spaceBetween={32}
+                    breakpoints={{
+                        960: {
+                            slidesPerView: 1.3,
+                            spaceBetween: 32,
+                            loop: true
+                        }
+                    }}
+                >
+                    <SwiperSlide>
+                        <div className={cls.slideItem}>
+                            <div className={cls.slideImgWrapper}>
+                                <img src={img1} alt='img'/>
+                            </div>
+                            <div className={cls.slideDescription}>
+                                <p>Icon</p>
+                                <p>пр-кт Сатпаева – уг. ул. Луганского</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={cls.slideItem}>
+                            <div className={cls.slideImgWrapper}>
+                                <img src={img2} alt='img'/>
+                            </div>
+                            <div className={cls.slideDescription}>
+                                <p>Luminor</p>
+                                <p>пр-кт Сатпаева – уг. ул. Луганского</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className={cls.slideItem}>
+                            <div className={cls.slideImgWrapper}>
+                                <img src={img3} alt='img'/>
+                            </div>
+                            <div className={cls.slideDescription}>
+                                <p>Norex</p>
+                                <p>пр-кт Сатпаева – уг. ул. Луганского</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+
+                </Swiper>
+            </div>
             <div className={cls.mainSectionBottom}>
                 <p>
                     Продажа и аренда офисных пространств в собственных БЦ в Алматы любого масштаба и уровня. Сервис 5* и современное High End оборудование.
@@ -61,7 +139,7 @@ export const MainSection = () =>{
                         </svg>
                     </Button>
                     <Button type="mainBtn" onClick={handleClick}>
-                        <p>Позвонить</p>
+                        <p>Приват-консультация</p>
                     </Button>
                 </div>
             </div>

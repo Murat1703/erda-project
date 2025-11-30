@@ -1,0 +1,133 @@
+.contactsPageWrapper{
+    width: 100%;
+    height: 100dvh;
+}
+.mapContactsPage{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+a[aria-label="Открыть эту область в Google Картах (в новом окне)"] {
+  display: none!important;
+}
+
+.infoContacts{
+    position: fixed;
+    left: 48px;
+    bottom: 24px;
+    display: flex;
+    width: 416px;
+    padding-bottom: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    border-radius: 24px;
+    background: rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(16px);
+}
+.citiesTabs{
+    display: flex;
+    padding: 24px 16px 0 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+.citiesTabs > div{
+    display: flex;
+    padding: 4px;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+    border-radius: 320px;
+    background: rgba(229, 227, 218, 0.12);
+    backdrop-filter: blur(50px); 
+}
+.citiesTabs > div > button{
+    display: flex;
+    padding: 10px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+    border-radius: 32px;
+
+}
+.citiesTabs > div > button > p{
+    line-height: 20px;
+    color: var(--text-color-light);
+    font-weight: 500;
+    opacity: .5
+}
+.activeLocation{
+    display: flex;
+    padding: 0 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+.activeLocation > p{
+    color: var(--text-color-light);
+}
+.activeLocation > p:nth-child(1){
+    font-family: "PT Serif", sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 48px; /* 120% */
+}
+.activeLocation > p:nth-child(2){
+    opacity: .5;
+}
+.details{
+    display: flex;
+    padding: 0 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+.details > li{
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    align-self: stretch;
+}
+.details > li > p, .details > li > a{
+    color: var(--text-color-light);
+}
+.details > li > p:nth-child(1){
+    opacity: .5;
+}
+.details > li > span{
+    display: flex;
+    padding-bottom: 6px;
+    align-items: flex-end;
+    gap: 32px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+.instaLink{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+@media (max-width: 960px){
+    .contactsPageWrapper{
+        display: flex;
+    }
+    .contactsPageWrapper{
+        height: auto;
+    }
+    .mapContactsPage{
+        height: 320px;
+    }
+    .infoContacts{
+        position: relative;
+        left: 0;
+        bottom: auto;
+        width: 100%;
+    }
+}

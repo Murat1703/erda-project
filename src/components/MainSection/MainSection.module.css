@@ -71,3 +71,135 @@
     align-items: center;
     gap: 8px;
 }
+.mobileTitle, .mobileTitleBlock{
+    display: none;
+}
+.mobileSlider{
+    display: none;
+}
+
+@media (max-width: 960px){
+    .mainSection{
+        padding: 0;
+        height: auto;
+        gap: 40px;
+    }
+    .mainTitleBlock{
+        display: none;
+    }
+    .mobileTitleBlock{
+        padding: 96px 20px 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .mobileTitle{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .mainSectionBottom{
+        align-items: flex-end;
+        justify-content: end;
+        padding: 0 
+    }
+    .mainSectionBottom > p{
+        display: none;
+    }
+    .mobileTitleRow{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .mobileTitleRow > p{
+        color: var(--Dark-D100, #1D1D1B);
+        font-feature-settings: 'ss10' on;
+        font-family: "TA Modern Times", sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 32px; /* 106.667% */
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+    }
+    .mobileTitleRow > p > span{
+        color: var(--Accent-A80, #A39C82);
+    }
+    .classTypeMobile{
+        display: flex;
+        width: 25px;
+        padding-right: 18px;
+        align-items: center;
+        gap: 18px; 
+        position: relative;
+    }
+     .classTypeMobile > svg{
+        position: absolute;
+        right: -3px;
+        top: 7px;
+     }
+    .mobileSlider{
+        display: block;
+        width: 100%;
+        padding-left: 20px;
+    }
+    .mobileSlider > div{
+        width: 100%;
+    }
+    .slideItem {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    };
+    .slideItem > div:nth-child(1){
+        height: 312px;
+    }
+
+    .slideItem > div:nth-child(1){
+        width: 100%;
+        height: 312px;
+        display: flex;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+    }
+    .slideImgWrapper > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .slideDescription{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .slideDescription > p:nth-child(1){
+        color: var(--Dark-D100, #1D1D1B);
+        font-feature-settings: 'ss10' on;
+        font-family: "TA Modern Times", sans-serif;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 28px; /* 100% */
+        letter-spacing: 0.56px;
+        text-transform: uppercase;
+    }
+    /* .top > div:nth-child(2){
+        display: flex;
+        gap: 8px;
+        justify-content: auto;
+    } */
+     .bottomBtns{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10;
+     }
+     .bottomBtns > button:nth-child(1){
+        display: none;
+     }
+}
