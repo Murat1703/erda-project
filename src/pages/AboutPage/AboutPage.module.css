@@ -120,3 +120,44 @@
 .mapAboutText > p:nth-child(1){
     opacity: .5;
 }
+
+@media (max-width: 960px){
+    
+    .aboutPageWrapper{
+        padding-top: 48px;
+        display: block;
+    }
+    .developerAbout{
+        height: auto;
+    }
+    .imgWrapper{
+        height: 340px;
+    }
+    .aboutPageTitleBlock{
+        padding: 0 20px;
+    }
+    .top >h3{
+        font-size: 52px;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 52px; /* 100% */
+        letter-spacing: 1.04px;
+    }
+    .bottom > p{
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+        max-width: 100%;
+        flex: 1 0 0;
+    }
+    .aboutMap{
+        flex-direction: column;
+        padding: 48px 20px ;
+        overflow: hidden;
+        gap: 48px;
+    }
+    .aboutMap > div:nth-child(1){
+        left: -330px;
+    }
+}

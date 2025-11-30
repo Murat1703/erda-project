@@ -5,7 +5,7 @@ import ala from './images/ala.svg'
 import abu from './images/abu.svg'
 import ist from './images/ist.svg'
 import lon from './images/lon.svg'
-import { Directions } from './content'
+import { Target, Directions, Team, Partners, Career, Questions  } from './content'
 
 export const AboutPage = () =>{
     return(
@@ -53,8 +53,11 @@ export const AboutPage = () =>{
                 </div>
             </section>
             <Directions />
-
-        
+            <Target />
+            <Team />
+            <Partners />
+            <Career />
+            <Questions />
         </>
     )
 }

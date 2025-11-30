@@ -40,6 +40,40 @@ export const Directions = ()=>{
                         <li><p>Венчурный капитал </p></li>
                     </ul>
                 </div>
+                <div className={cls.directionsMobile}>
+                    <div className={cls.row}>
+                        <div>
+                            <p>Девелопмент</p>
+                        </div>
+                        <div>
+                            <p>Инвестиции<br/>в недвижимость</p>
+                        </div>
+                    </div>
+                    <div className={cls.row}>
+                        <div>
+                            <p>Гостиничный<br/>бизнес и управление<br/> отелями</p>
+                        </div>
+                        <div>
+                            <p>Инвестиции <br/>в недвижимость</p>
+                        </div>
+                    </div>
+                    <div className={cls.row}>
+                        <div>
+                            <p>Инвестиционное <br/>консультирование</p>
+                        </div>
+                        <div>
+                            <p>Управление  <br/>активами</p>
+                        </div>
+                    </div>
+                    <div className={cls.row}>
+                        <div>
+                            <p>Частный <br/>капитал</p>
+                        </div>
+                        <div>
+                            <p>Венчурный<br/>капитал</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     )

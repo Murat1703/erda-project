@@ -1,1 +1,6 @@
 export {Directions} from './Directions'
+export {Target} from './Target'
+export {Team} from './Team'
+export {Partners} from './Partners'
+export {Career} from './Career'
+export {Questions} from './Questions'

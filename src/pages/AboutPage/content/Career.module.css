@@ -1,0 +1,113 @@
+.careerWrapper{
+    background: var(--btn-hover-bg);
+}
+.careerContent{
+    padding: 120px 0 120px 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+.careerTitle{
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.careerTitle > h3, 
+.careerTitle > p{
+    color: var(--text-color-light);
+}
+.careerTitle > h3{
+    font-feature-settings: 'ss10' on;
+    font-family: "TA Modern Times", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 72px; /* 112.5% */
+    letter-spacing: 2.56px;
+    text-transform: uppercase;
+}
+.careerTitle > p{
+    opacity: .4;
+}
+.vacancyCard{
+    display: flex;
+    width: 100%;
+    padding: 48px 24px 40px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    flex-shrink: 0;
+    border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.16));
+}
+.vacancyCard > p{
+    color: var(--text-color-light);
+    font-family: "PT Serif", sans-serif;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 32px; /* 106.667% */
+    height: 64px;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+.description > li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.description > li > p{
+    color: var(--text-color-light);
+}
+.description > li > p:nth-child(1){
+    opacity: .4;
+}
+.vacancyButtons{
+    display: flex;
+    width: 296px;
+    align-items: center;
+    gap: 8px;
+}
+.vacancyButtons > button{
+    display: flex;
+    padding: 11px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    background: var(--btn-bg);
+    border-radius: 320px;
+}
+.vacancyButtons > button:hover{
+    
+}
+.vacancyButtons > button > p{
+    color: var(--text-color-light);
+}
+
+@media (max-width: 960px){
+    .careerWrapper{
+        display: block;
+    }
+    .careerContent{
+        padding: 96px 0 96px 20px;
+    }
+    .careerTitle > h3{
+        font-size: 34px;
+        line-height: 40px;
+    }
+    .vacancyCard{
+        padding: 24px 16px;
+        gap: 48px;
+    }
+    .vacancyCard > p{
+        font-size: 22px;
+        line-height: 24px;
+        height: 48px;
+    }
+}
