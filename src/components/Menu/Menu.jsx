@@ -2,7 +2,22 @@ import cls from './Menu.module.css'
 
 export const Menu = ({type}) =>{
 
-    const projectsMenu = ["БЦ Icon", "БЦ Lumior", "БЦ Norex"];
+    // const projectsMenu = ["БЦ Icon", "БЦ Lumior", "БЦ Norex"];
+
+    const projectsMenuLinks = [
+        {
+            label: "БЦ Icon",
+            link: "icon"
+        },
+        {
+            label: "БЦ Lumior",
+            link: "luminor"
+        },
+        {
+            label: "БЦ Norex",
+            link: "norex"
+        }
+    ];
     const mainMenu = ["Главная", "Планировки", "О Холдинге", "Контакты", "Скачать буклет"]
 
     return(
@@ -16,9 +31,13 @@ export const Menu = ({type}) =>{
         > 
 
             {type == "projectsMenu"? 
-                projectsMenu.map((projectMenu, index)=>{
+                projectsMenuLinks.map((projectMenu, index)=>{
                     return(
-                        <li key={index}>{projectMenu}</li>
+                        <li key={index}>
+                            <a href={`/projects/${projectMenu.link}`}>
+                                {projectMenu.label}
+                            </a>
+                        </li>
                     )
                 })
             :

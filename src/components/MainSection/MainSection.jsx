@@ -10,7 +10,7 @@ import 'swiper/css';
 export const MainSection = () =>{
 
     const handleClick = () =>{
-        console.log('clicked')
+        // console.log('clicked')
     }
 
     return(

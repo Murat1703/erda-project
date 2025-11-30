@@ -7,6 +7,7 @@ import { ContactsPage } from './pages/ContactsPage'
 import { AboutPage } from './pages/AboutPage'
 import { Cursor } from './components/Cursor'
 import { Footer } from './components/Footer'
+import { ProjectsPage } from './pages/ProjectsPage'
 
 function App() {
   const [projectsOpen, setProjectsOpen] = useState(false);
@@ -45,6 +46,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/contacts" element={<ContactsPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects/:projectID" element = {<ProjectsPage />} />
       </Routes>
 
       <Footer />
