@@ -1,0 +1,83 @@
+.directionsWrapper{
+    background: var(--btn-hover-bg)
+}
+
+.directionsInner{
+    display: flex;
+    width: 100%;
+    padding: 96px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 64px;
+}
+.directionsTitleBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;
+    align-self: stretch;
+}
+.directionsTitleBlock > div:nth-child(1){
+    width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+.directionsTitleBlock > div:nth-child(1) > div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+.directionsTitleBlock > div:nth-child(1) > div > h3{
+    color: var(--text-color-light);
+    font-family: "PT Serif", sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 48px; /* 120% */
+}
+.directionsTitleBlock > div:nth-child(1) > p{
+    color: var(--text-color-light);
+    opacity: .5;
+}
+.directionsList{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+}
+.directionsRow{
+    display: flex;
+    padding-bottom: 32px;
+    align-items: center;
+    align-self: stretch;
+    border-bottom: 1px solid var(--Alpha-AL8, rgba(235, 233, 225, 0.08));
+}
+.directionsRow > li{
+    list-style: none;
+    display: flex;
+    padding: 40px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-right: 1px solid var(--Alpha-AL8, rgba(235, 233, 225, 0.08));
+}
+.directionsRow > li:nth-last-child(1){
+    border: none;
+}
+.directionsRow > li > p{
+    text-align: center;
+    color: var(--text-color-light);
+    font-family: "PT Serif";
+    font-size: 21px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 27px; /* 128.571% */
+    align-self: stretch;
+}

@@ -7,7 +7,7 @@ export const Header = ({onClick, projectsOpen, onCloseProjects, onOpenMainMenu, 
     
     const location = useLocation();
 
-    const isDark = location.pathname == "/contacts"
+    const isDark = location.pathname == "/contacts" || location.pathname == "/about"
 
 
 
@@ -16,6 +16,13 @@ export const Header = ({onClick, projectsOpen, onCloseProjects, onOpenMainMenu, 
             <header 
                 className={`${cls.header} ${isDark? cls.darkHeader : ""}`}
                 onClick={()=>{onCloseProjects(); onCloseMainMenu()}}
+
+                style={
+                    {
+                        background: location.pathname == "/about" ? "transparent": null,
+                        backdropFilter: location.pathname == "/about" ? "none": null
+                    }
+                }
             > 
                 <nav>
                     <div className={cls.left}>

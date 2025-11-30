@@ -1,0 +1,122 @@
+.aboutPageWrapper{
+    background: var(--text-color);
+
+}
+.developerAbout{
+    width: 100%;
+    height: 100dvh;
+    background: var(--text-color);
+}
+.developerAbout > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.imgWrapper{
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+.imgWrapper > img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+.aboutPageTitleBlock{
+    margin-top: -80px;
+    padding: 0 96px 82px 96px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 56px;
+    position: relative;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: stretch;
+}
+.top > p, .top > h3{
+    color: var(--text-color-light);
+}
+.top > h3{
+    font-family: "TA Modern Times", sans-serif;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 104px; /* 108.333% */
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+.bottom > p{
+    max-width: 624px;
+    color: var(--text-color-light);
+    font-family: "PT Serif", sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 32px; /* 145.455% */
+}
+.bottom > a{
+    display: flex;
+    width: 52px;
+    height: 52px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 320px;
+    border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.16));
+}
+.aboutMap{
+    padding: 0 96px 96px 48px;
+    display: flex;
+    gap: 104px;
+    align-items: flex-start;
+    justify-content: center;
+}
+.aboutMap > div:nth-child(1){
+    position: relative;
+}
+.locationIcon{
+    position: absolute;
+}
+.locationIcon:nth-child(2){
+    right: 180px;
+    top: 170px;
+}
+.locationIcon:nth-child(3){
+    right: 270px;
+    top: 220px;
+}
+.locationIcon:nth-child(4){
+    right: 318px;
+    top: 174px;
+}
+.locationIcon:nth-child(5){
+    left: 330px;
+    top: 115px;
+}
+.mapAboutText{
+    display: flex;
+    width: 312px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+.mapAboutText > p{
+    color: var(--text-color-light);
+}
+.mapAboutText > p:nth-child(1){
+    opacity: .5;
+}

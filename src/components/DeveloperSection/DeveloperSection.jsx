@@ -26,7 +26,7 @@ export const DeveloperSection = () =>{
                         <p>
                             В портфеле ERDA десятки реализованных проектов и три новых бизнес-центра в Алматы. ERDA предлагает инфраструктуру, соответствующую запросам современного бизнеса
                         </p>
-                        <a href="/" className={cls.developerBtn}>
+                        <a href="/about" className={cls.developerBtn}>
                             <p>Узнать больше</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
                                 <path d="M0.5 8L17.1667 8M17.1667 8L13.1667 4M17.1667 8L13.1667 12" stroke="#EBE9E1" strokeLinecap="round" strokeLinejoin="round"/>

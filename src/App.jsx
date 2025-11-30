@@ -4,6 +4,7 @@ import { HomePage } from './pages/HomePage'
 import { Routes, Route} from 'react-router-dom'
 import { Header } from './components/Header'
 import { ContactsPage } from './pages/ContactsPage'
+import { AboutPage } from './pages/AboutPage'
 import { Cursor } from './components/Cursor'
 import { Footer } from './components/Footer'
 
@@ -43,7 +44,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/contacts" element={<ContactsPage />} />
-
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
 
       <Footer />
