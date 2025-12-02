@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { projects } from './projects';
 
 
-export const ProjectsPage = ({}) =>{
+export const ProjectsPage = () =>{
 
     const id = useParams();
     // console.log('id  = ',id)
@@ -40,6 +40,41 @@ export const ProjectsPage = ({}) =>{
                 </div>
                 <div className={cls.projectImgWrapper}>
                     <img src={project.img} alt='project-img'/> 
+                </div>
+                <div className={cls.projectDescription}>
+                    <div className={cls.aboutProjectDescription}>
+                        <p>О проекте</p>
+                        <p>{project.about}</p>
+                    </div>
+                    <div className={cls.descriptionContent}>
+                        <div>
+                            <div className={cls.descriptionItem}>
+                                <p>{project.commercy}</p>
+                                <p>коммерческие помещения для флагманской <br/>коммерции и ритейла.</p>
+                            </div>
+                            <div className={cls.descriptionItem}>
+                                <p>{project.offices}</p>
+                                <p>офисные пространства с гибкой системой планировок<br/>с возможностью объединения этажей.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div className={cls.descriptionItem}>
+                                    <p>{project.squareRange}</p>
+                                    <p>квадратуры планировок</p>
+                                </div>
+                                <div className={cls.descriptionItem}>
+                                    <p>{project.height}</p>
+                                    <p>Высота потолков</p>
+                                </div>
+                                <div className={cls.descriptionItem}>
+                                    <p>{project.isReady}</p>
+                                    <p>сдача проекта в эксплуатацию</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

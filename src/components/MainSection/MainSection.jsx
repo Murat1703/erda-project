@@ -92,7 +92,7 @@ export const MainSection = () =>{
                     }}
                 >
                     <SwiperSlide>
-                        <div className={cls.slideItem}>
+                        <a href='/projects/icon' className={cls.slideItem}>
                             <div className={cls.slideImgWrapper}>
                                 <img src={img1} alt='img'/>
                             </div>
@@ -100,10 +100,10 @@ export const MainSection = () =>{
                                 <p>Icon</p>
                                 <p>пр-кт Сатпаева – уг. ул. Луганского</p>
                             </div>
-                        </div>
+                        </a>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className={cls.slideItem}>
+                        <a href='/projects/luminor' className={cls.slideItem}>
                             <div className={cls.slideImgWrapper}>
                                 <img src={img2} alt='img'/>
                             </div>
@@ -111,10 +111,10 @@ export const MainSection = () =>{
                                 <p>Luminor</p>
                                 <p>пр-кт Сатпаева – уг. ул. Луганского</p>
                             </div>
-                        </div>
+                        </a>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className={cls.slideItem}>
+                        <a href='/projects/norex' className={cls.slideItem}>
                             <div className={cls.slideImgWrapper}>
                                 <img src={img3} alt='img'/>
                             </div>
@@ -122,7 +122,7 @@ export const MainSection = () =>{
                                 <p>Norex</p>
                                 <p>пр-кт Сатпаева – уг. ул. Луганского</p>
                             </div>
-                        </div>
+                        </a>
                     </SwiperSlide>
 
                 </Swiper>
