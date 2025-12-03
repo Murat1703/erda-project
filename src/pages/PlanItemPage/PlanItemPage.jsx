@@ -1,11 +1,128 @@
 import cls from './PlanItemPage.module.css'
+import { useParams } from 'react-router-dom';
+import { plansData } from '../../components/PlansSection/plansData';
 
 export const PlanItemPage = () =>{
+
+const id = useParams();
+
+const project = plansData.find(item => item.id == id.planID);
+console.log(project)
+
+
     return(
-        <section className={cls.planItemPage}>
-            <div className={cls.planItemPageContent}>
-                <div className={cls.planItemPageContentTop}></div>
-            </div>
-        </section>
+        <>
+            <section className={cls.planItemPage}>
+                <div className={cls.planItemPageContent}>
+                    <div className={cls.planItemPageContentTop}>
+                        <div className={cls.planItemInformation}>
+                            <div className={cls.planItemTitle}>
+                                <div className={cls.breadCrumbs}>
+                                    <a href="/">Главная</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                        <path d="M4.5 9L7.5 6L4.5 3" stroke="#1D1D1B" strokeMiterlimit="10" strokeLinecap="square" strokeLinejoin="bevel"/>
+                                    </svg>
+                                    <a href="/plans">Планировки</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                        <path d="M4.5 9L7.5 6L4.5 3" stroke="#1D1D1B" strokeMiterlimit="10" strokeLinecap="square" strokeLinejoin="bevel"/>
+                                    </svg>
+                                    <a href={`/plans/${id.planID}`}>Помещение №{id.planID}</a>
+                                </div>
+                                <h2>{project.square} м²</h2>
+                            </div>
+                            <a href='/plans'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="97" height="9" viewBox="0 0 97 9" fill="none">
+                                <path d="M96.5 4.5L0.499997 4.5M0.499997 4.5L4.47241 8.5M0.499997 4.5L4.47241 0.499996" stroke="#1D1D1B" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </a>
+                            <div className={cls.planItemInfoBottom}>
+                                <ul className={cls.planItemCharacteristics}>
+                                    <li className={cls.characteristicItem}>
+                                        <p>Артикул помещения</p>
+                                        <span></span>
+                                        <p>№{project.id}</p>
+                                    </li>
+                                    <li className={cls.characteristicItem}>
+                                        <p>Проект</p>
+                                        <span></span>
+                                        <p>{project.project}</p>
+                                    </li>
+                                    <li className={cls.characteristicItem}>
+                                        <p>Этаж</p>
+                                        <span></span>
+                                        <p>{project.floor}</p>
+                                    </li>
+                                    <li className={cls.characteristicItem}>
+                                        <p>Высота потолков</p>
+                                        <span></span>
+                                        <p>{project.height}</p>
+                                    </li>
+                                    <li className={cls.characteristicItem}>
+                                        <p>Блок</p>
+                                        <span></span>
+                                        <p>{project.block}</p>
+                                    </li>
+                                    <li className={cls.characteristicItem}>
+                                        <p>Реализация</p>
+                                        <span></span>
+                                        <p>{project.dealType}</p>
+                                    </li>
+                                    <li className={cls.characteristicItem}>
+                                        <p>Подходит для</p>
+                                        <span></span>
+                                        <p>{project.propertyType}</p>
+                                    </li>
+                                    <li className={cls.characteristicItem}>
+                                        <p>Стоимость</p>
+                                        <span></span>
+                                        <p>По запросу</p>
+                                    </li>
+                                </ul>
+                                <div className={cls.planItemButtons}>
+                                    <button>
+                                        <p>Оставить заявку</p>
+                                    </button>    
+                                    <button>
+                                        <p>Приват-консультация</p>
+                                    </button>   
+                                </div>
+                            </div>
+                        </div>
+                        <div className={cls.planItemImgWrapper}>
+                            <div className={cls.planItemImg}>
+                                <img src={project.plan} alt='planImg'/>
+                            </div>
+                            <div className={cls.planItemPageControl}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 76 76" fill="none">
+                                <g clipPath="url(#clip0_191_8539)">
+                                <path d="M38.0002 57.4526C48.7435 57.4526 57.4526 48.7435 57.4526 38.0002C57.4526 27.257 48.7435 18.5479 38.0002 18.5479C27.257 18.5479 18.5479 27.257 18.5479 38.0002C18.5479 48.7435 27.257 57.4526 38.0002 57.4526Z" stroke="#1D1D1B" strokeWidth="0.904762"/>
+                                <path d="M38.8329 19H38V21.8436H38.8329V19Z" fill="#1D1D1B"/>
+                                <path d="M57.7283 38H54.8848V38.8329H57.7283V38Z" fill="#1D1D1B"/>
+                                <path d="M38.8329 54.2856H38V57.1292H38.8329V54.2856Z" fill="#1D1D1B"/>
+                                <path d="M21.8436 38H19V38.8329H21.8436V38Z" fill="#1D1D1B"/>
+                                <path d="M38.0001 31.6665L35.2913 37.6203L35.2432 37.6985C36.1572 39.714 37.0863 41.7146 38.0001 43.7306L40.757 37.6986L38.0001 31.6665Z" fill="#9F8A71"/>
+                                <path d="M38.345 13.099C37.2083 13.099 36.31 12.7397 35.65 12.021C34.9973 11.3023 34.671 10.3343 34.671 9.117V9.029C34.671 7.863 35.0193 6.90233 35.716 6.147C36.4127 5.39167 37.2963 5.014 38.367 5.014C39.225 5.014 39.9473 5.23767 40.534 5.685C41.128 6.13233 41.469 6.76667 41.557 7.588H40.611C40.501 6.97933 40.2663 6.52467 39.907 6.224C39.555 5.92333 39.0453 5.773 38.378 5.773C37.564 5.773 36.9077 6.07 36.409 6.664C35.9103 7.25067 35.661 8.03533 35.661 9.018V9.106C35.661 10.1107 35.8993 10.899 36.376 11.471C36.86 12.0357 37.5237 12.318 38.367 12.318C39.0197 12.318 39.5513 12.1567 39.962 11.834C40.38 11.504 40.6403 11.0237 40.743 10.393H41.634C41.502 11.2803 41.1463 11.955 40.567 12.417C39.9877 12.8717 39.247 13.099 38.345 13.099Z" fill="#9F8A71"/>
+                                <path d="M39.996 75.099C38.9253 75.099 38.049 74.7617 37.367 74.087C36.6923 73.405 36.311 72.5433 36.223 71.502H34.947V75H33.99V67.135H34.947V70.699H36.223C36.2817 69.6357 36.652 68.7593 37.334 68.07C38.0233 67.3807 38.9033 67.036 39.974 67.036C41.1033 67.036 42.0053 67.4137 42.68 68.169C43.362 68.9243 43.703 69.8703 43.703 71.007V71.095C43.703 72.239 43.362 73.1923 42.68 73.955C42.0053 74.7177 41.1107 75.099 39.996 75.099ZM39.996 74.307C40.854 74.307 41.5213 74.0137 41.998 73.427C42.4747 72.8403 42.713 72.0593 42.713 71.084V70.996C42.713 70.072 42.4747 69.3093 41.998 68.708C41.5213 68.1067 40.8467 67.806 39.974 67.806C39.0867 67.806 38.401 68.0993 37.917 68.686C37.4403 69.2727 37.202 70.05 37.202 71.018V71.106C37.202 72.052 37.4623 72.822 37.983 73.416C38.5037 74.01 39.1747 74.307 39.996 74.307Z" fill="#1D1D1B"/>
+                                <path d="M9.223 45.099C8.35033 45.099 7.68667 44.868 7.232 44.406C6.78467 43.944 6.52067 43.3427 6.44 42.602H7.364C7.43 43.1373 7.59867 43.559 7.87 43.867C8.14867 44.175 8.59967 44.329 9.223 44.329C9.80967 44.329 10.257 44.186 10.565 43.9C10.873 43.6067 11.027 43.2033 11.027 42.69C11.027 42.206 10.884 41.8577 10.598 41.645C10.3193 41.425 9.84267 41.315 9.168 41.315H8.167V40.589H9.168C10.18 40.589 10.686 40.1087 10.686 39.148C10.686 38.2533 10.1983 37.806 9.223 37.806C8.739 37.806 8.36867 37.916 8.112 38.136C7.86267 38.3487 7.69033 38.7043 7.595 39.203H6.737C6.90567 37.7583 7.75633 37.036 9.289 37.036C9.98567 37.036 10.5467 37.2303 10.972 37.619C11.4047 38.0003 11.621 38.51 11.621 39.148C11.621 39.5587 11.5073 39.9253 11.28 40.248C11.06 40.5633 10.741 40.7833 10.323 40.908C10.8657 40.9887 11.2763 41.183 11.555 41.491C11.8337 41.799 11.973 42.1987 11.973 42.69C11.973 43.3867 11.7163 43.9623 11.203 44.417C10.697 44.8717 10.037 45.099 9.223 45.099Z" fill="#1D1D1B"/>
+                                <path d="M65.056 37.135H67.421C69.1077 37.135 69.951 37.8133 69.951 39.17V39.214C69.951 40.05 69.555 40.6037 68.763 40.875C69.3277 41.007 69.731 41.2233 69.973 41.524C70.215 41.8247 70.336 42.2353 70.336 42.756V42.8C70.336 43.526 70.105 44.076 69.643 44.45C69.1883 44.8167 68.5577 45 67.751 45H65.056V37.135ZM67.729 44.252C68.8437 44.252 69.401 43.7643 69.401 42.789V42.745C69.401 42.2537 69.258 41.8943 68.972 41.667C68.686 41.4323 68.2277 41.315 67.597 41.315H65.991V44.252H67.729ZM67.421 40.567C67.993 40.567 68.4 40.4607 68.642 40.248C68.8913 40.028 69.016 39.6723 69.016 39.181V39.137C69.016 38.697 68.884 38.378 68.62 38.18C68.3633 37.982 67.9563 37.883 67.399 37.883H65.991V40.567H67.421Z" fill="#1D1D1B"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_191_8539">
+                                <rect width="76" height="76" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                <button className={cls.fullScreenBtn}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M6.66667 2.5H6.5C5.09987 2.5 4.3998 2.5 3.86502 2.77248C3.39462 3.01217 3.01217 3.39462 2.77248 3.86502C2.5 4.3998 2.5 5.09987 2.5 6.5V6.66667M6.66667 17.5H6.5C5.09987 17.5 4.3998 17.5 3.86502 17.2275C3.39462 16.9878 3.01217 16.6054 2.77248 16.135C2.5 15.6002 2.5 14.9001 2.5 13.5V13.3333M17.5 6.66667V6.5C17.5 5.09987 17.5 4.3998 17.2275 3.86502C16.9878 3.39462 16.6054 3.01217 16.135 2.77248C15.6002 2.5 14.9001 2.5 13.5 2.5H13.3333M17.5 13.3333V13.5C17.5 14.9001 17.5 15.6002 17.2275 16.135C16.9878 16.6054 16.6054 16.9878 16.135 17.2275C15.6002 17.5 14.9001 17.5 13.5 17.5H13.3333" stroke="#1D1D1B" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </>
     )
 }

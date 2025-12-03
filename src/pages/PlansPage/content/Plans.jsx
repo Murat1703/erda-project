@@ -253,7 +253,7 @@ export const Plans = ({isPage}) =>{
                             <div className={cls.planItemCard} key={index}>
                                 <div className={cls.planItemImg}>
                                     <img src={item.plan} alt='planImg'/>
-                                    <a className={cls.detailsBtn}>Подробнее</a>
+                                    <a href={`/plans/${item.id}`} className={cls.detailsBtn}>Подробнее</a>
                                 </div>
                                 <div className={cls.planItemDescription}>
                                     <p>{item.square} м²</p>
