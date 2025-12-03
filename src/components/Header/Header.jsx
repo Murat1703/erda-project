@@ -2,9 +2,11 @@ import cls from './Header.module.css'
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Menu } from '../Menu';
+import { useMediaQuery } from 'react-responsive';
 
 export const Header = ({onClick, projectsOpen, onCloseProjects, onOpenMainMenu, isOpenMainMenu, onCloseMainMenu}) =>{
-    
+
+    const isMobile = useMediaQuery({ query: "(max-width: 960px)" });    
     const location = useLocation();
 
     const isDark = location.pathname == "/contacts" || location.pathname == "/about"
@@ -14,7 +16,7 @@ export const Header = ({onClick, projectsOpen, onCloseProjects, onOpenMainMenu, 
     return(
         <>
             <header 
-                className={`${cls.header} ${isDark? cls.darkHeader : ""}`}
+                className={`${cls.header} ${isDark? cls.darkHeader : isMobile && isOpenMainMenu? cls.deepDark: ""}`}
                 onClick={()=>{onCloseProjects(); onCloseMainMenu()}}
 
                 style={

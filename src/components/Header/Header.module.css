@@ -83,6 +83,30 @@ header > nav > .left{
     header > nav{
         padding: 18px 20px 14px 20px;
     }
+    .header.deepDark{
+        background: #30302E
+    }
+    .header.deepDark  .menuBtn > svg path{
+        fill: #E5E3DA;        
+    }
+    .header.deepDark .logo svg path{
+        fill: #E5E3DA;
+    }
+    .header.deepDark .mobileContacts svg path{
+        stroke: #E5E3DA;
+    }
+    .header.deepDark .mobileContacts a{
+        color: var(--text-color-light);
+    }
+    
+
+    .header.deepDark  .menuBtn > svg path:nth-child(1){
+        transform: rotate(45deg);
+        left: -10px;
+    }
+    .header.deepDark  .menuBtn > svg path:nth-child(2){
+        transform: rotate(-45deg);
+    }
     .projectsBtn, .menuBtn > p{
         display: none;
     }
