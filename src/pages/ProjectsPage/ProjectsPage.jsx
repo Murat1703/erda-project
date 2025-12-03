@@ -4,6 +4,7 @@ import { projects } from './projects';
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 import { useRef, useState } from 'react';
 import { CustomMarker } from './CustomMarker';
+import { Plans } from '../PlansPage/content';
 
 
 export const ProjectsPage = () =>{
@@ -491,6 +492,7 @@ if (!isLoaded) return <div>Загрузка карты...</div>;
                 </div>
 
             </section>
+            <Plans />
         
         </>
 

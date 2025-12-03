@@ -1,0 +1,80 @@
+.plansWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    padding: 0 96px 96px 96px;
+}
+.plansTitleBlock{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+}
+.plansTitleBlock > h2{
+    /* text-align: center; */
+    font-feature-settings: 'ss10' on;
+    font-family: "TA Modern Times", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 72px; /* 112.5% */
+    letter-spacing: 2.56px;
+    text-transform: uppercase;
+}
+.plansListWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+.showMorePlansBtn{
+    display: flex;
+    padding: 11px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background: var(--text-color);
+    border-radius: 320px;
+    max-width: 200px;
+    margin: 0 auto;;
+}
+.showMorePlansBtn > p{
+    color: var(--text-color-light);
+}
+.filtersRow {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+.filterItem{
+    flex:  1 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.filterItem > p:nth-child(1){
+    opacity: .4;
+}
+.filterTabs{
+    display: flex;
+    padding: 2px;
+    align-items: center;
+    gap: 2px;
+    align-self: stretch;
+    border-radius: 320px;
+    border: 1px solid var(--Alpha-AD16, rgba(29, 29, 27, 0.16));
+    backdrop-filter: blur(50px);
+}
+.filterTabs > button{
+    display: flex;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+    border-radius: 32px;
+}
+.activeTab{
+    color: var(--text-color-light);
+    padding: 10px 24px;
+    background: #1D1D1B;
+}
