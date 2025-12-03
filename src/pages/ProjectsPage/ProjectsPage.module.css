@@ -243,6 +243,7 @@ a.linkLocation{
     }
     .projectsPageContent{
         padding: 96px 0;
+        gap: 32px;
     }
     .top{
         padding: 0 20px;
@@ -261,5 +262,94 @@ a.linkLocation{
     }
     .projectImgWrapper{
         height: 536px;
+    }
+    .projectBottom > p:nth-child(1),
+    .projectBottom > p:nth-child(3){
+        display: none;
+    }
+    .projectBottom > p:nth-child(2){
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 26px; /* 130% */
+        align-self: stretch;
+        flex: 1 0 0;
+    }
+    .mobileBottomDescription{
+        display: flex;
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+    .mobileBottomDescription > p{
+        flex: 1 0 0;
+    }
+    .mobileBottomDescription > p:nth-child(2){
+        text-align: right;
+    }
+    .projectDescription{
+        margin-top: 64px;
+        padding: 0 20px;
+        gap: 24px;
+    }
+    .aboutProjectDescription > p:nth-child(1){
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 12px; /* 100% */
+        letter-spacing: 0.12px;
+    }
+    .aboutProjectDescription > p:nth-child(2){
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 28px; /* 155.556% */
+        letter-spacing: 0.18px;
+    }
+    .descriptionContent{
+        gap: 0;
+    }
+    .descriptionContent > div, .descriptionContent > div > div{
+        flex-direction: column;
+    }
+    .descriptionItem{
+        padding: 40px 0;
+        align-items: flex-start;
+        border-right: none;
+        border-bottom: 1px solid var(--Alpha-AD12, rgba(29, 29, 27, 0.12));
+    }
+    .descriptionItem > p:nth-child(1){
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 28px; /* 116.667% */
+    }
+    .descriptionItem > p:nth-child(2){
+        text-align: left;
+    }
+    .projectLocation{
+        display: flex;
+    }
+    .projectLocationContent{
+        padding-top: 48px;
+    }
+    .projectLocationContentTitle{
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 32px;
+        align-items: flex-start;
+    }
+    .projectLocationContentTitle > div{
+        width: 100%;
+    }
+    .projectLocationContentTitle > h2{
+        font-size: 34px;
+        font-weight: 350;
+        line-height: 40px; /* 117.647% */
+        letter-spacing: 0.68px;
+    }
+    a.linkLocation{
+        display: none;
+    }
+    .projectLocation{
+        margin-bottom: 96px;
     }
 }

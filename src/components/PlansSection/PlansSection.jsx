@@ -284,6 +284,7 @@ export const PlansSection = () =>{
                             }}
                         >
                             {plansData.map((plan,index)=>{
+                                
                                 return(
                                     <SwiperSlide key={index}>
                                         <div className={cls.planItemCard}>
@@ -318,7 +319,7 @@ export const PlansSection = () =>{
 
                                                 </ul>
                                             </div>
-                                            <a href="/" className={cls.planLink}>
+                                            <a href={`/plans/${plan.id}`} className={cls.planLink}>
                                                 Подробнее
                                             </a>
                                         </div>

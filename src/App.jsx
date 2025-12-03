@@ -9,6 +9,7 @@ import { Cursor } from './components/Cursor'
 import { Footer } from './components/Footer'
 import { ProjectsPage } from './pages/ProjectsPage'
 import { PlansPage } from './pages/PlansPage/PlansPage'
+import { PlanItemPage } from './pages/PlanItemPage'
 
 function App() {
   const [projectsOpen, setProjectsOpen] = useState(false);
@@ -48,6 +49,7 @@ function App() {
         <Route path="/contacts" element={<ContactsPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/plans" element = {<PlansPage />} />
+        <Route path="/plans/:planID" element = {<PlanItemPage />} />
         <Route path="/projects/:projectID" element = {<ProjectsPage />} />
       </Routes>
 

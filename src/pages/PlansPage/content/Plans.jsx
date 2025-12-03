@@ -146,7 +146,13 @@ export const Plans = ({isPage}) =>{
         <div className={cls.plansWrapper}>
             <div className={cls.plansTitleBlock}>
                 {isPage? 
-                    <p></p>: null
+                    <p>
+                        <a href="/">Главная</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M4.5 9L7.5 6L4.5 3" stroke="#1D1D1B" strokeMiterlimit="10" strokeLinecap="square" strokeLinejoin="bevel"/>
+                        </svg>
+                        <a href="/plans">Планировки</a>
+                    </p>: null
                 }
                 <h2>Планировки</h2>
             </div>

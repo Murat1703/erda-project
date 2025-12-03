@@ -1,0 +1,10 @@
+.plansPageContent{
+    padding: 96px 0;
+}
+
+@media (max-width: 960px){
+    .plansPageContent{}
+    .plansPageWrapper{
+        display: block;
+    }
+}

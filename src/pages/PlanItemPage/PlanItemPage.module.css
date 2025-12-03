@@ -1,0 +1,11 @@
+.planItemPageContent{
+    padding: 114px 0;
+    gap: 114px;
+}
+
+
+@media (max-width: 960px){
+    .planItemPage{
+        display: block;
+    }
+}

@@ -8,13 +8,14 @@ import { Plans } from '../PlansPage/content';
 import { ConsultationSection } from '../../components/СoncultationSection';
 import { AdvantagesSection } from './content';
 import {SupportSection} from '../../components/SupportSection'
+import { useMediaQuery } from "react-responsive";
 
 export const ProjectsPage = () =>{
 
-    const id = useParams();
-    // console.log('id  = ',id)
-    const project = projects.find(item => item.id === id.projectID);
+const id = useParams();
+const project = projects.find(item => item.id === id.projectID);
 
+const isMobile = useMediaQuery({ query: "(max-width: 960px)" });
 
 const containerStyle = {
     width: '100%',
@@ -394,6 +395,13 @@ if (!isLoaded) return <div>Загрузка карты...</div>;
                     <div className={cls.projectImgWrapper}>
                         <img src={project.img} alt='project-img'/> 
                     </div>
+                    {isMobile?
+                    <div className={cls.mobileBottomDescription}>
+                        <p>
+                            {project.address}
+                        </p>
+                        <p>{`Срок сдачи `}<br/>{project.isReady}</p>
+                    </div>: null}
                     <div className={cls.projectDescription}>
                         <div className={cls.aboutProjectDescription}>
                             <p>О проекте</p>

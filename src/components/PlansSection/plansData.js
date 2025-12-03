@@ -22,7 +22,7 @@ export  const plansData = [
             "plan": "/assets/img/plans/220-4.svg"
         } ,
         {
-            "id": 103696,
+            "id": 103698,
             "project": "БЦ Luminor",
             "floor": "4 из 12",
             "height": 4.5,
@@ -33,7 +33,7 @@ export  const plansData = [
             "plan": "/assets/img/plans/160-3.svg"
         },
         {
-            "id": 103697,
+            "id": 103699,
             "project": "Icon",
             "floor": "2 из 8",
             "height": 4.5,
@@ -44,7 +44,7 @@ export  const plansData = [
             "plan": "/assets/img/plans/220-4.svg"
         },
         {
-            "id": 103696,
+            "id": 103700,
             "project": "БЦ Luminor",
             "floor": "4 из 12",
             "height": 4.5,
@@ -55,7 +55,7 @@ export  const plansData = [
             "plan": "/assets/img/plans/160-3.svg"
         },
         {
-            "id": 103697,
+            "id": 103701,
             "project": "Icon",
             "floor": "2 из 8",
             "height": 4.5,
@@ -66,7 +66,7 @@ export  const plansData = [
             "plan": "/assets/img/plans/220-4.svg"
         },
         {
-            "id": 103696,
+            "id": 103702,
             "project": "БЦ Luminor",
             "floor": "4 из 12",
             "height": 4.5,
@@ -77,7 +77,7 @@ export  const plansData = [
             "plan": "/assets/img/plans/160-3.svg"
         },
         {
-            "id": 103697,
+            "id": 103703,
             "project": "Icon",
             "floor": "2 из 8",
             "height": 4.5,
@@ -88,7 +88,7 @@ export  const plansData = [
             "plan": "/assets/img/plans/220-4.svg"
         },
         {
-            "id": 103696,
+            "id": 103704,
             "project": "БЦ Luminor",
             "floor": "4 из 12",
             "height": 4.5,
@@ -99,7 +99,7 @@ export  const plansData = [
             "plan": "/assets/img/plans/160-3.svg"
         },
         {
-            "id": 103697,
+            "id": 103705,
             "project": "Icon",
             "floor": "2 из 8",
             "height": 4.5,
