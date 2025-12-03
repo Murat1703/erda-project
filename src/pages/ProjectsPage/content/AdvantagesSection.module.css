@@ -1,0 +1,83 @@
+.advantagesContent{
+    padding: 96px 0 ;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: flex-start;
+}
+.advantagesContent > h2{
+    padding: 0 96px;
+    /* color: var(--Dark-D100, #1D1D1B); */
+    font-feature-settings: 'ss10' on;
+    font-family: "TA Modern Times", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 72px; /* 112.5% */
+    letter-spacing: 2.56px;
+    text-transform: uppercase;
+}
+.advantagesSlider{
+    padding-left: 96px;
+    width: 100%;
+    position: relative;
+    /* height: 525px; */
+}
+.advantagesSliderItem{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+.advantagesSliderImgWrapper{
+    width: 100%;
+    height: 300px;
+}
+.advantagesSliderImgWrapper > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.advantagesSliderInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.advantagesSliderInfo > p:nth-child(1){
+    color: var(--Dark-D100, #1D1D1B);
+    font-family: "PT Serif", sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 30px; /* 125% */
+    align-self: stretch;
+}
+.advantagesSliderControl{
+    padding: 0; 
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    height: 52px;
+    left: 72px;
+    /* right:  72px; */
+    top: 50%;
+    margin-top: -26px;
+    z-index: 10;
+    width: calc(100% - 72px);
+    padding-right: 96px;
+}
+.advantagesSliderControl > button{
+    display: flex;
+    width: 52px;
+    height: 52px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    border-radius: 320px;
+    background: #B5B4AC;
+}
+.advantagesSliderControl > button:hover{
+    background: #1D1D1B;
+}

@@ -2,8 +2,8 @@ import cls from './PlansPage.module.css'
 
 export const PlansPage = () =>{
     return(
-        <section>
-            <div></div>        
+        <section className={cls.plansPageWrapper}>
+            <div className={cls.plansPageContent}></div>        
         </section>
     )
 }

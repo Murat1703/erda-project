@@ -33,7 +33,7 @@
     gap: 16px;
     background: var(--text-color);
     border-radius: 320px;
-    max-width: 200px;
+    /* max-width: 0px; */
     margin: 0 auto;;
 }
 .showMorePlansBtn > p{
@@ -145,6 +145,7 @@
     gap: 32px;
 }
 .planItemCard{
+    cursor: pointer;
     display: flex;
     padding: 48px 24px 40px 24px;
     flex-direction: column;
@@ -157,6 +158,10 @@
 .planItemCard:hover{
     background: var(--Alpha-A48, rgba(255, 255, 255, 0.48));
 }
+.planItemCard:hover a.detailsBtn{
+    opacity: 1;
+    z-index: 1;
+}
 .planItemImg{
     width: 100%;
     height: 260px;
@@ -167,10 +172,28 @@
     align-items: center;
     gap: 8px;
     align-self: stretch;
+    position: relative;
 }
 .planItemImg > img{
     width: 100%;
     height: 100%;
+}
+a.detailsBtn{
+    opacity: 0;
+    top: 50%;
+    margin-top: -22px;
+    left: 50%;
+    margin-left: -62px;
+    z-index: -100;
+    position: absolute;
+    display: flex;
+    padding: 11px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 320px;
+    background: var(--Dark-D100, #1D1D1B);
+    color: var(--text-color-light);
 }
 .planItemDescription{
     display: flex;

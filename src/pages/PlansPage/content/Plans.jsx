@@ -247,6 +247,7 @@ export const Plans = ({isPage}) =>{
                             <div className={cls.planItemCard} key={index}>
                                 <div className={cls.planItemImg}>
                                     <img src={item.plan} alt='planImg'/>
+                                    <a className={cls.detailsBtn}>Подробнее</a>
                                 </div>
                                 <div className={cls.planItemDescription}>
                                     <p>{item.square} м²</p>
@@ -277,7 +278,11 @@ export const Plans = ({isPage}) =>{
                         )
                     })}
                 </div>
-                <button className={cls.showMorePlansBtn}><p>Показать еще</p> </button>
+                <button className={cls.showMorePlansBtn}><p>Показать еще планировки</p> 
+                {/* <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                    <path d="M0.5 8L17.1667 8M17.1667 8L13.1667 4M17.1667 8L13.1667 12" stroke="#EBE9E1" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg> */}
+            </button>
             </div>
         </div>
     )

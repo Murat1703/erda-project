@@ -3,15 +3,20 @@ import { Title } from '../Title'
 import { SupportCard } from './SupportCard'
 import cls from './SupportSection.module.css'
 
-export const SupportSection = () =>{
+export const SupportSection = ({isProjectPage}) =>{
     return(
         <section className={cls.supportSection}>
             <div className={cls.supportSectionInner}>
                 <div className={cls.supportSectionTop}>
                     <div>
+                        {isProjectPage?
+                        <EyeBrow>
+                            §4. Службы поддержки
+                        </EyeBrow>:
                         <EyeBrow>
                             §5. Службы поддержки
                         </EyeBrow>
+                        }
                         <Title>
                             задайте вопрос
                         </Title>
