@@ -37,5 +37,5 @@ export const projects = [
         squareRange: "80 — 1,600 м² ",
         height: "3.2 - 4.5 м",
         index: 3
-    }
+    },
 ]

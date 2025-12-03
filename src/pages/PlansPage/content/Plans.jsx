@@ -1,5 +1,7 @@
 import cls from './Plans.module.css'
 import { useState, useEffect } from 'react'
+import { projects } from '../../ProjectsPage/projects';
+import { plansData } from '../../../components/PlansSection/plansData';
 
 
 export const Plans = ({isPage}) =>{
@@ -8,6 +10,9 @@ export const Plans = ({isPage}) =>{
     const [dealType, setDealType] = useState("all");
     const [minSquare, setMinSquare] = useState(96.7);
     const [maxSquare, setMaxSquare] = useState(1680.3);
+    const [minFloor, setMinFloor] = useState(1);
+    const [maxFloor, setMaxFloor] = useState(12);
+
     const [isOpenBC, setIsOpenBC] = useState(false);
     const [businessCenter, setBusinessCenter] = useState("Все бизнес центры");
     const [totalCount, setTotalCount] = useState(8);
@@ -67,75 +72,75 @@ export const Plans = ({isPage}) =>{
         }
     ]
 
-    const plansData = [
-        {
-            "id": 103696,
-            "project": "БЦ Luminor",
-            "floor": "4 из 12",
-            "height": 4.5,
-            "dealType": "Продажа и аренда",
-            "propertyType": "Офис",
-            "block": 3,
-            "square": 160.3,
-            "plan": "/assets/img/plans/160-3.svg"
-        }  ,
-        {
-            "id": 103697,
-            "project": "Icon",
-            "floor": "2 из 8",
-            "height": 4.5,
-            "dealType": "Продажа и аренда",
-            "propertyType": "Коммерция",
-            "block": 3,
-            "square": 220.4,
-            "plan": "/assets/img/plans/220-4.svg"
-        } ,
-            {
-            "id": 103696,
-            "project": "БЦ Luminor",
-            "floor": "4 из 12",
-            "height": 4.5,
-            "dealType": "Продажа и аренда",
-            "propertyType": "Офис",
-            "block": 3,
-            "square": 160.3,
-            "plan": "/assets/img/plans/160-3.svg"
-        }  ,
-        {
-            "id": 103697,
-            "project": "Icon",
-            "floor": "2 из 8",
-            "height": 4.5,
-            "dealType": "Продажа и аренда",
-            "propertyType": "Коммерция",
-            "block": 3,
-            "square": 220.4,
-            "plan": "/assets/img/plans/220-4.svg"
-        }   ,
-        {
-            "id": 103696,
-            "project": "БЦ Luminor",
-            "floor": "4 из 12",
-            "height": 4.5,
-            "dealType": "Продажа и аренда",
-            "propertyType": "Офис",
-            "block": 3,
-            "square": 160.3,
-            "plan": "/assets/img/plans/160-3.svg"
-        }  ,
-        {
-            "id": 103697,
-            "project": "Icon",
-            "floor": "2 из 8",
-            "height": 4.5,
-            "dealType": "Продажа и аренда",
-            "propertyType": "Коммерция",
-            "block": 3,
-            "square": 220.4,
-            "plan": "/assets/img/plans/220-4.svg"
-        }     
+    // const plansData = [
+    //     {
+    //         "id": 103696,
+    //         "project": "БЦ Luminor",
+    //         "floor": "4 из 12",
+    //         "height": 4.5,
+    //         "dealType": "Продажа и аренда",
+    //         "propertyType": "Офис",
+    //         "block": 3,
+    //         "square": 160.3,
+    //         "plan": "/assets/img/plans/160-3.svg"
+    //     }  ,
+    //     {
+    //         "id": 103697,
+    //         "project": "Icon",
+    //         "floor": "2 из 8",
+    //         "height": 4.5,
+    //         "dealType": "Продажа и аренда",
+    //         "propertyType": "Коммерция",
+    //         "block": 3,
+    //         "square": 220.4,
+    //         "plan": "/assets/img/plans/220-4.svg"
+    //     } ,
+    //         {
+    //         "id": 103696,
+    //         "project": "БЦ Luminor",
+    //         "floor": "4 из 12",
+    //         "height": 4.5,
+    //         "dealType": "Продажа и аренда",
+    //         "propertyType": "Офис",
+    //         "block": 3,
+    //         "square": 160.3,
+    //         "plan": "/assets/img/plans/160-3.svg"
+    //     }  ,
+    //     {
+    //         "id": 103697,
+    //         "project": "Icon",
+    //         "floor": "2 из 8",
+    //         "height": 4.5,
+    //         "dealType": "Продажа и аренда",
+    //         "propertyType": "Коммерция",
+    //         "block": 3,
+    //         "square": 220.4,
+    //         "plan": "/assets/img/plans/220-4.svg"
+    //     }   ,
+    //     {
+    //         "id": 103696,
+    //         "project": "БЦ Luminor",
+    //         "floor": "4 из 12",
+    //         "height": 4.5,
+    //         "dealType": "Продажа и аренда",
+    //         "propertyType": "Офис",
+    //         "block": 3,
+    //         "square": 160.3,
+    //         "plan": "/assets/img/plans/160-3.svg"
+    //     }  ,
+    //     {
+    //         "id": 103697,
+    //         "project": "Icon",
+    //         "floor": "2 из 8",
+    //         "height": 4.5,
+    //         "dealType": "Продажа и аренда",
+    //         "propertyType": "Коммерция",
+    //         "block": 3,
+    //         "square": 220.4,
+    //         "plan": "/assets/img/plans/220-4.svg"
+    //     }     
 
-    ]
+    // ]
 
     return(
         <div className={cls.plansWrapper}>
@@ -177,8 +182,101 @@ export const Plans = ({isPage}) =>{
                             })}
                         </div>
                     </div>
+                    <div className={cls.filterItem}>
+                        <p>Этаж</p>
+                        <div className={cls.filterTabs}>
+                            <div className={cls.filterSliderWrapper}>
+                                <p>{minFloor}</p>
+                                <div></div>
+                                <p>{maxFloor}</p>
+                                <div className={cls.line}></div>
+                                <input 
+                                    type="range"  
+                                    name='floor'
+                                    value={minFloor}
+                                    max={12}
+                                    min={1}
+                                    step={1}
+                                    onChange={(e)=>setMinFloor(e.target.value)}
+                                />
+                                <input 
+                                    type="range"  
+                                    name='floor'
+                                    value={maxFloor}
+                                    max={12}
+                                    min={1}
+                                    step={1}
+                                    onChange={(e)=>setMaxFloor(e.target.value)}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className={cls.filterItem}>
+                        <p>Квадратура</p>
+                        <div className={cls.filterTabs}>
+                            <div className={cls.filterSliderWrapper}>
+                                <p>{minSquare}</p>
+                                <div></div>
+                                <p>{maxSquare}</p>
+                                <div className={cls.line}></div>
+                                <input 
+                                    type="range"  
+                                    name='square'
+                                    value={minSquare}
+                                    max={1680.3}
+                                    min={96.7}
+                                    step={0.1}
+                                    onChange={(e)=>setMinSquare(e.target.value)}
+                                />
+                                <input 
+                                    type="range"  
+                                    name='square'
+                                    value={maxSquare}
+                                    max={1680.3}
+                                    min={96.7}
+                                    step={0.1}
+                                    onChange={(e)=>setMaxSquare(e.target.value)}
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className={cls.plansList}></div>
+                <div className={cls.plansList}>
+                    {plansData.map((item, index)=>{
+                        return(
+                            <div className={cls.planItemCard} key={index}>
+                                <div className={cls.planItemImg}>
+                                    <img src={item.plan} alt='planImg'/>
+                                </div>
+                                <div className={cls.planItemDescription}>
+                                    <p>{item.square} м²</p>
+                                    <ul className={cls.planItemDescInfo}>
+                                        <li>
+                                            <p>Тип</p>
+                                            <p>{item.propertyType}</p>
+                                        </li>
+                                        <li>
+                                            <p>БЦ</p>
+                                            <p>{item.project}</p>
+                                        </li>
+                                        <li>
+                                            <p>Блок</p>
+                                            <p>{item.block}</p>
+                                        </li>
+                                        <li>
+                                            <p>Этаж</p>
+                                            <p>{item.floor}</p>
+                                        </li>
+                                        <li>
+                                            <p>Реализация</p>
+                                            <p>{item.dealType}</p>
+                                        </li>
+                                    </ul>
+                                </div> 
+                            </div>
+                        )
+                    })}
+                </div>
                 <button className={cls.showMorePlansBtn}><p>Показать еще</p> </button>
             </div>
         </div>

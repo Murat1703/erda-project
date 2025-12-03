@@ -78,3 +78,134 @@
     padding: 10px 24px;
     background: #1D1D1B;
 }
+.filterSliderWrapper{
+    display: flex;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    /* border-radius: 32px;
+    border: 1px solid var(--Alpha-AD16, rgba(29, 29, 27, 0.16)); */
+    backdrop-filter: blur(16px);
+    width: 100%;
+    position: relative;
+}
+.filterSliderWrapper > p{
+     flex: 1 0 0;
+}
+.filterSliderWrapper > div{
+    width: 1px;
+    height: 100%;
+    background: var(--Alpha-AD16, rgba(29, 29, 27, 0.16));
+
+}
+.filterSliderWrapper > p:nth-child(3){
+    text-align: right;
+}
+.filterSliderWrapper > .line{
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    width: calc(100% - 48px);
+    bottom: 0px;
+    height: 1px;
+    background: #1D1D1B;
+
+}
+.filterSliderWrapper > input{
+    /* width: 100%; */
+    /* bottom: 0; */
+    /* position: absolute; */
+    position: absolute;
+    bottom: -4px;    
+    border: none;
+    /* border-bottom: 1px solid #1D1D1B; */
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: calc(100% - 24px)
+}
+.filterSliderWrapper > input::-webkit-slider-thumb {
+    position: relative;
+    z-index: 1;
+    width: 24px;
+    height: 9px;
+    z-index: 2;
+    border-radius: 50%;
+    border-radius: 12px;
+    background: var(--Dark-D100, #1D1D1B);
+    -webkit-appearance: none;
+}
+.plansList{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 32px;
+}
+.planItemCard{
+    display: flex;
+    padding: 48px 24px 40px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    flex: 1 0 0;
+    align-self: stretch;
+    background: var(--Alpha-AW24, rgba(255, 255, 255, 0.24));
+}
+.planItemCard:hover{
+    background: var(--Alpha-A48, rgba(255, 255, 255, 0.48));
+}
+.planItemImg{
+    width: 100%;
+    height: 260px;
+    display: flex;
+    height: 260px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+}
+.planItemImg > img{
+    width: 100%;
+    height: 100%;
+}
+.planItemDescription{
+    display: flex;
+    min-width: 220px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+.planItemDescription > p:nth-child(1){
+    font-family: "PT Serif", sans-serif;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 32px; /* 106.667% */
+}
+.planItemDescInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+.planItemDescInfo > li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+}
+.planItemDescInfo > li > p:nth-child(1){
+    width: 90px;
+    opacity: .4;
+}
+.planItemDescInfo > li > p:nth-child(2){
+    flex: 1 0 0;
+    text-align: right;
+}
