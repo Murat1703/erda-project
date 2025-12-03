@@ -1,6 +1,5 @@
 import cls from './Plans.module.css'
 import { useState, useEffect } from 'react'
-import { projects } from '../../ProjectsPage/projects';
 import { plansData } from '../../../components/PlansSection/plansData';
 
 

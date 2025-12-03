@@ -158,4 +158,61 @@
     .planItemPage{
         display: block;
     }
+    .planItemPageContent{
+        padding: 96px 0;
+        gap: 96px;
+    }
+    .planItemPageControlMobile{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .planItemPageControl{
+        display: none;
+    }
+    .planItemInformation{
+        width: 100%;
+    }
+    .planItemPageContentTop{
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    .breadCrumbs > a{
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 160% */
+        letter-spacing: 1.2px;
+    }
+    .planItemTitle > h2{
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 40px; /* 117.647% */
+        letter-spacing: 0.68px;
+    }
+    .planItemInformation{
+        gap: 16px;
+    }
+    .planItemPageControlMobile > svg:nth-child(1){
+        width: 64px;
+        height: 64px;
+    }
+    .planItemImgWrapperMobile{
+        width: 100%;
+        height: 330px;
+    }
+    .planItemImg{
+        width: 100%;
+        height: 100%;
+    }
+    .planItemImgWrapper{
+        display: none;
+    }
+    .characteristicItem > p:nth-child(1),
+    .characteristicItem > p:nth-child(3){
+        font-size: 13px;
+        line-height: 20px; /* 153.846% */
+    }
 }
