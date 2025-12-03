@@ -219,7 +219,23 @@
     height: 736px;
     width: 100%;
 }
-
+a.linkLocation{
+    display: inline-flex;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 32px;
+    background: var(--Dark-D100, #1D1D1B);
+    backdrop-filter: blur(16px);
+    position: absolute;
+    z-index: 30;
+    bottom: 32px;
+    left: 48px;
+}
+.linkLocation > p{
+    color: var(--text-color-light);
+}
 @media (max-width: 960px){
     .projectsPageWrapper{
         display: block;

@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { projects } from './projects';
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 import { useRef, useState } from 'react';
+import { CustomMarker } from './CustomMarker';
 
 
 export const ProjectsPage = () =>{
@@ -16,16 +17,32 @@ const containerStyle = {
     width: '100%',
     height: '100%'
   };
-  
-  const center = {
-    lat: 43.241057, 
-    lng: 76.927427,
-  };
+let center={};
+project.id==="luminor"?   center = {
+    lat: 43.229590, 
+    lng: 76.931260,
+  }: 
+project.id==="icon"? center = {
+    lat: 43.248252, 
+    lng: 76.956433,
+  }: 
+  center = {
+    lat: 43.239576,  
+    lng: 76.9585483,
+  }
 
-  const markerPosition = {
-    lat: 43.188536,  
-    lng: 76.916803,
-  };
+let markerPosition = {};
+
+ project.id == "luminor" ?  markerPosition = {
+    lat: 43.230993,  
+    lng: 76.934475,
+  }: project.id == "icon" ? markerPosition = {
+    lat: 43.2525696, 
+    lng: 76.9614163,
+  }: project.id == "norex" ? markerPosition = {
+    lat: 43.239576,  
+    lng: 76.9585483,
+  }: null;
 
 
 
@@ -300,7 +317,7 @@ const customMapStyles = [
 ]
 
 
-  const zoomBtnStyle = {
+const zoomBtnStyle = {
     width: '52px',
     height: '52px',
     fontSize: '20px',
@@ -309,38 +326,37 @@ const customMapStyles = [
     background: '#4C4D52',
     color: 'white',
     cursor: 'pointer',
-  };
+};
   
 const { isLoaded } = useLoadScript({
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY
 });
 
-    const mapRef = useRef(null);
-    const [zoom, setZoom] = useState(15);
+const mapRef = useRef(null);
+const [zoom, setZoom] = useState(15);
   
   
-    const handleZoomIn = () => {
+const handleZoomIn = () => {
         if (mapRef.current) {
           const newZoom = zoom + 1;
           mapRef.current.setZoom(newZoom);
           setZoom(newZoom);
         }
-      };
+};
     
-    const handleZoomOut = () => {
-        if (mapRef.current) {
-          const newZoom = zoom - 1;
-          mapRef.current.setZoom(newZoom);
-          setZoom(newZoom);
-        }
-    };
+const handleZoomOut = () => {
+    if (mapRef.current) {
+        const newZoom = zoom - 1;
+        mapRef.current.setZoom(newZoom);
+        setZoom(newZoom);
+    }
+};
     
-      const onLoad = (map) => {
-        mapRef.current = map;
-      };
+const onLoad = (map) => {
+    mapRef.current = map;
+};
     
-    if (!isLoaded) return <div>Загрузка карты...</div>;
-
+if (!isLoaded) return <div>Загрузка карты...</div>;
 
     return(
         <>
@@ -449,8 +465,12 @@ const { isLoaded } = useLoadScript({
             </svg>
         </button>
       </div>
+      <a className={cls.linkLocation} href={project.id=="icon"?"https://2gis.kz/almaty/directions/points/%7C77.065355%2C43.329819%3B9430047375054553?m=76.954132%2C43.218941%2F10.77" : project.id=="luminor"? "https://2gis.kz/almaty/directions/points/%7C76.934341%2C43.231397%3B9430150454183347?m=76.934317%2C43.231199%2F15.8" : project.id=="norex"? "https://2gis.kz/almaty/directions/points/%7C76.961096%2C43.239735%3B9430150454184055?m=76.96213%2C43.241139%2F17.31" : null} target='__blank'>
+        <p >Построить маршрут в 2GIS</p>
+      </a>
+      <CustomMarker position={markerPosition} id={project.id}/>
 
-        <Marker 
+        {/* <Marker 
             position={markerPosition} 
             icon = {{
                 url: '/images/address_icon.webp',
@@ -465,7 +485,7 @@ const { isLoaded } = useLoadScript({
                     132)
     
             }}
-        />
+        /> */}
       </GoogleMap>
                     </div>
                 </div>
