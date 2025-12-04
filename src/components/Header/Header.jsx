@@ -32,10 +32,15 @@ export const Header = ({onClick, projectsOpen, onCloseProjects, onOpenMainMenu, 
                             className={cls.menuBtn}
                             onClick={(e)=>{e.stopPropagation();onOpenMainMenu()}}
                         >
+                            <div className={`${cls.menuBtnIcons} ${isOpenMainMenu? cls.opened: ""}`}>
+                                <span></span>
+                                <span></span>
+                            </div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="7" viewBox="0 0 40 7" fill="none">
                                 <path d="M0 6H40V7H0V6Z" fill="#1D1D1B"/>
                                 <path d="M0 0H40V1H0V0Z" fill="#1D1D1B"/>
                             </svg>
+                            <div></div>
                             <p>Меню</p>
                         </button>
                         <button className={cls.projectsBtn}
