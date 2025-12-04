@@ -206,11 +206,11 @@
     } */
      .bottomBtns{
         position: fixed;
-        bottom: 20px;
-        right: 20px;
+        bottom: 20px!important;
+        right: 20px!important;
         z-index: 10;
      }
-     .bottomBtns > button:nth-child(1){
-        display: none;
+     .bottomBtns > a:nth-child(1){
+        display: none!important;
      }
 }

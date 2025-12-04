@@ -9,7 +9,7 @@ import img5 from './images/adv5.png'
 import img6 from './images/adv6.png'
 import img7 from './images/adv7.png'
 import img8 from './images/adv8.png'
-import stickyImg from './images/26885b6ff204122e9a5468cea3272a49cbfb51b9.webp'
+import stickyImg from './images/photo_3_2025-12-04_09-58-13.webp'
 
 export const AdvantagesSection = () =>{
     return(
@@ -32,13 +32,13 @@ export const AdvantagesSection = () =>{
                         <div className={cls.imagesRow}>
                             <div className={cls.left}>
                                 <div className={cls.imgWrapper}>
-                                    <img src={img1} alt='img'/>
+                                    <img src={img1} alt='img' loading='lazy'/>
                                 </div>
                                 <p>Сейсмостойкость до 9 баллов по шкале MSK-64.</p>
                             </div>
                             <div className={cls.left}>
                                 <div className={cls.imgWrapper}>
-                                    <img src={img2} alt='img'/>
+                                    <img src={img2} alt='img' loading='lazy'/>
                                 </div>
                                 <p>Современные инженерные системы: вентиляция, охлаждение, отопление.</p>
                             </div>
@@ -50,7 +50,7 @@ export const AdvantagesSection = () =>{
                         <div className={cls.imagesRow}>
                             <div className={cls.left}>
                                 <div className={cls.imgWrapper}>
-                                    <img src={img3} alt='img'/>
+                                    <img src={img3} alt='img' loading='lazy'/>
                                 </div>
                                 <p>Круглосуточная охрана, видеонаблюдение и контроль доступа.</p>
                             </div>
@@ -68,13 +68,13 @@ export const AdvantagesSection = () =>{
                         <div className={cls.imagesRow}>
                             <div className={cls.left}>
                                 <div className={cls.imgWrapper}>
-                                    <img src={img5} alt='img'/>
+                                    <img src={img5} alt='img' loading='lazy'/>
                                 </div>
                                 <p>Внутренние зоны для ритейла, кафе, банков, сервисов.</p>
                             </div>
                             <div className={cls.left}>
                                 <div className={cls.imgWrapper}>
-                                    <img src={img6} alt='img'/>
+                                    <img src={img6} alt='img' loading='lazy'/>
                                 </div>
                                 <p>Управление зданиями через собственную КСК.</p>
                             </div>
@@ -86,7 +86,7 @@ export const AdvantagesSection = () =>{
                         <div className={cls.imagesRow}>
                             <div className={cls.left}>
                                 <div className={cls.imgWrapper}>
-                                    <img src={img7} alt='img'/>
+                                    <img src={img7} alt='img' loading='lazy'/>
                                 </div>
                                 <p>Современная высокоскоростная IT-инфраструктура во всех БЦ.</p>
                             </div>
@@ -103,7 +103,7 @@ export const AdvantagesSection = () =>{
                             <p>A</p>
                             <p>Класс объектов</p>
                         </div>
-                        <img src={stickyImg} alt="image"/>
+                        <img src={stickyImg} alt="image" loading="lazy"/>
                     </div>
                 </div>
             </div>

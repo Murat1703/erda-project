@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { useMask } from '@react-input/mask'
 import { useUTM } from '../../hooks/useUTM'
 
-export const Modal = ({isModal, closeModal}) =>{
+export const Modal = ({isModal, closeModal, isSupport}) =>{
 
     const utm = useUTM();
 
@@ -26,12 +26,12 @@ export const Modal = ({isModal, closeModal}) =>{
         e.preventDefault();
         
         const modalData = { // Собираем данные из формы
-            name: document.querySelector('.inputName').value,
-            phoneNumber: document.querySelector('.inputPhone').value
+            name: isSupport=="isSupport"? document.querySelector('.isSupportName').value : document.querySelector('.inputName').value,
+            phoneNumber: isSupport=="isSupport"? document.querySelector('.isSupportPhone').value : document.querySelector('.inputPhone').value
         };
         const inputData = { // Собираем данные из формы
-            name:  document.querySelector('.inputName'),
-            phoneNumber: document.querySelector('.inputPhone') ,
+            name: isSupport=="isSupport"? document.querySelector('.isSupportName'): document.querySelector('.inputName'),
+            phoneNumber: isSupport=="isSupport"? document.querySelector('.isSupportPhone'):document.querySelector('.inputPhone') ,
         };
 
 
@@ -115,14 +115,16 @@ export const Modal = ({isModal, closeModal}) =>{
                                 type="text" 
                                 name='name' 
                                 placeholder='Как к вам обратиться?' 
-                                className={"inputName"}
+                                className={isSupport=="isSupport"?"isSupportName" :"inputName"}
+                                id={isSupport=="isSupport"? "isSupportName": ""}
                             />
                             <input 
                                 type="text" 
                                 name='phone' 
-                                className={"inputPhone"} 
+                                className={isSupport=="isSupport"?"isSupportPhone":"inputPhone"} 
                                 placeholder='Номер телефона' 
                                 ref={phoneMask}
+                                id={isSupport=="isSupport"? "isSupportPhone": ""}
                             />
                         </div>
                         <div className={cls.bottom}>

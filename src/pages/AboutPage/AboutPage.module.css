@@ -1,10 +1,17 @@
-.aboutPageWrapper{
+.aboutPageWrapper, .aboutPageRegions{
     background: var(--text-color);
-
+}
+.aboutPageWrapper{
+    width: 100%;
+    height: 100dvh;
+}
+.aboutPageWrapper > div{
+    width: 100%;
+    height: 100%;
 }
 .developerAbout{
     width: 100%;
-    height: 100dvh;
+    height: 100%;
     background: var(--text-color);
 }
 .developerAbout > div:nth-child(1){
@@ -15,7 +22,7 @@
 }
 .imgWrapper{
     width: 100%;
-    height: 50%;
+    height: 70%;
     position: relative;
 }
 .imgWrapper > img{
@@ -55,7 +62,7 @@
 .bottom{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
     align-self: stretch;
 }
 .bottom > p{

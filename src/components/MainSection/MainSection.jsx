@@ -6,7 +6,8 @@ import img3 from './images/f3553da3a3f5284be1699962b8e628b2d175c08f.jpg'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Modal } from '../Modal'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Zoom } from 'swiper/modules'
 
 
 export const MainSection = () =>{
@@ -20,6 +21,18 @@ export const MainSection = () =>{
     }
 
     const [isModal, setIsModal] = useState(false);
+    const [fixed, setFixed] = useState(false);
+
+    useEffect(() => {
+        const onScroll = () => {
+        setFixed(window.scrollY > 0); 
+        };
+
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
+
 
     return(
         <>
@@ -72,7 +85,9 @@ export const MainSection = () =>{
                             <p><span className={cls.classTypeMobile}>A
                                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" fill="none">
                                     <path d="M5.5 0L6.79837 3.81966H11L7.60079 6.18035L8.89921 10L5.5 7.6393L2.10081 10L3.39919 6.18035L0 3.81966H4.20163L5.5 0Z" fill="#A39C82"/>
-                                </svg></span></p>
+                                </svg>
+                                </span>
+                            </p>
                             <p><span>класса</span></p>
                             <p>для</p>
                         </div>
@@ -140,7 +155,12 @@ export const MainSection = () =>{
                     <p>
                         Продажа и аренда офисных пространств в собственных БЦ в Алматы любого масштаба и уровня. Сервис 5* и современное High End оборудование.
                     </p>
-                    <div className={cls.bottomBtns}>
+                    <div className={`${cls.bottomBtns} ${fixed ? "fixed": ""}`} style={{
+                        position: fixed? "fixed": "",
+                        right: fixed? "48px": "",
+                        bottom: fixed? "20px": "",
+                        zIndex: fixed? "100": ""
+                    }}>
                         <a href='tel:+77273205136' className={cls.callBtn} target='__blank' type="callBtn">
                             <p>Позвонить</p>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">

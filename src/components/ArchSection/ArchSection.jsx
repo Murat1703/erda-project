@@ -82,7 +82,7 @@ export const ArchSection = () =>{
                         >
                             <SwiperSlide>
                                 <div className={cls.imgWrapper}>
-                                    <img src={img1} alt="slider-img"/>
+                                    <img src={img1} alt="slider-img" loading="lazy"/>
                                 </div>
                                 <div className={cls.sliderText}>
                                     <h3>Каркас — монолитный железобетон</h3>
@@ -93,11 +93,11 @@ export const ArchSection = () =>{
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={img2} alt="img" />
+                                <img src={img2} alt="img" loading="lazy"/>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className={cls.imgWrapper}>
-                                    <img src={img1} alt="slider-img"/>
+                                    <img src={img1} alt="slider-img" loading="lazy"/>
                                 </div>
                                 <div className={cls.sliderText}>
                                     <h3>Премиальные натуральные материалы</h3>
@@ -107,11 +107,11 @@ export const ArchSection = () =>{
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={img3} alt="slider-img"/>
+                                <img src={img3} alt="slider-img" loading="lazy"/>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className={cls.imgWrapper}>
-                                    <img src={img4} alt="slider-img"/>
+                                    <img src={img4} alt="slider-img" loading="lazy"/>
                                 </div>
                                 <div className={cls.sliderText}>
                                     <h3>Витражные системы</h3>
@@ -121,11 +121,11 @@ export const ArchSection = () =>{
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={img5} alt="slider-img"/>
+                                <img src={img5} alt="slider-img" loading="lazy"/>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className={cls.imgWrapper}>
-                                    <img src={img6} alt="slider-img"/>
+                                    <img src={img6} alt="slider-img" loading="lazy"/>
                                 </div>
                                 <div className={cls.sliderText}>
                                     <h3>Коммерческие площади на 1-2 этаже</h3>
@@ -135,11 +135,11 @@ export const ArchSection = () =>{
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={img7} alt="slider-img"/>
+                                <img src={img7} alt="slider-img" loading="lazy"/>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className={cls.imgWrapper}>
-                                    <img src={img8} alt="slider-img"/>
+                                    <img src={img8} alt="slider-img" loading="lazy"/>
                                 </div>
                                 <div className={cls.sliderText}>
                                     <h3>Комфорт во всем</h3>
@@ -149,11 +149,11 @@ export const ArchSection = () =>{
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={img9} alt="slider-img"/>
+                                <img src={img9} alt="slider-img" loading="lazy"/>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className={cls.imgWrapper}>
-                                    <img src={img10} alt="slider-img"/>
+                                    <img src={img10} alt="slider-img" loading="lazy"/>
                                 </div>
                                 <div className={cls.sliderText}>
                                     <h3>Территория вокруг — продолжение архитектуры</h3>

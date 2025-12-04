@@ -8,6 +8,7 @@ import lon from './images/lon.svg'
 import { Target, Directions, Team, Partners, Career, Questions  } from './content'
 
 export const AboutPage = () =>{
+
     return(
         <>
             <section className={cls.aboutPageWrapper}>
@@ -37,7 +38,7 @@ export const AboutPage = () =>{
                     </div>
                 </div>
             </section>
-            <section className={cls.aboutPageWrapper}>
+            <section className={cls.aboutPageRegions}>
                 <div className={cls.aboutMap}>
                     <div className={cls.mapWrapper}>
                         <img src={mapImg} alt='map'/>

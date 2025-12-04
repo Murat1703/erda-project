@@ -5,7 +5,7 @@
         CURLOPT_POST => 1,
         CURLOPT_HEADER => 0,
         CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_URL => "https://motion.zoyd.space/webhook/test_project/website",
+        CURLOPT_URL => "https://motion.zoyd.space/webhook/test/website",
         CURLOPT_POSTFIELDS => [
             "имя"=>trim($_POST["name"]),
             "телефон"=>trim($_POST["phone"]),
