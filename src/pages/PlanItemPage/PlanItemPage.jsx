@@ -112,7 +112,7 @@ const project = plansData.find(item => item.id == id.planID);
                                     <li className={cls.characteristicItem}>
                                         <p>Этаж</p>
                                         <span></span>
-                                        <p>{project.floor}</p>
+                                        <p>{project.current_floor} из {project.floor_max}</p>
                                     </li>
                                     <li className={cls.characteristicItem}>
                                         <p>Высота потолков</p>

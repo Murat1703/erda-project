@@ -56,7 +56,7 @@ export const ArchSection = () =>{
                     </div>
                     <div>
                         <p>Пропустить блок</p>
-                        <a>
+                        <a href='/#plans' className={cls.skipBlockLink}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
                                 <path d="M8 0.5V17.1667M8 17.1667L12 13.1667M8 17.1667L4 13.1667" stroke="#1D1D1B" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>

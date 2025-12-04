@@ -38,6 +38,9 @@
     border-radius: 320px;
     border: 1px solid var(--Alpha-AD16, rgba(29, 29, 27, 0.16));
 }
+.archTitleBlock > div:nth-child(2) > a:hover{
+    border: 1px solid rgba(29, 29, 27, 0.32);
+}
 .archSlider{
     width: 100%;
     height: 580px;

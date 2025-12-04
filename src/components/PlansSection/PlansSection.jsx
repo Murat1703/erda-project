@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import { EyeBrow } from '../EyeBrow'
 import { Title } from '../Title'
 import cls from './PlansSection.module.css'
@@ -18,12 +18,77 @@ export const PlansSection = () =>{
     const [minSquare, setMinSquare] = useState(96.7);
     const [maxSquare, setMaxSquare] = useState(1680.3);
     const [isOpenBC, setIsOpenBC] = useState(false);
-    const [businessCenter, setBusinessCenter] = useState("Все бизнес центры")
+    const [businessCenter, setBusinessCenter] = useState("все бизнес центры")
+
+    const [filtersSection, setFiltersSection] = useState({
+        businessCenter: businessCenter,
+        propertyType: propertyType,
+        dealType: dealType,
+        squareMin: minSquare,
+        squareMax: maxSquare,
+    });
+
+    const setFilter = (key, value) => setFiltersSection((prev) => ({ ...prev, [key]: value }));
+
+
+    const filtered = useMemo(() => {
+        return plansData.filter((item) => {
+            if (filtersSection.businessCenter !== "Все бизнес-центры" && item.businessCenter !== filtersSection.businessCenter.toLowerCase()) {
+            return false;
+            }
+        // // Количество комнат
+        //     if (filters.flatRoom !== null && flat.flatRoom !== filters.flatRoom) {
+        //     return false;
+        //     }
+
+        // // Этажи
+        //     if (filters.floorMin !== null && flat.flatFloor < filters.floorMin) {
+        //     return false;
+        //     }
+        //     if (filters.floorMax !== null && flat.flatFloor > filters.floorMax) {
+        //     return false;
+        //     }
+
+        // // Площадь
+        //     if (filters.squareMin !== null && flat.flatSquare < filters.squareMin) {
+        //     return false;
+        //     }
+        //     if (filters.squareMax !== null && flat.flatSquare > filters.squareMax) {
+        //     return false;
+        //     }
+
+        // // Терраса
+        //     if (filters.isTerrace !== null && flat.flatTerra !== filters.isTerrace) {
+        //     return false;
+        //     }
+
+
+
+
+            // if (filters.floorMin !== "" && flat.floor < filters.floorMin) return false;
+            // if (filters.floorMax !== "" && flat.floor > filters.floorMax) return false;
+
+        // Площадь (мин)
+        //   if (filters.squareMin !== "" && flat.square < filters.squareMin) return false;
+
+        // Площадь (макс)
+        //   if (filters.squareMax !== "" && flat.square > filters.squareMax) return false;
+        return true; 
+
+        }) ;
+    }, [filtersSection]);
+
+
 
     useEffect(() => {
+        console.log('filtersSection', filtersSection)
+        console.log(businessCenter);
     }, [propertyType, dealType, minSquare, maxSquare, businessCenter]);
 
-    
+    useEffect(() => {
+        console.log(filtered);
+    }, [filtersSection]);
+
 
     const propertyFilters  = [
         {
@@ -147,7 +212,7 @@ export const PlansSection = () =>{
 
 
     return(
-        <section className={cls.plansWrapper}>
+        <section className={cls.plansWrapper} id="plans">
             <div className={cls.plansInner}>
                 <div className={cls.plansTitleBlock}>
                     <EyeBrow>
@@ -178,7 +243,10 @@ export const PlansSection = () =>{
                                     return(
                                         <li 
                                             key={index}
-                                            onClick={()=>setBusinessCenter(item.value)}
+                                            onClick={()=>{
+                                                setBusinessCenter(item.value);
+                                                setFilter("businessCenter",item.value)                              
+                                            }}
                                         >
                                             {item.value}
                                             {businessCenter == item.value && 
@@ -310,7 +378,7 @@ export const PlansSection = () =>{
                                                     </li>
                                                     <li>
                                                         <span>Этаж</span>
-                                                        <span>{plan.floor}</span>
+                                                        <span>{plan.current_floor} из {plan.floor_max}</span>
                                                     </li>
                                                     <li>
                                                         <span>Реализация</span>
