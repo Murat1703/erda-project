@@ -13,6 +13,9 @@ header{
     background: #30302E!important;
     /* backdrop-filter: blur(16px); */
 }
+.darkHeader .menuBtnIcons span{
+    background: var(--text-color-light);
+}
 .darkHeader > nav > .left > button > p{
     color: var(--text-color-light);
 }

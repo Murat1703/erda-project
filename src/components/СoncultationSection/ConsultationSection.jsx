@@ -25,18 +25,15 @@ export const ConsultationSection = () =>{
 
     function handleSubmit(e){
         e.preventDefault();
-        
+
         const modalData = { // Собираем данные из формы
-            name: document.querySelector('.inputName').value,
-            phoneNumber: document.querySelector('.inputPhone').value
+            name: document.querySelector('.consultationName').value,
+            phoneNumber: document.querySelector('.consultationPhone').value
         };
         const inputData = { // Собираем данные из формы
-            name:  document.querySelector('.inputName'),
-            phoneNumber: document.querySelector('.inputPhone') ,
+            name:  document.querySelector('.consultationName'),
+            phoneNumber: document.querySelector('.consultationPhone')
         };
-
-
-
 
         if (inputData.name.value=='') inputData.name.style.borderBottom = `1px solid red`; else inputData.name.style.borderBottom = ``;
         if ((inputData.phoneNumber.value=='')) inputData.phoneNumber.style.borderBottom = `1px solid red`; else inputData.phoneNumber.style.borderBottom = ``;
@@ -94,10 +91,10 @@ export const ConsultationSection = () =>{
                         <p>Хотите стать резидентом бизнес-центра ультра-класса? Оставьте заявку — персональный менеджер свяжется с вами, расскажет об условиях и подберёт офис, достойный вашего статуса.</p>
                     </div>
                     {isSend? null : 
-                        <div className={cls.right}>
+                        <form className={cls.right} onSubmit={(e)=>handleSubmit(e)}>
                             <div className={cls.inputItems}>
-                                <input type="text" name='name' className={`inputName`} placeholder='Как к вам обратиться?'/>
-                                <input type="text" name='phone' ref={phoneMask} placeholder='Номер телефона' className={`inputPhone`}/>
+                                <input type="text" name='name' className="consultationName" placeholder='Как к вам обратиться?'/>
+                                <input type="text" name='phone' ref={phoneMask} placeholder='Номер телефона' className="consultationPhone"/>
                             </div>
                             <div className={cls.bottom}>
                                 <p>
@@ -105,7 +102,7 @@ export const ConsultationSection = () =>{
                                 </p>
                                 <button type='submit' onClick={(e)=>handleSubmit(e)}>Заказать обратный звонок</button>
                             </div>
-                        </div>
+                        </form>
                     }
                     {isSend? 
                     <div className={cls.resultBlock}>

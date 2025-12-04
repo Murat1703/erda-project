@@ -13,13 +13,13 @@ export const Questions = () => {
                 </div>
                 <div className={cls.bottom}>
                     <div>
-                        <a href="mailto:info@erdaholding.com" target='__blank'>mailto:info@erdaholding.com</a>
+                        <a href="mailto:info@erdaholding.com" target='__blank'>info@erdaholding.com</a>
                         <a className={cls.btn}>
                             <p>Написать нам</p>
                         </a>
                     </div>
                     <div>
-                        <a href="tel:+7 727 320 5136" target='__blank'>+7 727 320 5136</a>
+                        <a href="tel:+77005161616" target='__blank'>+7 700 516 16 16</a>
                         <a className={cls.btn}>
                             <p>Перезвонить мне</p>
                         </a>

@@ -88,11 +88,11 @@ export const Footer = ()=>{
                     </div>
                     <div className={cls.addressFooter}>
                         <div>
-                            <a href="">Скачать буклет</a>
+                            <a href="/">Скачать буклет</a>
                         </div>
                         <div>
-                            <a href="tel:+77273205136" target='__blank'>+7 727 320 51 36</a>
-                            <p>Алматы, ул. Кабанбай Батыра, стр. 17</p>
+                            <a href="tel:+77005161616" target='__blank'>+7 700 516 16 16</a>
+                            <p>Алматы, ул. ул. Радлова 48/49</p>
                             <p>Пн-Пт: 09:00 – 21:00, Сб-Вс: 10:00 – 20:00</p>
                         </div>
                         <div>

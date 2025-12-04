@@ -9,8 +9,8 @@ const [infoCity, setinfoCity] = useState(
             label: "Алматы",
             value: "Алматы",
             country: "Республика Казахстан",
-            address: "ул. Кабанбай Батыра, стр. 5",
-            phone: "+7 727 320 51 36",
+            address: "ул. Радлова 48/49",
+            phone: "+7 700 516 16 16",
             email: "info@erdaholding.com",
             instagram: "erdaholding"
         }
@@ -22,15 +22,14 @@ const containerStyle = {
   };
   
   const center = {
-    lat: 43.250019, 
-    lng: 76.9645197,
+    lat: 43.2405897,  
+    lng: 76.9674184,
   };
 
   const markerPosition = {
-    lat: 43.2511786,  
-    lng: 76.9663573,
+    lat: 43.2405897,  
+    lng: 76.9674184,
   };
-
 
 
 const customMapStyles = [
@@ -351,8 +350,8 @@ const { isLoaded } = useLoadScript({
             label: "Алматы",
             value: "Алматы",
             country: "Республика Казахстан",
-            address: "ул. Кабанбай Батыра, стр. 5",
-            phone: "+7 727 320 51 36",
+            address: "ул. Радлова 48/49",
+            phone: "+7 700 516 16 16",
             email: "info@erdaholding.com",
             instagram: "erdaholding"
         },

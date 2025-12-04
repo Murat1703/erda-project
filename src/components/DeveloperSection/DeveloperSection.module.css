@@ -60,6 +60,10 @@
     height: 70px;
     width: calc(100% );
 }
+.bottom > div,
+.bottom > div > div{
+transition-timing-function: linear !important;
+}
 .bottom > div > div> div{
     position: relative;
 }

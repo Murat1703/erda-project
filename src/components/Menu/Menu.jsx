@@ -20,6 +20,29 @@ export const Menu = ({type}) =>{
     ];
     const mainMenu = ["Главная", "Планировки", "О Холдинге", "Контакты", "Скачать буклет"]
 
+    const mainMenuLinks = [
+        {
+            label: "Главная",
+            link: "/"
+        },
+        {
+            label: "Планировки",
+            link: "/plans"
+        },
+        {
+            label: "О Холдинге",
+            link: "/about"
+        },
+        {
+            label: "Контакты",
+            link: "/contacts"
+        },
+        {
+            label: "Скачать буклет",
+            link: "/"
+        }
+    ]
+
     return(
         <ul 
             className={cls.menuWrapper} 
@@ -42,9 +65,11 @@ export const Menu = ({type}) =>{
                 })
             :
             type == "mainMenu"? 
-                mainMenu.map((menuItem, index)=>{
+                mainMenuLinks.map((menuItem, index)=>{
                     return(
-                        <li key={index}>{menuItem}</li>
+                        <li key={index}>
+                            <a href={menuItem.link}>{menuItem.label}</a>
+                        </li>
                     )
                 }):
 

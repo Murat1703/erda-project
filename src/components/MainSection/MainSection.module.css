@@ -77,7 +77,18 @@
 .mobileSlider{
     display: none;
 }
-
+.callBtn{
+    display: flex;
+    padding: 11px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 320px;
+    background: var(--Accent-A100, #A39F91);
+}
+.callBtn > p{
+    color: var(--text-color-light);
+}
 @media (max-width: 960px){
     .mainSection{
         padding: 0;

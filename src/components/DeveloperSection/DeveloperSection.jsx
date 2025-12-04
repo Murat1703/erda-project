@@ -7,6 +7,7 @@ import img3 from './images/3.svg'
 import img4 from './images/4.svg'
 import img5 from './images/5.svg'
 import img6 from './images/6.svg'
+import { Autoplay } from 'swiper/modules';
 
 export const DeveloperSection = () =>{
     return(
@@ -36,13 +37,24 @@ export const DeveloperSection = () =>{
                 </div>
                 <div className={cls.bottom}>
                     <Swiper
-                        slidesPerView={5.4}
+                        modules={[Autoplay]}
+                        speed={4000}
+                        // slidesPerView={'auto'}
                         loop={true}
+                        // autoplay={{
+                        //     delay: 0,                   // без пауз между анимациями
+                        //     disableOnInteraction: false // не останавливать после свайпа
+                        // }}
                         spaceBetween={108}
                         breakpoints={{
                             0: {
                                 slidesPerView: 2.4,
                                 spaceBetween: 56
+                            },
+                            960:{
+                                slidesPerView: 5.3,
+                                spaceBetween: 108
+
                             }
                         }}
                     >  
