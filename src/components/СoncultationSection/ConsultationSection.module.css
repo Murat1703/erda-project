@@ -80,6 +80,9 @@
     background: var(--Dark-D100, #1D1D1B);
     color: var(--btn-text-color);
 }
+.bottom > button{
+    background: var(--btn-hover-bg);
+}
 .resultBlock{
     display: flex;
     flex-direction: column;

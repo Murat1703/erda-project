@@ -1,7 +1,7 @@
 import cls from './Plans.module.css'
 import { useState, useEffect } from 'react'
 import { plansData } from '../../../components/PlansSection/plansData';
-
+import { EyeBrow } from '../../../components/EyeBrow';
 
 export const Plans = ({isPage}) =>{
 
@@ -13,7 +13,7 @@ export const Plans = ({isPage}) =>{
     const [maxFloor, setMaxFloor] = useState(12);
 
     const [isOpenBC, setIsOpenBC] = useState(false);
-    const [businessCenter, setBusinessCenter] = useState("Все бизнес центры");
+    const [businessCenter, setBusinessCenter] = useState("Все бизнес-центры");
     const [totalCount, setTotalCount] = useState(8);
 
     useEffect(() => {
@@ -157,6 +157,39 @@ export const Plans = ({isPage}) =>{
             </div>
             <div className={cls.plansListWrapper}>
                 <div className={cls.filtersRow}>
+                    <div 
+                    className={`${cls.filterItem} ${cls.businessFilter} ${isOpenBC ? cls.opened : ""}`}
+                    onClick={() => setIsOpenBC(!isOpenBC)}
+                    >
+                    <p>
+                        Бизнес-центр
+                    </p>
+                    <div className={cls.filterTabs}>
+                        <p>{businessCenter}</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6" fill="none">
+                        <path d="M10.8002 1.20007L6.0002 4.80007L1.2002 1.20007" stroke="#1D1D1B" strokeWidth="1.48" strokeLinejoin="bevel"/>
+                        </svg>
+                    </div>
+                    <div className={`${cls.businessCenter}  ${isOpenBC ? cls.opened : ""}`}>
+                        {businessCenterFilter.map((item, index) => (
+                        <li 
+                            key={index}
+                            onClick={(e) => {
+                            e.stopPropagation();
+                            setBusinessCenter(item.value);
+                            setIsOpenBC(false);
+                            }}
+                        >
+                            {item.value}
+                            {businessCenter === item.value && 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6668 5L7.50016 14.1667L3.3335 10" stroke="#E6E3DA" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                            }
+                        </li>
+                        ))}
+                    </div>
+                    </div>
                     <div className={cls.filterItem}>
                         <p>Тип помещения</p>
                         <div className={cls.filterTabs}>

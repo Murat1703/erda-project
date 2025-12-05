@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 
 
 export const Footer = ()=>{
-
+    
     const location = useLocation();
 
     const isContacts = location.pathname == "/contacts" ? true : null
@@ -14,7 +14,7 @@ export const Footer = ()=>{
                 <div className={cls.top}>
                     <div>
                         <div className={cls.socialBtns}>
-                            <a href="" target='__blank'>
+                            <a href="https://www.instagram.com/erdaholding/" target='__blank'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <g clipPath="url(#clip0_162_330)">
                                     <path d="M15.3746 8.00003C15.373 8.65771 15.3656 9.31543 15.3566 9.97308C15.3457 10.7665 15.3335 11.5604 15.1345 12.3402C14.9258 13.158 14.5142 13.8634 13.8739 14.3855C13.1992 14.9358 12.3836 15.225 11.5034 15.2785C10.3359 15.3495 9.16788 15.3776 7.99991 15.3748C6.83191 15.3776 5.66392 15.3495 4.49645 15.2785C3.6162 15.225 2.80064 14.9358 2.1259 14.3855C1.48559 13.8634 1.07402 13.158 0.865338 12.3402C0.666338 11.5604 0.654088 10.7665 0.643245 9.97308C0.634245 9.31543 0.626775 8.65771 0.625244 8.00003C0.626775 7.34234 0.634245 6.68462 0.643245 6.02697C0.654088 5.2335 0.666338 4.43969 0.865338 3.65982C1.07402 2.84201 1.48559 2.1367 2.1259 1.61455C2.80064 1.0643 3.6162 0.775078 4.49645 0.721547C5.66392 0.650547 6.83191 0.622485 7.99991 0.625235C9.16788 0.622485 10.3359 0.650547 11.5034 0.721547C12.3836 0.775078 13.1992 1.0643 13.8739 1.61455C14.5142 2.1367 14.9258 2.84201 15.1345 3.65982C15.3335 4.43969 15.3457 5.2335 15.3566 6.02697C15.3656 6.68462 15.373 7.34234 15.3746 8.00003Z" stroke="#E6E3DA" strokeLinecap="round" strokeLinejoin="round"/>
@@ -28,7 +28,7 @@ export const Footer = ()=>{
                                 </defs>
                                 </svg>
                             </a>
-                            <a href="" target='__blank'>
+                            <a href="https://wa.me/77005161616" target='__blank'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <g clipPath="url(#clip0_162_335)">
                                     <path d="M8.00266 0.625043C3.92958 0.625043 0.627686 3.92694 0.627686 8.00002C0.627686 9.5803 1.12497 11.0443 1.97124 12.2446L0.877685 15.375H8.00266C12.0757 15.375 15.3776 12.0731 15.3776 8.00002C15.3776 3.92694 12.0757 0.625043 8.00266 0.625043Z" stroke="#E6E3DA" strokeLinecap="round" strokeLinejoin="round"/>
@@ -61,7 +61,9 @@ export const Footer = ()=>{
                             </svg>
                         </div>
                         <div className={cls.topBtn}>
-                            <a >
+                            <a 
+                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" }) }
+                            className={cls.topLink}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
                                     <path d="M8 17.1667L8 0.500082M8 0.500082L4 4.50008M8 0.500082L12 4.50008" stroke="#E6E3DA" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>

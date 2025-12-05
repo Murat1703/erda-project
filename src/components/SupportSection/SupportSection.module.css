@@ -36,10 +36,11 @@
     align-self: stretch;
 }
 .vacancyBtn{
-    background: var(--Accent-A100, #A39F91)!important;
+    background: var(--Accent-A100, #A39F91);
 }
 .vacancyBtn:hover{
-    background: #A39F91;
+    background: #B2B1A2;
+;
 }
 .btn:hover{
     color: var(--text-color-lights);
@@ -52,7 +53,7 @@
     gap: 16px;
     border-radius: 320px;
     color:   var(--text-color-light);
-    background: var(--text-color);
+    /* background: var(--text-color); */
 }
 .supportSectionBottom > div > a:nth-child(1){
     font-size: 18px;
@@ -63,6 +64,12 @@
 }
 .supportSectionBottom > div > a:nth-child(2){
     color: var(--text-color-light);
+}
+.callBtn{
+    background: var(--btn-bg);
+}
+.callBtn:hover{
+    background: var(--btn-hover-bg);
 }
 @media (max-width: 960px){
     .supportSection{

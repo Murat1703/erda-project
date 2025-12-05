@@ -40,6 +40,12 @@
     border-radius: 320px;
     border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.16));
 }
+.socialBtns > a:hover{
+    border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.32));
+}
+.topLink:hover{    
+    border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.32));
+}
 .footerLogo{
     display: flex;
     align-items: center;

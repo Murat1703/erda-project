@@ -18,7 +18,7 @@ export const Header = ({onClick, projectsOpen, onCloseProjects, onOpenMainMenu, 
             <header 
                 className={`${cls.header} ${isDark? cls.darkHeader : isMobile && isOpenMainMenu? cls.deepDark: ""}`}
                 onClick={()=>{onCloseProjects(); onCloseMainMenu()}}
-
+                id='header'
                 style={
                     {
                         background: location.pathname == "/about" ? "transparent": null,

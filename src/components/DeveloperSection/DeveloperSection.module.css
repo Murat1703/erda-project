@@ -51,6 +51,9 @@
     border-radius: 320px;
     background: var(--Dark-D100, #1D1D1B);
 }
+.developerBtn:hover{
+    background: var(--btn-hover-bg);
+}
 .developerBtn > p{
     color: var(--text-color-light);
 }
