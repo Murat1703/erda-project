@@ -336,7 +336,7 @@
     z-index: 10;
     color: var(--text-color-light);
 }
-.planLink{
+a.planLink{
     opacity: 0;
     z-index: -10;
     position: absolute;
@@ -352,7 +352,7 @@
     left: 50%;
     margin-left: -62px;
 }
-.planLink:hover{
+a.planLink:hover{
     color: var(--text-color-light);
     background: var(--btn-hover-bg);
 }

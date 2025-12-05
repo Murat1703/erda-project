@@ -10,7 +10,10 @@
     top: 85px;
     z-index: 100;
 }
-.menuWrapper > li{
+.menuWrapper > .menuInner{
+    width: 100%;
+}
+.menuWrapper > .menuInner > li{
     display: flex;
     padding: 12px 0;
     justify-content: flex-start;
@@ -26,9 +29,80 @@
     .menuWrapper{
         border-radius: 0;
         width: 100%!important;
-        height: 100dvh;
+        height: calc(100dvh - 72px);
         position: fixed;
+        justify-content: space-between;
         top: 72px;
         left: 0!important;
+        z-index: 101;
+    }
+    .menuBottom{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .menuBottom > .top{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        align-self: stretch;
+    }
+    .menuBottom > .top > div:nth-child(1){
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        align-self: stretch;
+    }
+    .menuBottom > .top > div:nth-child(1) > div{
+        display: flex;
+        gap: 12px;
+        flex: 1 0 0;
+    }
+    .menuBottom > .top > div:nth-child(1) > div > a{
+        display: flex;
+        width: 44px;
+        height: 44px;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-radius: 320px;
+        border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.16));
+    }
+    .menuBottom > .top > div:nth-child(1) > div > a:hover{
+        border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.36));
+    }
+    .bottomInformation{
+        display: flex;
+        flex-direction: column;
+    }
+    .bottomInformation > a, .bottomInformation > span{
+        color: var(--text-color-light);
+    }
+    .bottomInformation > span:nth-last-child(1){
+        opacity: .4;
+    }
+    .buttonsList{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-bottom: 32px;
+    }
+    .buttonsList > a.downloadLink {
+        display: flex;
+        padding: 10px 22px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-color-light);
+        background: var(--btn-bg);
+        border-radius: 320px;
+    }
+    .buttonsList > a.downloadLink > p{
+        color: var(--text-color-light);
+    }
+    .buttonsList > a.downloadLink:hover{
+        background: var(--btn-hover-bg);
     }
 }

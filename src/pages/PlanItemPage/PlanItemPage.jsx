@@ -4,12 +4,23 @@ import { plansData } from '../../components/PlansSection/plansData';
 import { ConsultationSection } from '../../components/СoncultationSection';
 import { SupportSection } from '../../components/SupportSection';
 import { useMediaQuery } from 'react-responsive';
+import { Modal  } from '../../components/Modal';
+import { useState } from 'react';
 
 export const PlanItemPage = () =>{
 
 const id = useParams();
 const isMobile = useMediaQuery({ query: "(max-width: 960px)" });
 const project = plansData.find(item => item.id == id.planID);
+const [modal, setModal] = useState(false);
+
+const handleShowModal = () =>{
+    setModal(true);
+}
+
+const hideModal = () =>{
+    setModal(false)
+}
 
     return(
         <>
@@ -141,10 +152,10 @@ const project = plansData.find(item => item.id == id.planID);
                                     </li>
                                 </ul>
                                 <div className={cls.planItemButtons}>
-                                    <button>
+                                    <a href='tel:+77005161616' target='__blank'>
                                         <p>Оставить заявку</p>
-                                    </button>    
-                                    <button>
+                                    </a>    
+                                    <button onClick={handleShowModal}>
                                         <p>Приват-консультация</p>
                                     </button>   
                                 </div>
@@ -187,6 +198,7 @@ const project = plansData.find(item => item.id == id.planID);
 
             <ConsultationSection />
             <SupportSection isProjectPage={true}/>
+            {modal && <Modal isModal={modal} closeModal={hideModal}/>}
 
         </>
     )

@@ -105,6 +105,7 @@
     align-items: center;
     gap: 8px;
 }
+.planItemButtons > a,
 .planItemButtons > button{
     display: flex;
     padding: 11px 24px;
@@ -113,11 +114,26 @@
     gap: 8px;
     border-radius: 320px;
 }
+.planItemButtons > a > p{
+    color: var(--text-color-light);
+}
 .planItemButtons > button:nth-child(1){
     background: var(--Accent-A100, #A39F91);
 }
+.planItemButtons > button:nth-child(1):hover{
+    background: #B2B1A2;
+}
+.planItemButtons > a:nth-child(1){
+    background: var(--Accent-A100, #A39F91);
+}
+.planItemButtons > a:nth-child(1):hover{
+    background: #B2B1A2;
+}
 .planItemButtons > button:nth-child(2){
-    background: var(--text-color);
+    background: var(--btn-bg);
+}
+.planItemButtons > button:nth-child(2):hover{
+    background: var(--btn-hover-bg);
 }
 .planItemButtons > button > p{
     color: var(--text-color-light);
@@ -151,6 +167,9 @@
     gap: 8px;
     border-radius: 24px;
     border: 1px solid var(--Alpha-AD16, rgba(29, 29, 27, 0.16));
+}
+.fullScreenBtn:hover{
+    border: 1px solid var(--Alpha-AD16, rgba(29, 29, 27, 0.46));
 }
 .planItemPageControl{
     display: flex ;
@@ -221,5 +240,9 @@
     .characteristicItem > p:nth-child(3){
         font-size: 13px;
         line-height: 20px; /* 153.846% */
+    }
+    .planItemPageControlMobile > svg:nth-child(1){
+        width: 48px;
+        height: 48px;
     }
 }

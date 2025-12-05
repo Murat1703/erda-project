@@ -219,6 +219,7 @@
 .mapWrapper{
     height: 736px;
     width: 100%;
+    position: relative;
 }
 a.linkLocation{
     display: inline-flex;

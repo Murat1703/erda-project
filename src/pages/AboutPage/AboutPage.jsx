@@ -27,7 +27,7 @@ export const AboutPage = () =>{
                                     <p>
                                         Молодой бренд, основанный в 2022 году и базирующийся в Алматы, Казахстан. Несмотря на недавнее образование, компания унаследовала богатый опыт своей материнской структуры, зарегистрированной в Лондоне и успешно работающей с 2003 года.
                                     </p>
-                                    <a>
+                                    <a href='#regions' className={cls.toBottomLink}>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
                                         <path d="M8 0.5V17.1667M8 17.1667L12 13.1667M8 17.1667L4 13.1667" stroke="#E6E3DA" strokeLinecap="round" strokeLinejoin="round"/>
                                         </svg>
@@ -38,7 +38,7 @@ export const AboutPage = () =>{
                     </div>
                 </div>
             </section>
-            <section className={cls.aboutPageRegions}>
+            <section className={cls.aboutPageRegions} id='regions'>
                 <div className={cls.aboutMap}>
                     <div className={cls.mapWrapper}>
                         <img src={mapImg} alt='map'/>

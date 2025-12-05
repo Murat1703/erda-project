@@ -413,8 +413,8 @@ export const Plans = ({isPage}) =>{
                             <h3>Фильтры</h3>
                             <button onClick={()=>{setMobileFilters(false)}}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
-                                <path d="M4 4L12 12" stroke="#1D1D1B" stroke-linecap="round" strokeLinejoin="round"/>
-                                <path d="M12 4L4 12" stroke="#1D1D1B" stroke-linecap="round" strokeLinejoin="round"/>
+                                <path d="M4 4L12 12" stroke="#1D1D1B" strokeLinecap="round" strokeLinejoin="round"/>
+                                <path d="M12 4L4 12" stroke="#1D1D1B" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                             </button>
                         </div>
