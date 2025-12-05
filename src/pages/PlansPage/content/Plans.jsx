@@ -1,5 +1,5 @@
 import cls from './Plans.module.css'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { plansData } from '../../../components/PlansSection/plansData';
 import { EyeBrow } from '../../../components/EyeBrow';
 
@@ -14,10 +14,14 @@ export const Plans = ({isPage}) =>{
 
     const [isOpenBC, setIsOpenBC] = useState(false);
     const [businessCenter, setBusinessCenter] = useState("Все бизнес-центры");
-    const [totalCount, setTotalCount] = useState(8);
+    const [totalCount, setTotalCount] = useState(4);
+
+    const showAllPlans = () =>{
+        setTotalCount(filtered.length)
+    }
 
     useEffect(() => {
-    }, [propertyType, dealType, minSquare, maxSquare, businessCenter]);
+    }, [propertyType, dealType, minSquare, maxSquare, businessCenter, minFloor, maxFloor]);
 
     
 
@@ -140,6 +144,54 @@ export const Plans = ({isPage}) =>{
     //     }     
 
     // ]
+
+  const filtered = useMemo(() => {
+    return plansData.filter((item) => {
+      // Бизнес-центр
+      if (
+        businessCenter !== "Все бизнес-центры" &&
+        item.businessCenter !== businessCenter.toLowerCase()
+      ) {
+        return false;
+      }
+
+      // Тип помещения
+      if (propertyType !== "all") {
+        const map = {
+          commercy: "Коммерция",
+          offices: "Офис",
+        };
+
+        if (item.propertyType !== map[propertyType]) {
+          return false;
+        }
+      }
+
+      // Реализация
+      if (dealType !== "all") {
+        const deal = item.dealType.toLowerCase();
+
+        if (dealType === "sale" && !deal.includes("продажа")) {
+          return false;
+        }
+        if (dealType === "rent" && !deal.includes("аренда")) {
+          return false;
+        }
+      }
+
+      // Площадь
+      if (item.square < minSquare || item.square > maxSquare) {
+        return false;
+      }
+
+      if (item.current_floor < minFloor || item.floor_max > maxFloor){
+        return false;
+      }
+
+      return true;
+    });
+  }, [businessCenter, propertyType, dealType, minSquare, maxSquare, minFloor, maxFloor]);
+
 
     return(
         <div className={cls.plansWrapper}>
@@ -280,7 +332,7 @@ export const Plans = ({isPage}) =>{
                     </div>
                 </div>
                 <div className={cls.plansList}>
-                    {plansData.map((item, index)=>{
+                    {filtered.slice(0, totalCount).map((item, index)=>{
                         return(
                             <div className={cls.planItemCard} key={index}>
                                 <div className={cls.planItemImg}>
@@ -304,7 +356,7 @@ export const Plans = ({isPage}) =>{
                                         </li>
                                         <li>
                                             <p>Этаж</p>
-                                            <p>{item.floor}</p>
+                                            <p>{item.current_floor} из {item.floor_max}</p>
                                         </li>
                                         <li>
                                             <p>Реализация</p>
@@ -316,7 +368,13 @@ export const Plans = ({isPage}) =>{
                         )
                     })}
                 </div>
-                <button className={cls.showMorePlansBtn}><p>Показать еще планировки</p> 
+                <button 
+                    className={cls.showMorePlansBtn}
+                    onClick={showAllPlans}
+                    style={{
+                        display: totalCount >= filtered.length ? "none": ""
+                    }}
+                ><p>Показать еще планировки</p> 
                 {/* <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
                     <path d="M0.5 8L17.1667 8M17.1667 8L13.1667 4M17.1667 8L13.1667 12" stroke="#EBE9E1" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg> */}

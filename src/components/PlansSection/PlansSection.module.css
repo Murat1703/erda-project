@@ -354,6 +354,7 @@
 }
 .planLink:hover{
     color: var(--text-color-light);
+    background: var(--btn-hover-bg);
 }
 
 @media (max-width: 960px){
