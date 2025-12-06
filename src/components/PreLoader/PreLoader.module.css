@@ -1,0 +1,127 @@
+.preLoaderWrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    z-index: 100000;
+    background: var(--Light-L80, #E5E3DA)
+}
+.preLoaderContent{
+    width: 100%;
+    height: 100%;
+    padding: 40px 48px 32px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.preLoaderContent > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 116px;
+    align-items: flex-end;
+}
+.preLoaderContent > div > div > p{
+    opacity: .5;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 145.455% */
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+.line{
+    flex: 1 0 0;
+    height: 1px;
+    width: 100%;
+    position: relative;
+    /* background: #1D1D1B; */
+}
+.line > span{
+    left: 0;
+    width: 100%;
+    height: 1px;
+
+    position: absolute;
+}
+.line > span:nth-child(1){
+    width: 100%;
+    background: #1D1D1B;
+    opacity: .1;
+}
+.line > span:nth-child(2){
+    /* background: #1D1D1B; */
+    /* width: 30%; */
+    z-index: 3;
+}
+.middle{
+    display: flex;
+    align-items: center;
+}
+.mainLogo{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.mainLogo > svg:nth-child(1){
+    animation:  spin 4s ease-in-out infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.progressValue{
+    color: var(--text-color);
+    opacity: 1!important;
+}
+.hideLoader{
+    opacity: 0;
+    z-index: -1000;
+    transition: .6s linear;
+}
+
+@media (max-width: 960px){
+    .preLoaderContent{
+        padding: 48px 20px;
+        align-items: center;
+
+    }
+    .middle{
+        align-self: center;
+        justify-content: center!important;
+    }
+    .preLoaderContent > div{
+        gap: 32px;
+        align-items: center;
+    }
+    .left, .right{
+        display: none;
+    }
+    .mobileLoadingText{
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100px;
+        height: 20px;
+        overflow: hidden;
+        position: relative;
+    }
+    .mobileLoadingText > p{
+        position: absolute;
+        top:0;
+        left: 0;
+    }
+    .mobileLoadingText > p:nth-child(2), 
+    .mobileLoadingText > p:nth-child(3),
+    .mobileLoadingText > p:nth-child(4){
+        transform: translateY(-30px);
+    }
+    .mobileLoadingText > p:nth-child(1){
+        /* transform: translateY(11px); */
+        transition: .3s linear;
+    }
+}

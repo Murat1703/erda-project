@@ -10,8 +10,16 @@ import { Preface } from '../../components/Preface'
 import { ConsultationSection } from '../../components/СoncultationSection'
 import cls from './HomePage.module.css'
 import { Footer } from '../../components/Footer'
+import { PreLoader } from '../../components/PreLoader/PreLoader'
+import { useState } from 'react'
 
 export const HomePage = () =>{
+
+    const [isReady, setIsReady] = useState(false);  
+    const hideLoader = () =>{
+        setIsReady(true)
+    }
+
     return(
         <div className={cls.homePage}>
             <MainSection />
@@ -23,6 +31,8 @@ export const HomePage = () =>{
             <PlansSection />
             <DeveloperSection />
             <SupportSection />
+            <PreLoader onLoadComplete={hideLoader} isLoaded={isReady}/>
+            
         </div>
     )
 }
