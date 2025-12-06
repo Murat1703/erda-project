@@ -10,6 +10,7 @@ export const projects = [
         offices: "c 3 по 5 этаж",
         squareRange: "80 — 1,600 м² ",
         height: "3.2 - 4.5 м",
+        floorCount: 12,
         index: 1,
     },
     {
@@ -23,6 +24,7 @@ export const projects = [
         offices: "c 3 по 5 этаж",
         squareRange: "80 — 1,600 м² ",
         height: "3.2 - 4.5 м",
+        floorCount: 6,
         index: 2
     },
     {
@@ -36,6 +38,7 @@ export const projects = [
         offices: "c 3 по 5 этаж",
         squareRange: "80 — 1,600 м² ",
         height: "3.2 - 4.5 м",
+        floorCount: 8,
         index: 3
     },
 ]

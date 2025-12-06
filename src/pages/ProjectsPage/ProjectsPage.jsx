@@ -448,56 +448,56 @@ if (!isLoaded) return <div>Загрузка карты...</div>;
                         </div>
                     </div>
                     <div className={cls.mapWrapper}>
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        options={{ styles: customMapStyles }}
-        zoom={zoom}
-        onLoad={onLoad}
-      >
-      <div className="zoom-control-wrapper" style={{
-        position: 'absolute',
-        bottom: '50%',
-        marginTop: -57,
-        right: 48,
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '8px',
-        zIndex: 10
-      }}>
-        <button onClick={handleZoomIn} className="mapZoomBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <path d="M13.9994 5.83447V22.1678M5.83276 14.0011H22.1661" stroke="#EBE9E1" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-        </button>
-        <button onClick={handleZoomOut} className="mapZoomBtn" >
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <path d="M5.83301 14.0003H22.1663" stroke="#EBE9E1" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-        </button>
-      </div>
-      <a className={cls.linkLocation} href={project.id=="icon"?"https://2gis.kz/almaty/directions/points/%7C77.065355%2C43.329819%3B9430047375054553?m=76.954132%2C43.218941%2F10.77" : project.id=="luminor"? "https://2gis.kz/almaty/directions/points/%7C76.934341%2C43.231397%3B9430150454183347?m=76.934317%2C43.231199%2F15.8" : project.id=="norex"? "https://2gis.kz/almaty/directions/points/%7C76.961096%2C43.239735%3B9430150454184055?m=76.96213%2C43.241139%2F17.31" : null} target='__blank'>
-        <p >Построить маршрут в 2GIS</p>
-      </a>
-      <CustomMarker position={markerPosition} id={project.id}/>
+                        <GoogleMap
+                            mapContainerStyle={containerStyle}
+                            center={center}
+                            options={{ styles: customMapStyles }}
+                            zoom={zoom}
+                            onLoad={onLoad}
+                        >
+                        <div className="zoom-control-wrapper" style={{
+                            position: 'absolute',
+                            bottom: '50%',
+                            marginTop: -57,
+                            right: 48,
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: '8px',
+                            zIndex: 10
+                        }}>
+                            <button onClick={handleZoomIn} className="mapZoomBtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                    <path d="M13.9994 5.83447V22.1678M5.83276 14.0011H22.1661" stroke="#EBE9E1" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </button>
+                            <button onClick={handleZoomOut} className="mapZoomBtn" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                    <path d="M5.83301 14.0003H22.1663" stroke="#EBE9E1" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <a className={cls.linkLocation} href={project.id=="icon"?"https://2gis.kz/almaty/directions/points/%7C77.065355%2C43.329819%3B9430047375054553?m=76.954132%2C43.218941%2F10.77" : project.id=="luminor"? "https://2gis.kz/almaty/directions/points/%7C76.934341%2C43.231397%3B9430150454183347?m=76.934317%2C43.231199%2F15.8" : project.id=="norex"? "https://2gis.kz/almaty/directions/points/%7C76.961096%2C43.239735%3B9430150454184055?m=76.96213%2C43.241139%2F17.31" : null} target='__blank'>
+                            <p >Построить маршрут в 2GIS</p>
+                        </a>
+                        <CustomMarker position={markerPosition} id={project.id}/>
 
-        {/* <Marker 
-            position={markerPosition} 
-            icon = {{
-                url: '/images/address_icon.webp',
-                scaledSize: new google.maps.Size(
-                    90,
-                    132),
-                size: new google.maps.Size(
-                    90,
-                    132),
-                anchor: new google.maps.Point(
-                    90,
-                    132)
-    
-            }}
-        /> */}
-      </GoogleMap>
+                            {/* <Marker 
+                                position={markerPosition} 
+                                icon = {{
+                                    url: '/images/address_icon.webp',
+                                    scaledSize: new google.maps.Size(
+                                        90,
+                                        132),
+                                    size: new google.maps.Size(
+                                        90,
+                                        132),
+                                    anchor: new google.maps.Point(
+                                        90,
+                                        132)
+                        
+                                }}
+                            /> */}
+                        </GoogleMap>
                     </div>
                 </div>
 
