@@ -30,6 +30,8 @@
     gap: 12px;
 }
 .socialBtns > a{
+    position: relative;
+    overflow: hidden;
     display: flex;
     width: 44px;
     height: 44px;
@@ -39,9 +41,26 @@
     gap: 8px;
     border-radius: 320px;
     border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.16));
+    transition: .8s linear;
 }
 .socialBtns > a:hover{
     border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.32));
+    transition: .8s linear;
+
+}
+.socialBtns > a > svg{
+    position: absolute;
+}
+.socialBtns > a:hover svg:nth-child(1){
+    transform: translateY(60px);
+    transition: .3s linear;
+}
+.socialBtns > a:hover svg:nth-child(2){
+    transform: translateY(0);
+    transition: .3s linear;
+}
+.socialBtns > a > svg:nth-child(2){
+    transform: translateY(-60px);
 }
 .topLink:hover{    
     border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.32));
