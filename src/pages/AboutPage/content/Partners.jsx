@@ -17,7 +17,7 @@ export const Partners = () =>{
                     <div className={cls.titleRow}>
                         <h3>Партнёры и</h3>
                         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="32" viewBox="0 0 29 32" fill="none">
-                        <g clip-path="url(#clip0_254_34817)">
+                        <g clipPath="url(#clip0_254_34817)">
                             <path d="M4.34521 0.939453H24.454" stroke="#E6E3DA" strokeMiterlimit="10"/>
                             <path d="M1.22021 5.05508L7.70782 12.2969L14.3997 5.3134L4.34527 0.938346L1.22021 5.05508Z" stroke="#E6E3DA" strokeMiterlimit="10"/>
                             <path d="M27.5794 5.05508L21.0918 12.2969L14.3999 5.3134L24.4543 0.938346L27.5794 5.05508Z" stroke="#E6E3DA" strokeMiterlimit="10"/>
