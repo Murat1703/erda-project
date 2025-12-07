@@ -53,13 +53,19 @@ export const MainSection = () =>{
 
     return(
         <>
-            <div className={cls.mainSection}>
+            <div className={cls.mainSection} 
+                onClick={()=>{
+                    setBigImg(false);
+                    setBigLuminor(false);
+                    setBigNorex(false)
+                }}
+            >
                 <div className={cls.mainTitleBlock}>
                     <div className={cls.titleRow}>
                         <p>создаем деловое</p>
                         <div 
                             className={`${cls.titleImg} ${bigImg ? cls.showBigImg : "" }`}
-                            onClick={handleShowBigImg}
+                            onClick={(e)=>{e.stopPropagation();handleShowBigImg()}}
                         > 
                             <img src={img1} alt="img" />
                             <div className={cls.bottom}>
@@ -91,7 +97,7 @@ export const MainSection = () =>{
                         <p>для</p>
                         <div 
                             className={`${cls.titleImg} ${cls.luminorImg} ${bigLuminor ? cls.showBigLuminor : "" }`}
-                            onClick={handleShowBigLuminor}
+                            onClick={(e)=>{handleShowBigLuminor(); e.stopPropagation()}}
                         >
                             <img src={img2} alt="img" />
                             <div className={cls.bottom}>
@@ -115,7 +121,7 @@ export const MainSection = () =>{
                         <p>работы</p>
                         <div 
                             className={`${cls.titleImg} ${cls.norexImg} ${bigNorex ? cls.showBigNorex : "" }`}
-                            onClick={handleShowBigNorex}
+                            onClick={(e)=>{handleShowBigNorex(); e.stopPropagation();}}
 
                         >
                             <img src={img3} alt="img" />
