@@ -1,13 +1,12 @@
 import { Button } from '../Button'
 import cls from './MainSection.module.css'
-import img1 from './images/ca3838f118c56703133177f24bb1c3523af6d9ae.png'
-import img2 from './images/2c607706eddfebcddb119930448dbd061279aa40.jpg'
-import img3 from './images/f3553da3a3f5284be1699962b8e628b2d175c08f.jpg'
+import img1 from './images/ca3838f118c56703133177f24bb1c3523af6d9ae.webp'
+import img2 from './images/2c607706eddfebcddb119930448dbd061279aa40.webp'
+import img3 from './images/f3553da3a3f5284be1699962b8e628b2d175c08f.webp'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Modal } from '../Modal'
 import { useState, useEffect } from 'react'
-import { Zoom } from 'swiper/modules'
 
 
 export const MainSection = () =>{
@@ -32,6 +31,24 @@ export const MainSection = () =>{
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
+    const [bigImg, setBigImg] = useState(false)
+
+    const handleShowBigImg = () =>{
+        setBigImg(!bigImg)
+    }
+
+    const [bigLuminor, setBigLuminor] = useState(false)
+
+    const handleShowBigLuminor = () =>{
+        setBigLuminor(!bigLuminor)
+    }
+
+    const [bigNorex, setBigNorex] = useState(false)
+
+    const handleShowBigNorex = () =>{
+        setBigNorex(!bigNorex)
+    }
+
 
 
     return(
@@ -40,8 +57,22 @@ export const MainSection = () =>{
                 <div className={cls.mainTitleBlock}>
                     <div className={cls.titleRow}>
                         <p>создаем деловое</p>
-                        <div className={cls.titleImg}>
+                        <div 
+                            className={`${cls.titleImg} ${bigImg ? cls.showBigImg : "" }`}
+                            onClick={handleShowBigImg}
+                        > 
                             <img src={img1} alt="img" />
+                            <div className={cls.bottom}>
+                                <div>
+                                    <p>Icon</p>
+                                    <p>Бизнес-центр<br/>ул. Кабанбай батыра стр. 5</p>
+                                </div>
+                                <a href="/projects/icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="9" viewBox="0 0 18 9" fill="none">
+                                        <path d="M0.5 4.5L17.1667 4.5M17.1667 4.5L13.1667 0.499999M17.1667 4.5L13.1667 8.5" stroke="#EBE9E1" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div className={cls.titleRow}>
@@ -58,8 +89,22 @@ export const MainSection = () =>{
                     </div>
                     <div className={cls.titleRow}>
                         <p>для</p>
-                        <div className={cls.titleImg}>
+                        <div 
+                            className={`${cls.titleImg} ${cls.luminorImg} ${bigLuminor ? cls.showBigLuminor : "" }`}
+                            onClick={handleShowBigLuminor}
+                        >
                             <img src={img2} alt="img" />
+                            <div className={cls.bottom}>
+                                <div>
+                                    <p>Luminor</p>
+                                    <p>Бизнес-центр<br/>ул. Тимирязева 107</p>
+                                </div>
+                                <a href="/projects/luminor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="9" viewBox="0 0 18 9" fill="none">
+                                        <path d="M0.5 4.5L17.1667 4.5M17.1667 4.5L13.1667 0.499999M17.1667 4.5L13.1667 8.5" stroke="#EBE9E1" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                         <p>комфортной</p>
                     </div>
@@ -68,8 +113,23 @@ export const MainSection = () =>{
                     </div>
                     <div className={cls.titleRow}>
                         <p>работы</p>
-                        <div className={cls.titleImg}>
+                        <div 
+                            className={`${cls.titleImg} ${cls.norexImg} ${bigNorex ? cls.showBigNorex : "" }`}
+                            onClick={handleShowBigNorex}
+
+                        >
                             <img src={img3} alt="img" />
+                            <div className={cls.bottom}>
+                                <div>
+                                    <p>Norex</p>
+                                    <p>Бизнес-центр<br/>улCатпаева - Луганского</p>
+                                </div>
+                                <a href="/projects/luminor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="9" viewBox="0 0 18 9" fill="none">
+                                        <path d="M0.5 4.5L17.1667 4.5M17.1667 4.5L13.1667 0.499999M17.1667 4.5L13.1667 8.5" stroke="#EBE9E1" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

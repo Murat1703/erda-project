@@ -22,6 +22,13 @@
     gap: 116px;
     align-items: flex-end;
 }
+.left, .right{
+    flex: 1 0 0;
+}
+.right{
+    display: flex;
+    justify-content: end;
+}
 .preLoaderContent > div > div > p{
     opacity: .5;
     font-size: 11px;

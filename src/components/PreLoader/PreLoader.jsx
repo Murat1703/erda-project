@@ -1,6 +1,9 @@
 import cls from './PreLoader.module.css'
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import Lottie from "lottie-react";
+import animatedLogo from "./images/logo.json";
+
 
 
 export const PreLoader = ({onLoadComplete, isLoaded}) =>{
@@ -56,7 +59,12 @@ export const PreLoader = ({onLoadComplete, isLoaded}) =>{
                         <p>Жүктелуде</p>
                     </div>
                     <div className={cls.mainLogo}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="43" viewBox="0 0 48 43" fill="none">
+                        <Lottie 
+                            animationData={animatedLogo}
+                            loop={false}
+                            style={{ width: 120 }}
+                        />
+                        {/* <svg xmlns="http://www.w3.org/2000/svg" width="48" height="43" viewBox="0 0 48 43" fill="none">
                             <path d="M12.6953 41.6L0.695312 21.1L12.6953 0.600006M12.6953 41.6H35.6953L47.1953 21.1M12.6953 41.6L23.1953 21.1M12.6953 0.600006H35.6953L47.1953 21.1M12.6953 0.600006L23.1953 21.1M47.1953 21.1H23.1953" stroke="#1D1D1B" strokeWidth="1.2"/>
                         </svg>
                         <svg xmlns="http://www.w3.org/2000/svg" width="97" height="44" viewBox="0 0 97 44" fill="none">
@@ -71,7 +79,7 @@ export const PreLoader = ({onLoadComplete, isLoaded}) =>{
                             <path fillRule="evenodd" clipRule="evenodd" d="M62.7792 43.7602H64.5619V33.0357H62.7792V43.7602Z" fill="#1D1D1B"/>
                             <path fillRule="evenodd" clipRule="evenodd" d="M79.7832 41.2756L71.5637 33.0358H71.0411V43.7604H71.519V35.513L79.7309 43.7604H80.2527V33.0358H79.7832V41.2756Z" fill="#1D1D1B"/>
                             <path fillRule="evenodd" clipRule="evenodd" d="M91.9387 38.6263H94.7059V43.035H94.699C94.3203 43.2836 93.9079 43.4384 93.4604 43.4985C93.3014 43.5185 93.1395 43.5282 92.9756 43.5282H92.8785C92.4854 43.5033 92.1054 43.4211 91.7377 43.2816C91.1456 43.0474 90.623 42.7048 90.1706 42.2558C89.6487 41.7425 89.2536 41.1512 88.9851 40.4825C88.7165 39.8138 88.5822 39.1182 88.5822 38.3949C88.5822 37.8809 88.6476 37.3753 88.7798 36.8786C88.9113 36.3826 89.1145 35.9122 89.3878 35.4687C89.6309 35.0639 89.9269 34.704 90.2753 34.3869C90.623 34.0698 91.0162 33.8142 91.454 33.6194C91.9759 33.3853 92.5206 33.2678 93.0872 33.2678C93.689 33.2678 94.257 33.3935 94.792 33.6457C95.3263 33.8978 95.7972 34.246 96.2055 34.6895L96.5484 34.3455C95.9914 33.8363 95.3683 33.4502 94.6798 33.1856C93.9913 32.9211 93.2738 32.7891 92.5274 32.7891C91.5931 32.7891 90.707 32.9977 89.8691 33.4143C89.0305 33.8301 88.331 34.4256 87.7691 35.1986C87.0779 36.1768 86.7322 37.242 86.7322 38.3949C86.7322 39.5471 87.0779 40.6123 87.7691 41.5898C88.331 42.3635 89.0305 42.9583 89.8691 43.3748C90.707 43.7914 91.5931 44 92.5274 44C93.2738 44 93.9926 43.866 94.6839 43.5993C95.3752 43.3327 95.9969 42.9445 96.5484 42.436V38.1552H91.9387V38.6263Z" fill="#1D1D1B"/>
-                        </svg>
+                        </svg> */}
                     </div>
                     <div className={cls.right}>
                         <p>Загрузка</p>

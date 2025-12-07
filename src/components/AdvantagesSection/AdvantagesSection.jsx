@@ -10,6 +10,10 @@ import img6 from './images/adv6.png'
 import img7 from './images/adv7.png'
 import img8 from './images/adv8.png'
 import stickyImg from './images/photo_3_2025-12-04_09-58-13.webp'
+import { projects } from '../../pages/ProjectsPage/projects.js'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules'
+import 'swiper/css';
 
 export const AdvantagesSection = () =>{
     return(
@@ -103,7 +107,22 @@ export const AdvantagesSection = () =>{
                             <p>A</p>
                             <p>Класс объектов</p>
                         </div>
-                        <img src={stickyImg} alt="image" loading="lazy"/>
+                        <Swiper
+                            modules={[Autoplay]}
+                            autoplay={{
+                                delay: 2500,      // задержка между слайдами
+                                disableOnInteraction: false,  // не отключать после свайпа
+                                pauseOnMouseEnter: true,      // пауза при наведении
+                            }}
+                            loop={true}
+                        >
+                            {projects.map((projectImg, index)=>{
+                                return (<SwiperSlide key={index}>
+                                    <img src={projectImg.img} alt="img"/>
+                                </SwiperSlide>)
+                            })}
+                        </Swiper>
+                        {/* <img src={stickyImg} alt="image" loading="lazy"/> */}
                     </div>
                 </div>
             </div>
