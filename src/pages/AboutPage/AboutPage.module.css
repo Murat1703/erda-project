@@ -170,4 +170,7 @@
     .aboutMap > div:nth-child(1){
         left: -330px;
     }
+    .aboutPageRegions{
+        display: flex;
+    }
 }
