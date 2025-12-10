@@ -11,9 +11,23 @@ import { ConsultationSection } from '../../components/СoncultationSection'
 import cls from './HomePage.module.css'
 import { Footer } from '../../components/Footer'
 import { PreLoader } from '../../components/PreLoader/PreLoader'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export const HomePage = () =>{
+
+  const [showLoader, setShowLoader] = useState(true);
+
+  useEffect(() => {
+    const isShown = sessionStorage.getItem("loader_shown");
+
+    if (isShown) {
+      setShowLoader(false);
+    } else {
+      sessionStorage.setItem("loader_shown", "true");
+      setTimeout(() => setShowLoader(false), 6000);
+    }
+  }, []);
+
 
     const [isReady, setIsReady] = useState(false);  
     const hideLoader = () =>{
@@ -31,7 +45,8 @@ export const HomePage = () =>{
             <PlansSection />
             <DeveloperSection />
             <SupportSection />
-            <PreLoader onLoadComplete={hideLoader} isLoaded={isReady}/>
+            {showLoader? <PreLoader onLoadComplete={hideLoader} isLoaded={isReady}/> : null}
+
             
         </div>
     )

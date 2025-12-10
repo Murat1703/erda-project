@@ -24,6 +24,9 @@
     color: var(--text-color-light);
     align-items: flex-start;
 }
+.menuWrapper > .menuInner > li:nth-last-child(1){
+    border-bottom: none;
+}
 
 @media(max-width: 960px){
     .menuWrapper{

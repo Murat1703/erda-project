@@ -13,6 +13,15 @@ header{
     background: #30302E!important;
     /* backdrop-filter: blur(16px); */
 }
+.darkHeader .plansLink > p{
+    color: var(--text-color-light);
+}
+.darkHeader .plansLink > svg path{
+    stroke: var(--text-color-light);
+}
+.darkHeader > nav > .right > a:nth-child(1) > p{
+    color: var(--text-color-light);
+}
 .darkHeader .menuBtnIcons span{
     background: var(--text-color-light);
 }
@@ -56,12 +65,17 @@ header > nav > .left{
     align-items: center;
     gap: 16px;
 }
-.projectsBtn{
+.projectsBtn, .plansLink{
     display: flex;
     align-items: center;
     gap: 4px;
 }
 .logo{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.logoFixed{
     display: flex;
     align-items: center;
     gap: 9.75px;

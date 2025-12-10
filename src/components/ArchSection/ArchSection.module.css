@@ -41,6 +41,24 @@
 .archTitleBlock > div:nth-child(2) > a:hover{
     border: 1px solid rgba(29, 29, 27, 0.32);
 }
+.animatedTitle{
+    height: 72px;
+    overflow: hidden;
+    position: relative;
+}
+.animatedTitle > h2{
+    font-feature-settings: 'ss10' on;
+    font-family: "TA Modern Times", sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 72px;
+    letter-spacing: 2.56px;
+    text-transform: uppercase;
+}
+.animatedTitle > h2:nth-child(2){
+    transform: translateY(80px);
+}
 .archSlider{
     width: 100%;
     height: 580px;
@@ -94,6 +112,13 @@
 }
 
 @media (max-width: 960px){
+    .animatedTitle{
+        height: 40px;
+    }
+    .animatedTitle > h2{
+        font-size: 34px;
+        line-height: 40px;
+    }
     .archSectionWrapper{
         /* padding: 96px 0; */
         display: block;

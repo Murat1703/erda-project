@@ -38,9 +38,14 @@ export const DeveloperSection = () =>{
                 <div className={cls.bottom}>
                     <Swiper
                         modules={[Autoplay]}
-                        speed={4000}
+                        speed={5000}
                         // slidesPerView={'auto'}
                         loop={true}
+                        autoplay={{
+                            delay: 0,      // задержка между слайдами
+                            disableOnInteraction:false,  // не отключать после свайпа
+                            pauseOnMouseEnter: false,      // пауза при наведении
+                        }}
                         // autoplay={{
                         //     delay: 0,                   // без пауз между анимациями
                         //     disableOnInteraction: false // не останавливать после свайпа

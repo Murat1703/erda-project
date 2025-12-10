@@ -1,7 +1,7 @@
 import cls from './Partners.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from "swiper/modules";
 import 'swiper/css';
-import { Navigation } from "swiper/modules";
 import img1 from './images/1.svg'
 import img2 from './images/2.svg'
 import img3 from './images/3.svg'
@@ -44,9 +44,15 @@ export const Partners = () =>{
                 </div>
                 <div className={cls.partnersList}>
                     <Swiper
-                        slidesPerView={5.6}
+                        modules={[Autoplay]}
+                        speed={5000}                        slidesPerView={5.6}
                         spaceBetween={108}
                         loop={true}
+                        autoplay={{
+                            delay: 0,      // задержка между слайдами
+                            disableOnInteraction:false,  // не отключать после свайпа
+                            pauseOnMouseEnter: false,      // пауза при наведении
+                        }}
                         breakpoints={{
                             0:{
                                 slidesPerView: 2.4,

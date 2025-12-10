@@ -1,7 +1,7 @@
 import cls from './Menu.module.css'
 import { useMediaQuery } from 'react-responsive';
 
-export const Menu = ({type}) =>{
+export const Menu = ({type, scrolled}) =>{
 
     const projectsMenuLinks = [
         {
@@ -47,8 +47,9 @@ export const Menu = ({type}) =>{
         <ul 
             className={cls.menuWrapper} 
             style={{
-                left: type==="projectsMenu" ? "192px" : type==="mainMenu" ? "48px":  null,
-                width: type==="projectsMenu" ? "200px" : type==="mainMenu" ? "252px" : null
+                left: type==="projectsMenu" && scrolled ? "192px" : type==="projectsMenu" && !scrolled ? "48px" : type==="mainMenu" ? "48px":  null,
+                width: type==="projectsMenu" ? "200px" : type==="mainMenu" ? "252px" : null,
+                top: type=="mainMenu" && scrolled? "58px": type==="projectsMenu" && !scrolled ? "72px" : type==="projectsMenu" && scrolled? "58px":""
             }}
             onClick={(e)=>e.stopPropagation()}
         > 

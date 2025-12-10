@@ -13,8 +13,23 @@ import img7 from './images/90a3ba02b9f5ab235a351e2e267395f60627113d.jpg'
 import img8 from './images/aa0e80179ad34ea0d690e022f2748664a5854af2.png'
 import img9 from './images/f4441b85ff1a2cb2a41133d9fdc3d4842997190e.jpg'
 import img10 from './images/45af3c289eaf3580e28d2678c6bb8954381e6320.png'
+import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 export const ArchSection = () =>{
+
+const isMobile = useMediaQuery({ query: "(max-width: 960px)" });    
+
+const [active, setActive] = useState(false)
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setActive(prev => !prev); 
+  },3500);
+  return () => clearInterval(interval);
+}, []);
+
+
     return(
         <section className={cls.archSectionWrapper}>
             <div className={cls.archSectionInner}>
@@ -50,9 +65,21 @@ export const ArchSection = () =>{
                         <path d="M52.7892 1.96397H101.428L100.495 4.07872H82.3956V45.5028H71.9463V4.07872H53.7843L52.7892 1.96397Z" stroke="#A39F91" strokeWidth="1.44" mask="url(#path-1-outside-1_110_376)"/>
                         <path d="M53.7105 23.298C53.7105 35.7377 41.955 46.7468 24.8504 46.7468C13.8413 46.7468 5.56893 42.6417 0.904053 36.6707L3.88958 32.6278C8.30566 41.3356 16.5159 44.5699 23.9175 44.5699C34.9888 44.5699 42.266 34.0583 43.1368 24.7286H17.0134V22.7382H43.199C43.1368 13.9683 36.8547 2.89694 24.2285 2.89694C16.7646 2.89694 9.92282 4.26531 4.07617 13.4085L2.02362 8.99239C6.9373 3.95432 14.8365 0.720001 24.726 0.720001C41.7062 0.720001 53.7105 10.7339 53.7105 23.298Z" stroke="#A39F91" strokeWidth="1.44" mask="url(#path-1-outside-1_110_376)"/>
                         </svg>
-                        <Title >
-                            Архитектура
-                        </Title>
+                        <div className={cls.animatedTitle}>
+                            <h2 style={{
+                                transition: ".8s linear",
+                                transform: active && isMobile? "translateY(-40px)":active && !isMobile?"translateY(-80px)" : "translateY(0px)"
+                            }}>
+                                Архитектура
+                            </h2>
+                            <h2 style={{
+                                transition: ".8s linear",
+                                transform: active && isMobile? "translateY(-40px)": active && !isMobile? "translateY(-80px)":!active && !isMobile? "translateY(40px)" : ""
+                            }}>
+                                Территория
+                            </h2> 
+                        </div>
+
                     </div>
                     <div>
                         <p>Пропустить блок</p>

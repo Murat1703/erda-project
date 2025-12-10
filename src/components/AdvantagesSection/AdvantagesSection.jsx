@@ -53,13 +53,13 @@ export const AdvantagesSection = () =>{
                         </div>
                         <div className={cls.imagesRow}>
                             <div className={cls.left}>
-                                <div className={cls.imgWrapper}>
+                                <div className={`${cls.imgWrapper} ${cls.w156}`}>
                                     <img src={img3} alt='img' loading='lazy'/>
                                 </div>
                                 <p>Круглосуточная охрана, видеонаблюдение и контроль доступа.</p>
                             </div>
                             <div className={cls.left}>
-                                <div className={cls.imgWrapper}>
+                                <div className={`${cls.imgWrapper} ${cls.w156}`}>
                                     <img src={img4} alt='img'/>
                                 </div>
                                 <p>Подземный и наземный паркинг – до 63 машино-мест в каждом объекте.</p>
@@ -71,13 +71,13 @@ export const AdvantagesSection = () =>{
                         </div>
                         <div className={cls.imagesRow}>
                             <div className={cls.left}>
-                                <div className={cls.imgWrapper}>
+                                <div className={`${cls.imgWrapper} ${cls.h112}` }>
                                     <img src={img5} alt='img' loading='lazy'/>
                                 </div>
                                 <p>Внутренние зоны для ритейла, кафе, банков, сервисов.</p>
                             </div>
                             <div className={cls.left}>
-                                <div className={cls.imgWrapper}>
+                                <div className={`${cls.imgWrapper} ${cls.h112}`}>
                                     <img src={img6} alt='img' loading='lazy'/>
                                 </div>
                                 <p>Управление зданиями через собственную КСК.</p>
@@ -89,13 +89,13 @@ export const AdvantagesSection = () =>{
                         </div>
                         <div className={cls.imagesRow}>
                             <div className={cls.left}>
-                                <div className={cls.imgWrapper}>
+                                <div className={`${cls.imgWrapper} ${cls.h112}`}>
                                     <img src={img7} alt='img' loading='lazy'/>
                                 </div>
                                 <p>Современная высокоскоростная IT-инфраструктура во всех БЦ.</p>
                             </div>
                             <div className={cls.left}>
-                                <div className={cls.imgWrapper}>
+                                <div className={`${cls.imgWrapper} ${cls.h112}`}>
                                     <img src={img8} alt='img'/>
                                 </div>
                                 <p>Приватный лифтовой холл и отдельные входные группы.</p>
@@ -112,7 +112,7 @@ export const AdvantagesSection = () =>{
                             autoplay={{
                                 delay: 2500,      // задержка между слайдами
                                 disableOnInteraction: false,  // не отключать после свайпа
-                                pauseOnMouseEnter: true,      // пауза при наведении
+                                pauseOnMouseEnter: false,      // пауза при наведении
                             }}
                             loop={true}
                         >
