@@ -341,15 +341,6 @@
      }
 }
 
-@media (min-width: 960px){
-    /* .titleRow > p{
-        font-size: clamp(2.5rem, 4vw, 5rem);
-        font-style: normal;
-        font-weight: 350;
-        line-height: 5.5rem;
-        letter-spacing: 0.045rem;
-    } */
-}
 
 @media (min-width: 1441px){
     .mainSection{
@@ -419,17 +410,28 @@
         width: 16.875vw;
         height: 23.9583vw;
     }
-    .showBigImg > .bottom > div > p:nth-child(1),
-    .showBigLuminor > .bottom > div > p:nth-child(1),
-    .showBigNorex > .bottom > div > p:nth-child(1){
-        font-size: .7292vw;
-        line-height: 1.6667vw;
+    .showBigImg > .bottom > div > p:nth-child(2),
+    .showBigLuminor > .bottom > div > p:nth-child(2),
+    .showBigNorex > .bottom > div > p:nth-child(2){
+        font-size: .6771vw;
+        line-height: 1.1458vw;
         letter-spacing: .0333vw;
     }
-    .showBigImg > .bottom > div > p:nth-child(1),
+/*  */
+
+    .showBigNorex > .bottom > div > p:nth-child(1),
     .showBigLuminor > .bottom > div > p:nth-child(1),
-    .showBigNorex > .bottom > div > p:nth-child(1){
-        font-size: .6771vw;
+    .showBigImg > .bottom > div > p:nth-child(1){
+        color: var(--Light-L100, #EBE9E1);
+        font-feature-settings: 'ss10' on;
+        font-family: "TA Modern Times", sans-serif;
+        font-size: 1.6667vw;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 1.6667vw; /* 100% */
+        letter-spacing: 0.64px;
+        text-transform: uppercase;
     }
+
 
 }
