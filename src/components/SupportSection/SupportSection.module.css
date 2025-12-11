@@ -117,3 +117,84 @@
         width: 170px;
     }
 }
+
+
+@media (min-width: 1441px){
+    .supportSectionInner{
+        display: flex;
+        width: 100%;
+        padding: 6.25vw 0 4.1667vw 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 4.1667vw;
+    }
+    .supportSectionTop{
+        display: flex;
+        flex-direction: column;
+        width: 32.5vw;
+        height: 10.7292vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5vw;
+    }
+    .supportSectionTop > div:nth-child(1){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6667vw;
+        align-self: stretch;
+    }
+    .supportSectionTop > div:nth-child(1) > h2{
+        font-size: 2.9167vw;
+        line-height: 2.7083vw;
+    }
+    .supportSectionTop > p{
+        text-align: center;
+        flex: 1 0 0;
+        font-size: .7292vw;
+        line-height: 1.1458vw;
+    }
+    .supportSectionBottom{
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+    }
+    .vacancyBtn{
+        background: var(--Accent-A100, #A39F91);
+    }
+    .vacancyBtn:hover{
+        background: #B2B1A2;
+    ;
+    }
+    .btn:hover{
+        color: var(--text-color-lights);
+    }
+    .btn{
+        display: flex;
+        padding: .5729vw 1.25vw;
+        justify-content: center;
+        align-items: center;
+        gap: .8333vw;
+        border-radius: 320px;
+        color:   var(--text-color-light);
+        /* background: var(--text-color); */
+    }
+    .supportSectionBottom > div > a:nth-child(1){
+        font-size: .9375vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.25vw; /* 133.333% */
+        color: var(--text-color);
+    }
+    .supportSectionBottom > div > a:nth-child(2){
+        color: var(--text-color-light);
+        font-size: .7292vw;
+        line-height: 1.1458vw;
+    }
+    .callBtn{
+        background: var(--btn-bg);
+    }
+    .callBtn:hover{
+        background: var(--btn-hover-bg);
+    }
+}

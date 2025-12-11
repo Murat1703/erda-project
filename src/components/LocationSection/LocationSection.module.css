@@ -172,3 +172,155 @@
         height: 200px;
     }
 }
+
+@media (min-width: 1441px){
+    .locationWrapper{
+        width: 100%;
+        height: 100dvh;
+        position: relative;
+    }
+
+    .map{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .projectInformation{
+        display: flex ;
+        display: flex;
+        width: 18.75vw;
+        height: 36.6667vw;
+        padding-bottom: 1.25vw;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-shrink: 0;
+        border-radius: 1.25vw;
+        background: rgba(0, 0, 0, 0.48);
+        backdrop-filter: blur(16px);
+        position: absolute;
+        left: 2.5vw;
+        bottom: 1.25vw;    
+        overflow: hidden;
+    }
+    .projectInformationTop{
+        display: flex;
+        height: 18.3333vw;
+        padding: 1.25vw .8333vw .4167vw .8333vw;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .4167vw;
+        flex-shrink: 0;
+        align-self: stretch;
+        position: relative;
+        overflow: hidden;
+    }
+    .projectInformationTop > img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+    .projectTabs{
+        display: flex;
+        padding: .2083vw;
+        align-items: center;
+        gap: .2083vw;
+        align-self: stretch;
+        border-radius: 320px;
+        background: rgba(33, 33, 31, 0.64);
+        backdrop-filter: blur(50px);
+        position: relative;
+        z-index: 3;
+    }
+    .projectTabs > button > p{
+        color: var(--Light-L100, #EBE9E1);
+        opacity: .5;
+    }
+    .projectTabs > button{
+        display: flex;
+        padding: .5208vw .8333vw;
+        justify-content: center;
+        align-items: center;
+        gap: .8333vw;
+        flex: 1 0 0;
+        border-radius: 1.6667vw;
+    }
+    .prjectInfoTitleBlock{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 16px;
+        gap: .625vw;
+    }
+    .prjectInfoTitleBlock > p:nth-child(1){
+        color: var(--Light-L100, #EBE9E1);
+        font-family: "TA Modern Times", sans-serif;
+        font-size: 1.6667vw;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 1.6667vw; /* 100% */
+        letter-spacing: .0333vw;
+        text-transform: uppercase;
+    }
+    .prjectInfoTitleBlock > p:nth-child(2){
+        opacity: .5;
+        color: var(--text-color-light);
+    }
+    .projectsCharactersistics{
+        display: flex;
+        height: 10.875rem;
+        padding: 0 .8333vw;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-shrink: 0;
+        align-self: stretch;
+    }
+    .projectsCharactersistics > ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .625vw;
+        align-self: stretch;
+    }
+    .projectsCharactersistics > ul > li{
+        list-style: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .projectsCharactersistics > ul > li > p{
+        color: var(--text-color-light);
+        font-size: .625vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: .8333vw; /* 133.333% */
+    }
+    .projectsCharactersistics > ul > li > p:nth-child(1){
+        opacity: .5;
+    }
+    .projectItemsLinks{
+        display: flex;
+        align-items: center;
+        gap: .4167vw;
+    }
+    .projectItemsLinks > a{
+        display: flex;
+        padding: .5208vw 1.0417vw;
+        justify-content: center;
+        align-items: center;
+        gap: .4167vw;
+        border-radius: 1.6667vw;
+        background: rgba(101, 101, 94, 0.32);
+        backdrop-filter: blur(16px);
+    }
+    .projectItemsLinks > a:hover{
+        background: rgba(101, 101, 94, 0.52);
+    }
+    .projectItemsLinks > a > p{
+        color: var(--text-color-light);
+    }
+}

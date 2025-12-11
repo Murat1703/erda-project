@@ -17,3 +17,13 @@
         letter-spacing: 0.68px;
     }
 }
+
+@media (min-width: 1441px){
+    .title{
+        font-size: 3.3333vw;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 3.75vw; /* 112.5% */
+        letter-spacing: .1333vw;
+    }
+}

@@ -76,9 +76,9 @@
 }
 .advSticky{
     width: 720px;
-    height: 810px;
+    height: 100dvh;
     position: sticky;
-    top:88px;    
+    top:58px;    
 }
 .advSticky > div{
     width: 100%;
@@ -171,6 +171,10 @@
     .imagesRow{
         padding: 48px 0;
         gap: 56px;
+        align-items: center;
+    }
+    .imagesRow > .left{
+        padding: 0;
     }
     .imagesRow > .left{
         padding: 0;
@@ -178,5 +182,174 @@
     .imgWrapper {
         width: 100%;
         height: 80px;
+    }
+    .imagesRow:nth-child(2) > .left:nth-child(1) > .imgWrapper{
+        width: 140px;
+        height: 80px;
+    }
+    .imagesRow:nth-child(2) > .left:nth-child(2){
+        gap: 0;
+    }
+    .imagesRow > .left:nth-child(2) > .imgWrapper{
+        width: 150px;
+        height: 111px;
+        margin-top: -14px;
+    }
+    .imagesRow:nth-child(4) > .left:nth-child(1){
+        gap: 0;
+    }
+    .imagesRow:nth-child(4) > .left:nth-child(1) > .imgWrapper{
+        width: 163px;
+        height: 105px;
+        margin-top: -10px;
+    }
+     .imagesRow:nth-child(4) > .left:nth-child(1) > .imgWrapper > img{
+        position: absolute;
+        left: -20px;
+     }
+    .imagesRow:nth-child(4) > .left:nth-child(2) > .imgWrapper{
+        width: 130px;
+        height: 80px;
+    }
+    .imagesRow:nth-child(6) > .left > .imgWrapper{
+        width: 111px;
+        height: 80px;
+    }
+    .imagesRow:nth-last-child(1) > .left > .imgWrapper{
+        width: 111px;
+        height: 80px;
+    }
+}
+
+
+@media (min-width: 1441px){
+    .advantagesWrapper{
+        padding-left: 5vw;
+    }
+    .advantagesInner{
+        display: flex;
+        flex-direction: column;
+        gap: 5.8333vw;
+    }
+    .advantagesSectionTitle{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6667vw;
+    }
+    .advantagesContent{
+        display: flex;
+        justify-content: space-between;
+        gap: 4.1667vw;
+    }
+    .left{
+        display: flex;
+        width: 28.3333vw;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .textRow{
+        display: flex;
+        padding: 3.3333vw 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.0417vw;
+        align-self: stretch;
+        border-bottom: 1px solid var(--Alpha-AD12, rgba(29, 29, 27, 0.12));
+    }
+    .textRow > h3{
+        font-family: "PT Serif", sans-serif;
+        font-size: 2.0833vw;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 2.5vw; /* 120% */
+    }
+    .textRow > p{
+        max-width: 27.0833vw;
+        font-size: .7292vw;
+        line-height: 1.1458vw;
+    }
+    .imagesRow{
+        display: flex;
+        padding: 3.75vw 0;
+        align-items: flex-start;
+        gap: 4.1667vw;
+        align-self: stretch;
+        border-bottom: 1px solid var(--Alpha-AD12, rgba(29, 29, 27, 0.12));
+    }
+    .imagesRow > .left{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.0417vw;
+        flex: 1 0 0;
+    }
+    .imagesRow > .left > p{
+        font-size: .7292vw;
+        line-height: 1.1458vw;
+    }
+    .imgWrapper {
+        width: 10.5625rem;
+        height: 5vw;
+        flex-shrink: 0;
+        position: relative;
+    }
+    .w156{
+        width: 8.125vw;
+    }
+    .h112{
+        width: 8.125vw;
+        height: 5.8333vw;
+    }
+    .imgWrapper > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .advSticky{
+        width: 37.5vw;
+        height: 100dvh;
+        position: sticky;
+        top:58px;    
+    }
+    .advSticky > div{
+        width: 100%;
+        height: 100%;
+    }
+    .advSticky > div > div > div > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .advSticky > img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .advSticky > div:nth-child(1){
+        position: absolute;
+        display: flex;
+        width: 18.9583vw;
+        height: 4.3229vw;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.0417vw;
+        flex-shrink: 0;
+        left: 2.5vw;
+        top: 4.5833vw;
+        z-index: 3;
+    }
+    .advSticky > div:nth-child(1) > p:nth-child(1){
+        color: #1D1D1B;
+        text-align: center;
+        font-family: "PT Serif", sans-serif;
+        font-size: 2.0833vw;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 2.5vw; /* 120% */
+    }
+    .advSticky > div:nth-child(1) > p:nth-child(2){
+        font-size: .7292vw;
+        line-height: 1.1458vw;
     }
 }

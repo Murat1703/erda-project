@@ -8,3 +8,9 @@
         display: block;
     }
 }
+
+@media (min-width: 1441px){
+    .plansPageContent{
+        padding: 5vw 0;
+    }
+}

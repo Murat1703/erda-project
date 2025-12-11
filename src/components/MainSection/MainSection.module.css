@@ -340,3 +340,96 @@
         display: none!important;
      }
 }
+
+@media (min-width: 960px){
+    /* .titleRow > p{
+        font-size: clamp(2.5rem, 4vw, 5rem);
+        font-style: normal;
+        font-weight: 350;
+        line-height: 5.5rem;
+        letter-spacing: 0.045rem;
+    } */
+}
+
+@media (min-width: 1441px){
+    .mainSection{
+        padding: 7.708vw 2.5vw 1.041vw 2.5vw;
+
+    }
+    .mainTitleBlock{
+        max-width: 65vw;
+        padding: 0 2.5vw;
+    }
+    .titleRow{
+        gap: 0.9375vw;
+    }
+    .titleRow:nth-child(1) > .titleImg{
+        right: 5.20833vw
+    }
+    .titleImg{
+        width: 9.5833vw;
+        height: 3.333vw;
+    }
+    .titleRow > p, .titleRow > div > p{
+        font-size: 3.75vw;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 4.583vw;
+        letter-spacing: 0.0375vw;
+        text-transform: uppercase;
+    }
+    .titleRow:nth-child(3) > p:nth-child(1){
+        margin-right:9.375vw ;
+    }
+    .luminorImg{
+        left: 9.8958vw;
+    }
+    .norexImg{
+        right: -9.8958vw;
+    }
+    .mainSectionBottom{
+        padding-left: 2.5vw;
+    }
+    .mainSectionBottom > p{
+        max-width: 18.33333vw;
+        margin-bottom: 1.04vw;
+        font-size: 1.04vw;
+        line-height: 1.15vw;
+    }
+    .callBtn,  .bottomBtns > button{
+        padding: 0.5729vw 1.25vw;
+        gap: 0.4vw;
+        border-radius: 320px;
+    }
+    .bottomBtns > button > p{
+        font-size: .7292vw;
+    }
+    .callBtn > p{
+        font-size: .7292vw;
+        color: var(--text-color-light);
+    }
+    .titleImg:hover{
+        cursor: url('/images//cursor-splash.svg') 0 0 auto;
+    }
+    .showBigImg > .bottom,
+     .showBigLuminor > .bottom, .showBigNorex > .bottom{
+        padding: 3.3333vw 1.25vw 1.25vw 1.25vw;
+    }
+    .showBigImg, .showBigLuminor, .showBigNorex{
+        width: 16.875vw;
+        height: 23.9583vw;
+    }
+    .showBigImg > .bottom > div > p:nth-child(1),
+    .showBigLuminor > .bottom > div > p:nth-child(1),
+    .showBigNorex > .bottom > div > p:nth-child(1){
+        font-size: .7292vw;
+        line-height: 1.6667vw;
+        letter-spacing: .0333vw;
+    }
+    .showBigImg > .bottom > div > p:nth-child(1),
+    .showBigLuminor > .bottom > div > p:nth-child(1),
+    .showBigNorex > .bottom > div > p:nth-child(1){
+        font-size: .6771vw;
+    }
+
+}

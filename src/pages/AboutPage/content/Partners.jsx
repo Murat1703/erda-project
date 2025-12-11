@@ -45,7 +45,7 @@ export const Partners = () =>{
                 <div className={cls.partnersList}>
                     <Swiper
                         modules={[Autoplay]}
-                        speed={5000}                        slidesPerView={5.6}
+                        speed={5000}                       
                         spaceBetween={108}
                         loop={true}
                         autoplay={{
@@ -59,7 +59,7 @@ export const Partners = () =>{
                                 spaceBetween: 64
                             },
                             960:{
-                                slidesPerView: 5.6,
+                                slidesPerView: 5.2,
                                 spaceBetween: 108
                             }
                         }}

@@ -216,3 +216,178 @@
     }
 
 }
+
+@media (min-width: 1441px){
+    .footer{
+        background: #242421;
+    }
+    .footerInner{
+        display: flex;
+        padding: 3.3333vw 5vw 2.5vw 5vw;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2.9167vw;
+    }
+    .top{
+        display: flex;
+        padding-bottom: 2.9167vw;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 9vw;
+        align-self: stretch;
+        border-bottom: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.16));
+    }
+    .top > div:nth-child(1){
+        display: flex;
+        align-items: center;
+        gap: .8333vw;
+        align-self: stretch;
+    }
+    .socialBtns{
+        display: flex;
+        flex: 1 0 0;
+        align-items: center;
+        gap: .625vw;
+    }
+    .socialBtns > a{
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        width: 2.2917vw;
+        height: 2.2917vw;
+        padding: .4167vw;
+        justify-content: center;
+        align-items: center;
+        gap: .4167vw;
+        border-radius: 320px;
+        border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.16));
+        transition: .8s linear;
+    }
+    .socialBtns > a:hover{
+        border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.32));
+        transition: .8s linear;
+
+    }
+    .socialBtns > a > svg{
+        position: absolute;
+    }
+    .socialBtns > a:hover svg:nth-child(1){
+        transform: translateY(3.125vw);
+        transition: .3s linear;
+    }
+    .socialBtns > a:hover svg:nth-child(2){
+        transform: translateY(0);
+        transition: .3s linear;
+    }
+    .socialBtns > a > svg:nth-child(2){
+        transform: translateY(-3.125vw);
+    }
+    .topLink:hover{    
+        border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.32));
+    }
+    .footerLogo{
+        display: flex;
+        align-items: center;
+        gap: .625vw;
+    }
+    .topBtn{
+        flex: 1 0 0;
+        display: flex;
+        justify-content:end;
+        align-items: flex-end;
+        gap: .4167vw;
+    }
+    .topBtn > a{
+        display: flex;
+        width: 2.2917vw;
+        height: 2.2917vw;
+        padding: .4167vw;
+        justify-content: center;
+        align-items: center;
+        gap: .4167vw;
+        border-radius: 320px;
+        border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.16));
+    }
+
+    .top > .addressFooter{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+    }
+    .top > .addressFooter > div:nth-child(1),
+    .top > .addressFooter > div:nth-child(3){
+        flex: 1 0 0;
+    }
+    .top > .addressFooter > div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .top > .addressFooter > div:nth-child(2) > p:nth-child(3){
+        opacity: .4;
+    }
+    .top > .addressFooter > div:nth-child(3){
+        justify-content: end;
+        display: flex;
+        align-items: flex-end;
+    }
+    .top > .addressFooter > div  > a, 
+    .top > .addressFooter > div  > p{
+        color: var(--text-color-light);
+    }
+    .bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.0833vw;
+        align-self: stretch;
+    }
+    .bottom > p:nth-child(1){
+        color: var(--Alpha-AL40, rgba(235, 233, 225, 0.40));
+        font-family: "Graphik LCG", sans-serif;
+        font-size: .5729vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: .8333vw; /* 145.455% */
+    }
+    .bottom > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-self: stretch; 
+    }
+    .bottom > div > p{
+        font-size: .7292vw;
+        color: var(--Light-L80, #E5E3DA);
+    }
+    .bottom > div > a{
+        color: var(--Alpha-AL40, rgba(235, 233, 225, 0.40));
+    }
+    .bottom > div > a > span{
+        color: var(--Light-L80, #E5E3DA);
+    }
+    .mobileFooterLogo{
+        display: none!important;
+    }
+    .mobileLinks{
+        display: none;
+    }
+    .footer.contactsFooter{
+        display: none;
+    }
+    .addressFooter > div > a{
+        font-size: .7292vw;
+        line-height: 1.1458vw;
+    }
+    .addressFooter > div:nth-child(2) > a,
+    .addressFooter > div:nth-child(2) > p{
+        font-size: .7292vw;
+        line-height: 1.1458vw;
+    }
+    .bottom > div > a{
+        font-size: .7292vw;
+        line-height: 1.1458vw;
+    }
+}

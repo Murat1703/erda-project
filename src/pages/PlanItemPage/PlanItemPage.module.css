@@ -284,3 +284,232 @@
         height: 48px;
     }
 }
+
+@media (min-width: 1441px){
+    .planItemPage{
+        width: 100%;
+        height: 100dvh;
+    }
+    .planItemPageContent{
+        padding: 5.9375vw 0;
+        gap: 5.9375vw;
+        height: 100%;
+    }
+    .planItemPageContentTop{
+        padding: 0 5vw;
+        display: flex;
+        align-items: flex-start;
+        gap: 5.4167vw;
+        height: 100%;
+    }
+    .planItemInformation{
+        display: flex;
+        width: 21.6667vw;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.0833vw;
+        flex-shrink: 0;
+    }
+    .breadCrumbs{
+        display: flex;
+        align-items: center;
+        gap: .625vw;
+        align-self: stretch;
+    }
+    .breadCrumbs > a{
+        color: var(--Dark-D100, #1D1D1B);
+        font-family: "Graphik LCG", sans-serif;
+        font-size: .625vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.0417vw; /* 166.667% */
+        letter-spacing: .075vw;
+        text-transform: uppercase;
+    }
+    .planItemTitle{
+        display: flex;
+        flex-direction: column;
+        gap: .8333vw;
+    }
+    .planItemTitle > h2{
+        color: var(--Dark-D100, #1D1D1B);
+        font-family: "TA Modern Times", sans-serif;
+        font-size: 3.8542vw;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 4.6875vw; /* 121.622% */
+        letter-spacing: .0771vw;
+        text-transform: uppercase;
+    }
+    .planItemInfoBottom{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.9167vw;
+        align-self: stretch;
+    }
+    .planItemCharacteristics{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.0417vw;
+        align-self: stretch;
+    }
+    .planItemCharacteristics > li{
+        list-style: none;
+        display: flex;
+        align-items: flex-end;
+        gap: .625vw;
+        align-self: stretch;
+    }
+    .characteristicItem > p:nth-child(1){
+        font-size: .7292vw;
+        line-height: 1.1458vw;
+    }
+    .characteristicItem > span{
+        display: flex;
+        padding-bottom: .3125vw;
+        align-items: flex-end;
+        gap: 1.6667vw;
+        flex: 1 0 0;
+        align-self: stretch;
+        position: relative;
+    }
+    .characteristicItem > span::after{
+        content: '';
+        position: absolute;
+        bottom: .3125vw;
+        width: 100%;
+        height: 1px;
+        background: var(--Alpha-AD12, rgba(29, 29, 27, 0.12));
+    }
+    .characteristicItem > p:nth-child(3){
+        font-size: .7813vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.25vw; /* 160% */
+    }
+    .planItemButtons{
+        display: flex;
+        align-items: center;
+        gap: .4167vw;
+    }
+    .planItemButtons > a,
+    .planItemButtons > button{
+        display: flex;
+        padding: .5729vw 1.25vw;
+        justify-content: center;
+        align-items: center;
+        gap: .4167vw;
+        border-radius: 320px;
+    }
+    .planItemButtons > a > p{
+        font-size: .7292vw;
+        line-height: 1.1458vw;
+        color: var(--text-color-light);
+    }
+    .planItemButtons > button:nth-child(1){
+        background: var(--Accent-A100, #A39F91);
+    }
+    .planItemButtons > button:nth-child(1):hover{
+        background: #B2B1A2;
+    }
+    .planItemButtons > a:nth-child(1){
+        background: var(--Accent-A100, #A39F91);
+    }
+    .planItemButtons > a:nth-child(1):hover{
+        background: #B2B1A2;
+    }
+    .planItemButtons > button:nth-child(2){
+        background: var(--btn-bg);
+    }
+    .planItemButtons > button:nth-child(2) > p,
+    .planItemButtons > a:nth-child(1) > p{
+        font-size: .7292vw;
+        line-height: 1.1458vw;
+    }
+    .planItemButtons > button:nth-child(2):hover{
+        background: var(--btn-hover-bg);
+    }
+    .planItemButtons > button > p{
+        color: var(--text-color-light);
+    }
+    .planItemImgWrapper{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1 0 0;
+        align-self: stretch;
+    }
+    .planItemImg{
+        display: flex;
+        /* padding: 111.935px 0 141.935px 0; */
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        flex: 1 0 0;
+    }
+    .planItemImg > img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .fullScreenBtn{
+        width: 2.5vw;
+        height: 2.5vw;
+        display: flex;
+        padding: .7292vw;
+        align-items: flex-start;
+        gap: .4167vw;
+        border-radius: 1.25vw;
+        border: 1px solid var(--Alpha-AD16, rgba(29, 29, 27, 0.16));
+    }
+    .fullScreenBtn:hover{
+        border: 1px solid var(--Alpha-AD16, rgba(29, 29, 27, 0.46));
+    }
+    .planItemPageControl{
+        display: flex ;
+        align-items: flex-end;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    .fullPlanWrapper{
+        width: 100%;
+        height: 100dvh;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        /* background: #33332F; */
+        backdrop-filter: blur(5px);
+        z-index: 100;
+    }
+    .fullPlanWrapper > .fullImgContent{
+        width: 100%;
+        height: 80%;
+        position: relative;
+    }
+    .fullImgContent > img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .closeFull{
+        position: absolute;
+        right: 2.5vw;
+        top: 2.5vw;
+        width: 2.2917vw;
+        height: 2.2917vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--Alpha-AD16, rgba(29, 29, 27, 0.16));
+        border-radius: 50%;
+    }
+    .closeFull:hover{
+        border: 1px solid var(--Alpha-AD16, rgba(29, 29, 27, 0.36))
+    }  
+}

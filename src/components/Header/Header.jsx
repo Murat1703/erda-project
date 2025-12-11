@@ -36,7 +36,8 @@ export const Header = ({onClick, projectsOpen, onCloseProjects, onOpenMainMenu, 
                     }
                 }
             > 
-                <nav
+                <nav 
+                    className={scrolled? cls.scrolled : null}
                     style={{
                         padding: scrolled && !isMobile ? "18px 48px 14px 48px" : ""
                     }}

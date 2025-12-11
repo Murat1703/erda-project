@@ -17,3 +17,13 @@
         letter-spacing: 0.12px;
     }
 }
+
+@media (min-width: 1441px){
+    .eyeBrow{
+        font-size: .625vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: .625vw;
+        letter-spacing: .0063vw;
+    }
+}

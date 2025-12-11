@@ -110,3 +110,96 @@
         display: none;
     }
 }
+
+@media (min-width: 1441px){
+
+    .advantagesContent{
+        padding: 5vw 0 ;
+        display: flex;
+        flex-direction: column;
+        gap: 4.1667vw;
+        align-items: flex-start;
+    }
+    .advantagesContent > h2{
+        padding: 0 5vw;
+        /* color: var(--Dark-D100, #1D1D1B); */
+        font-feature-settings: 'ss10' on;
+        font-family: "TA Modern Times", sans-serif;
+        font-size: 3.3333vw;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 3.75vw; /* 112.5% */
+        letter-spacing: .1333vw;
+        text-transform: uppercase;
+    }
+    .advantagesSlider{
+        padding-left: 5vw;
+        width: 100%;
+        position: relative;
+        height: 27.3438vw;
+    }
+    .advantagesSliderItem{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.0833vw;
+    }
+    .advantagesSliderImgWrapper{
+        width: 100%;
+        height: 15.625vw;
+    }
+    .advantagesSliderImgWrapper > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .advantagesSliderInfo{
+        display: flex;
+        flex-direction: column;
+        gap: .7813vw;
+    }
+    .advantagesSliderInfo > p:nth-child(1){
+        color: var(--Dark-D100, #1D1D1B);
+        font-family: "PT Serif", sans-serif;
+        font-size: 1.25vw;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.5625vw; /* 125% */
+        align-self: stretch;
+    }
+    .advantagesSliderInfo > p:nth-child(2){
+        font-size: .7292vw;
+        line-height: 1.1458vw;
+    }
+    .advantagesSliderControl{
+        padding: 0; 
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        height: 2.7083vw;
+        left: 3.75vw;
+        /* right:  72px; */
+        top: 50%;
+        margin-top: -1.3542vw;
+        z-index: 10;
+        width: calc(100% - 3.75vw);
+        padding-right: 5vw;
+    }
+    .advantagesSliderControl > button{
+        display: flex;
+        width: 2.7083vw;
+        height: 2.7083vw;
+        justify-content: center;
+        align-items: center;
+        gap: .2083vw;
+        flex-shrink: 0;
+        border-radius: 320px;
+        background: #B5B4AC;
+    }
+    .advantagesSliderControl > button:hover{
+        background: #1D1D1B;
+    }
+
+
+}

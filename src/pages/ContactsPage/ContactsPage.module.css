@@ -131,3 +131,128 @@ a[aria-label="Открыть эту область в Google Картах (в н
         width: 100%;
     }
 }
+
+@media (min-width: 1441px){
+    .contactsPageWrapper{
+        width: 100%;
+        height: 100dvh;
+    }
+    .mapContactsPage{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    a[aria-label="Открыть эту область в Google Картах (в новом окне)"] {
+    display: none!important;
+    }
+
+    .infoContacts{
+        position: fixed;
+        left: 2.5vw;
+        bottom: 1.25vw;
+        display: flex;
+        width: 21.6667vw;
+        padding-bottom: 1.25vw;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5vw;
+        border-radius: 1.25vw;
+        background: rgba(0, 0, 0, 0.48);
+        backdrop-filter: blur(16px);
+    }
+    .citiesTabs{
+        display: flex;
+        /* padding: 1.25vw .8333vw 0 8333vw; */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .4167vw;
+        align-self: stretch;
+    }
+    .citiesTabs > div{
+        display: flex;
+        padding: .2083vw;
+        align-items: center;
+        gap: .2083vw;
+        align-self: stretch;
+        border-radius: 320px;
+        background: rgba(229, 227, 218, 0.12);
+        backdrop-filter: blur(50px); 
+    }
+    .citiesTabs > div > button{
+        display: flex;
+        padding: .5208vw .625vw;
+        justify-content: center;
+        align-items: center;
+        gap: .8333vw;
+        flex: 1 0 0;
+        border-radius: 1.6667vw;
+
+    }
+    .citiesTabs > div > button > p{
+        line-height: 1.0417vw;
+        color: var(--text-color-light);
+        font-weight: 500;
+        opacity: .5;
+        font-size: .7292vw;
+        line-height: 1.1458vw;
+    }
+    .activeLocation{
+        display: flex;
+        padding: 0 .8333vw;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        align-self: stretch;
+    }
+    .activeLocation > p{
+        color: var(--text-color-light);
+    }
+    .activeLocation > p:nth-child(1){
+        font-family: "PT Serif", sans-serif;
+        font-size: 2.0833vw;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 2.5vw; /* 120% */
+    }
+    .activeLocation > p:nth-child(2){
+        opacity: .5;
+    }
+    .details{
+        display: flex;
+        padding: 0 .8333vw;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .625vw;
+        align-self: stretch;
+    }
+    .details > li{
+        list-style: none;
+        display: flex;
+        align-items: flex-end;
+        gap: .625vw;
+        align-self: stretch;
+    }
+    .details > li > p, .details > li > a{
+        color: var(--text-color-light);
+    }
+    .details > li > p:nth-child(1){
+        opacity: .5;
+    }
+    .details > li > span{
+        display: flex;
+        padding-bottom: .3125vw;
+        align-items: flex-end;
+        gap: 1.6667vw;
+        flex: 1 0 0;
+        align-self: stretch;
+    }
+    .instaLink{
+        display: flex;
+        align-items: center;
+        gap: .3125vw;
+    }
+    .details > li > p, .details > li > a{
+        font-size: .7292vw;
+        line-height: 1.1458vw;
+    }
+}

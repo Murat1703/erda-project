@@ -411,3 +411,371 @@ a.planLink:hover{
     }
 
 }
+
+@media (min-width: 1441px){
+    .plansWrapper{}
+    .plansInner{
+        display: flex;
+        flex-direction: column;
+        gap: 6.25vw;
+        padding: 6.25vw 0;
+    }
+    .plansTitleBlock{
+        display: flex;
+        flex-direction: column;
+        gap: 1.6667vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .plansTitleBlock{
+        text-align: center;
+    }
+    .plansContent{
+        display: flex;
+        flex-direction: column;
+        gap: 2.5vw;
+    }
+    .plansSectionFilters{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 1.25vw;
+        padding: 0 5vw;
+    }
+    .filter{
+        display: flex;
+        flex-direction: column;
+        gap: .625vw;
+    }
+    .filter:nth-child(1){
+        flex: 1 0 0;
+    }
+    .plansContent{
+        /* padding-left: 96px;; */
+    }
+    .bcSelect{
+        display: flex;
+        padding: .625vw .8333vw;
+        align-items: center;
+        justify-content: space-between;
+        gap: .8333vw;
+        align-self: stretch;
+        border-radius: 1.6667vw;
+        border: 1px solid var(--Alpha-AD16, rgba(29, 29, 27, 0.16));
+        backdrop-filter: blur(16px);
+        width: 100%;
+    }
+    .filterTabs{
+        display: flex;
+        padding: .1042vw;
+        align-items: center;
+        gap: .1042vw;
+        align-self: stretch;
+        border-radius: 320px;
+        border: 1px solid var(--Alpha-AD16, rgba(29, 29, 27, 0.16));
+        backdrop-filter: blur(50px);
+    }
+    .filterTab{
+        display: flex;
+        padding: .5208vw 1.25vw;
+        justify-content: center;
+        align-items: center;
+        gap: .8333vw;
+        flex: 1 0 0;
+        border-radius: 1.6667vw;
+    }
+    .filterTab:hover{
+        background: rgba(29, 29, 27, 0.12);
+    }
+    .active{
+        background: #1D1D1B;
+    }
+    .filterTab.active > p{
+        color: var(--text-color-light);
+    }
+    .filterTab.active:hover{
+        background: #1D1D1B;
+    }
+    .filter:nth-last-child(1) {
+        flex: 1 0 0;
+    }
+    .filter:nth-last-child(1) > div{
+        display: flex;
+        padding: .625vw .8333vw;
+        justify-content: center;
+        align-items: center;
+        gap: .8333vw;
+        align-self: stretch;
+        border-radius: 1.6667vw;
+        border: 1px solid var(--Alpha-AD16, rgba(29, 29, 27, 0.16));
+        backdrop-filter: blur(16px);
+        position: relative;
+    }
+    .filter:nth-last-child(1) > div > p{
+        flex: 1 0 0;
+    }
+    .filter:nth-last-child(1) > div > p:nth-child(3){
+        text-align: right;
+    }
+    .filter:nth-last-child(1) > div > span{
+        width: 1px ;
+        height: 1.1458vw;
+        background: var(--Alpha-AD16, rgba(29, 29, 27, 0.16));
+    }
+
+    .filter:nth-last-child(1) > div > input{
+        position: absolute;
+        bottom: -0.2083vw;    
+        border: none;
+        /* border-bottom: 1px solid #1D1D1B; */
+        outline: none;
+        background: transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: calc(100% - 1.25vw)
+
+    }
+    .filter:nth-last-child(1) > div > input::-webkit-slider-thumb {
+        position: relative;
+        z-index: 1;
+        width: 1.25vw;
+        height: .4688vw;
+        z-index: 2;
+        border-radius: 50%;
+        border-radius: .625vw;
+        background: var(--Dark-D100, #1D1D1B);
+        -webkit-appearance: none;
+    }
+    .filter:nth-last-child(1) > div > input:nth-child(5){
+        right: 1.25vw;;
+    }
+    .filter:nth-last-child(1) > div > input:nth-child(4){
+        left: 1.25vw;
+    }
+    .filter:nth-last-child(1) > div > span:nth-last-child(1){
+        position: absolute;
+        left: 1.25vw;
+        right: 1.25vw;
+        width: calc(100% - 2.5vw);
+        bottom: 0px;
+        height: 1px;
+        background: #1D1D1B;
+    }
+    .businessFilter{
+        position: relative;
+        bottom: 0;
+    }
+    .businessFilter.opened{
+        position: relative;
+        /* z-index: -1; */
+        cursor: pointer;
+    }
+    .businessCenter{
+        opacity: 0;
+        bottom: -10.9375vw;
+        /* height: 0; */
+        z-index: -1000;
+        display: flex;
+        padding: .4167vw 0;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+        background: #1D1D1B;
+        border-radius: 24px;
+        width: 100%;
+        position: absolute;
+    }
+    .businessCenter.opened{
+        height: auto;
+        opacity: 1;
+        position: absolute;
+        z-index: 4000;
+    }
+    .businessCenter > li{
+        list-style: none;
+        display: flex;
+        padding: .625vw;
+        align-items: center;
+        justify-content: space-between;
+        gap: .4167vw;
+        align-self: stretch;
+        color: var(--text-color-light);
+    }
+    .businessCenter > li:hover{
+        background: var(--Alpha-AL8, rgba(235, 233, 225, 0.08));
+    }
+    .plansList{
+        height: 34.375vw;
+        padding-left: 5vw;
+        position: relative;
+    }
+    .plansList > div:nth-child(1){
+        height: 100%;
+        /* padding-left: 96px; */
+    }
+    .plansList > div > div:nth-child(1){
+        height: 30.5208vw;
+    }
+    .plansList > div > div:nth-child(2){
+        bottom: 0;
+        /* width: 100%; */
+        padding-right: 5vw;
+    }
+    .planItemCard{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        position: relative;
+        /* width: 288px; */
+        padding: 2.5vw 1.25vw 2.0833vw 1.25vw;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.6667vw;
+        align-self: stretch;
+        background: var(--Alpha-AW24, rgba(255, 255, 255, 0.24));
+    }
+    .planItemImg{
+        width: 100%;
+        height: 13.5417vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+    }
+    .planItemImg > img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .planItemDescription{
+        display: flex;
+        min-width: 11.4583vw;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25vw;
+        align-self: stretch;
+    }
+    .squareWrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .625vw;
+        align-self: stretch;
+    }
+    .squareWrapper > p{
+        font-family: "PT Serif", sans-serif;
+        font-size: 1.5625vw;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.6667vw; /* 106.667% */
+    }
+    .planItemDescription > ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5208vw;
+        align-self: stretch;
+    }
+    .planItemDescription > ul > li{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: .8333vw;
+        align-self: stretch;
+    }
+    .planItemDescription > ul > li > span:nth-child(1){
+        width: 5.7292vw;
+        opacity: .4;
+        font-size: .7292vw;
+        line-height: 1.1458vw
+    }
+    .planItemDescription > ul > li > span:nth-child(2){
+        flex: 1 0 0;
+        font-size: .7292vw;
+        line-height: 1.1458vw;
+        text-align: right;
+    }
+    .planItemCard{
+        cursor: pointer;
+    }
+    .planItemCard:hover{
+        background: var(--Alpha-A48, rgba(255, 255, 255, 0.48));
+    }
+    .plansShowMoreBtn{
+        margin: 0 auto;
+        max-width: 14.2708vw;
+        display: flex;
+        padding: .5729vw 1.25vw;
+        justify-content: center;
+        align-items: center;
+        gap: .8333vw;
+        border-radius: 320px;
+        background: var(--Dark-D100, #1D1D1B);
+    }
+    .plansShowMoreBtn:hover{
+        background-color: var(--btn-hover-bg
+        );
+    }
+    .plansShowMoreBtn > p{
+        color: var(--text-color-light);
+    }
+    .plansSliderControl{
+        position: absolute;
+        z-index: 10;
+        left: 3.75vw;
+        top: 50%;
+        width: calc(100% - 3.75vw);
+        height: 2.7083vw;
+        margin-top: -1.3542vw;
+        display: flex;
+        justify-content: space-between;
+        padding-right:5vw;                                           
+    }
+    .plansSliderControl > button{
+        width: 2.7083vw;
+        height: 2.7083vw;
+        border-radius: 50%;
+        display: flex;
+        width: 2.7083vw;
+        height: 2.7083vw;
+        justify-content: center;
+        align-items: center;
+        gap: .2083vw;
+        flex-shrink: 0;
+        background: #B5B4AC;
+    }
+    .plansSliderControl > button:hover{
+        background: var(--text-color);
+    }
+    .planItemCard:hover .planLink{
+        opacity: 1;
+        z-index: 10;
+        color: var(--text-color-light);
+    }
+    a.planLink{
+        opacity: 0;
+        z-index: -10;
+        position: absolute;
+        border-radius: 320px;
+        background: var(--Dark-D100, #1D1D1B);
+        display: flex;
+        padding: .5729vw 1.25vw;
+        justify-content: center;
+        align-items: center;
+        gap: .8333vw;
+        color: var(--text-color-light);
+        top: 8.125vw;
+        left: 50%;
+        margin-left: -3.2292vw;
+        font-size: .7292vw;
+        line-height: 1.1458vw;
+    }
+    a.planLink:hover{
+        color: var(--text-color-light);
+        background: var(--btn-hover-bg);
+    }
+
+}
