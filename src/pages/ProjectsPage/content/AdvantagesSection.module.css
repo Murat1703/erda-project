@@ -87,6 +87,7 @@
         display: block;
     }
     .advantagesContent{
+        padding: 24px 0 0 0 ;
         gap: 56px;
         padding-bottom: 0;
     }

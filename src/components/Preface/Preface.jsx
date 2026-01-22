@@ -1,13 +1,19 @@
 import { EyeBrow } from "../EyeBrow"
 import cls from './Preface.module.css'
+import { useMediaQuery } from "react-responsive"
 
 export const Preface = () =>{
+
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+
+
     return(
         <section className={cls.prefaceWrapper}>
             <div className={cls.prefaceInner}>
                 <EyeBrow>
                    §1.Предисловие 
                 </EyeBrow>
+                {!isMobile && 
                 <div className={cls.prefaceRows}>
                     <div className={cls.prefaceRow}>
                         <p>Основанная на принципах</p>
@@ -45,6 +51,14 @@ export const Preface = () =>{
                         уровня — с выразительной архитектурой,
                     </p>
                 </div>
+                }
+                {isMobile && 
+                <div className={cls.prefaceRows}>
+                    <p>
+                        Проектируем и строим на стыке лучших мировых и локальных практик.  Британский подход к эстетике и функциональности пространства. Строгое соблюдение казахстанских СНиПов и инженерных стандартов безопасности. 
+                    </p>
+                </div>
+                }
             </div>
         </section>
     )

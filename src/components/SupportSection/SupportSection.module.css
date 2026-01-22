@@ -76,8 +76,8 @@
         display:block;
     }
     .supportSectionInner{
-        padding: 96px 0 96px 0;
-        gap: 32px;
+        padding: 24px 0 24px 0;
+        gap: 0;
     }
     .supportSectionTop{
         width: 100%;

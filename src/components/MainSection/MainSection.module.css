@@ -219,7 +219,7 @@
     .mainSection{
         padding: 0;
         height: auto;
-        gap: 40px;
+        gap: 12px;
     }
     .mainTitleBlock{
         display: none;
@@ -228,7 +228,7 @@
         padding: 96px 20px 0 20px;
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 20px;
     }
     .mobileTitle{
         display: flex;
@@ -270,11 +270,14 @@
         gap: 18px; 
         position: relative;
     }
-     .classTypeMobile > svg{
+    .classTypeMobile{
+        font-size: 45px;
+    }
+    .classTypeMobile > svg{
         position: absolute;
-        right: -3px;
-        top: 7px;
-     }
+        right: -10px;
+        top: 5px;
+    }
     .mobileSlider{
         display: block;
         width: 100%;

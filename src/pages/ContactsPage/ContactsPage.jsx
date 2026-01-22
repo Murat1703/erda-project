@@ -359,7 +359,7 @@ const { isLoaded } = useLoadScript({
             label: "Стамбул",
             value: "Стамбул",
             country: "Турецкая Республика",
-            address: "ул. Кабанбай Батыра, стр. 5",
+            address: "ул. Радлова 48/49",
             phone: "+7 727 320 51 36",
             email: "info@erdaholding.com",
             instagram: "erdaholding"
@@ -368,7 +368,7 @@ const { isLoaded } = useLoadScript({
             label: "Абу-Даби",
             value: "Абу-Даби",
             country: "ОАЭ",
-            address: "ул. Кабанбай Батыра, стр. 5",
+            address: "ул. Радлова 48/49",
             phone: "+7 727 320 51 36",
             email: "info@erdaholding.com",
             instagram: "erdaholding"
@@ -377,7 +377,7 @@ const { isLoaded } = useLoadScript({
             label: "Лондон",
             value: "Лондон",
             country: "Великобритания",
-            address: "ул. Кабанбай Батыра, стр. 5",
+            address: "ул. Радлова 48/49",
             phone: "+7 727 320 51 36",
             email: "info@erdaholding.com",
             instagram: "erdaholding"

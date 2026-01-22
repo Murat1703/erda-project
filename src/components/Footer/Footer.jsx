@@ -118,14 +118,14 @@ export const Footer = ()=>{
                         <div>
                             <a href="tel:+77005161616" target='__blank'>+7 700 516 16 16</a>
                             <p>Алматы, ул. ул. Радлова 48/49</p>
-                            <p>Пн-Пт: 09:00 – 21:00, Сб-Вс: 10:00 – 20:00</p>
+                            <p>Ежедневно: 10:00 – 19:00</p>
                         </div>
                         <div>
                             <a href="/contacts">Контакты</a>
                         </div>
                         <div className={cls.mobileLinks}>
-                            <div><a href="/contacts">Скачать буклет</a></div>
-                            <div><a href="/contacts">Контакты</a></div>
+                            <button><a href="/contacts">Скачать буклет</a></button>
+                            <button><a href="/contacts">Контакты</a></button>
                         </div>
                     </div>
                 </div>

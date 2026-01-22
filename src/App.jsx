@@ -10,8 +10,11 @@ import { Footer } from './components/Footer'
 import { ProjectsPage } from './pages/ProjectsPage'
 import { PlansPage } from './pages/PlansPage/PlansPage'
 import { PlanItemPage } from './pages/PlanItemPage'
+import { useMediaQuery } from 'react-responsive'
 
 function App() {
+
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   const [projectsOpen, setProjectsOpen] = useState(false);
   const [mainMenuOpen, setMainMenuOpen] = useState(false);
 
@@ -34,7 +37,7 @@ function App() {
 
   return (
     <>
-    <Cursor />
+    {!isMobile && <Cursor />}    
     <div onClick={()=>{handleProjectsClose(); handleCloseMainMenu()}}>
       <Header 
         onClick={handleProjectsOpen}

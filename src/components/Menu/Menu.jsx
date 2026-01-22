@@ -101,8 +101,8 @@ export const Menu = ({type, scrolled}) =>{
                     </div>
                     <div className={cls.bottomInformation}>
                         <a href='tel:+77005161616' target='__blank'>+7 700 516 16</a>
-                        <span>Алматы, ул. Кабанбай Батыра, стр. 17</span>
-                        <span>Пн-Пт: 09:00 – 21:00, Сб-Вс: 10:00 – 20:00</span>
+                        <span>Алматы, ул. Радлова 48/49</span>
+                        <span>Ежедневно: 10:00 – 19:00</span>
                     </div>
                 </div>
                 <div className={cls.buttonsList}>

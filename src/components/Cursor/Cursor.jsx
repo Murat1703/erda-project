@@ -50,8 +50,6 @@ export const Cursor = () => {
             fill="none"
           />
       </svg>
-
-
     </>
 
 

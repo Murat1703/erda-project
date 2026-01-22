@@ -31,7 +31,7 @@ export const AdvantagesSection = () =>{
                     <div className={cls.left}>
                         <div className={cls.textRow}>
                             <h3>В центре Алматы</h3>
-                            <p>Все бизнес-центры расположены в престижной локации города в пешей доступности от ключевых объектов инфраструктуры.</p>
+                            <p>Все бизнес-центры расположены в ключевых деловых районах города.<br/> Основные объекты инфраструктуры находятся в нескольких минутах ходьбы. <br/>Быстрый доступ к главным транспортным развязкам. </p>
                         </div>
                         <div className={cls.imagesRow}>
                             <div className={cls.left}>
@@ -48,7 +48,7 @@ export const AdvantagesSection = () =>{
                             </div>
                         </div>
                         <div className={cls.textRow}>
-                            <h3>1 и 2 этажи – коммерция</h3>
+                            <h3>1 и 2 этажи – дуплекс - коммерция</h3>
                             <p>Все что выше – офисные помещения с возможностью объединения этажей.</p>
                         </div>
                         <div className={cls.imagesRow}>
@@ -62,7 +62,7 @@ export const AdvantagesSection = () =>{
                                 <div className={`${cls.imgWrapper} ${cls.w156}`}>
                                     <img src={img4} alt='img'/>
                                 </div>
-                                <p>Подземный и наземный паркинг – до 63 машино-мест в каждом объекте.</p>
+                                <p>Подземный паркинг – до 77 машиномест в каждом объекте</p>
                             </div>
                         </div>
                         <div className={cls.textRow}>
@@ -80,11 +80,11 @@ export const AdvantagesSection = () =>{
                                 <div className={`${cls.imgWrapper} ${cls.h112}`}>
                                     <img src={img6} alt='img' loading='lazy'/>
                                 </div>
-                                <p>Управление зданиями через собственную КСК.</p>
+                                <p>Управление зданиями через собственную управляющую компанию.</p>
                             </div>
                         </div>
                         <div className={cls.textRow}>
-                            <h3>3,2 — 4,5 м </h3>
+                            <h3>3 — 3,3 м </h3>
                             <p>Высота потолков в каждом объекте.</p>
                         </div>
                         <div className={cls.imagesRow}>

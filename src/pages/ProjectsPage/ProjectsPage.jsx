@@ -23,29 +23,30 @@ const containerStyle = {
   };
 let center={};
 project.id==="luminor"?   center = {
-    lat: 43.229590, 
-    lng: 76.931260,
+    lat: 43.2515093,  
+    lng: 76.9671956,
   }: 
 project.id==="icon"? center = {
-    lat: 43.248252, 
-    lng: 76.956433,
+    lat: 43.2390234, 
+    lng: 76.9564526,
   }: 
   center = {
-    lat: 43.239576,  
-    lng: 76.9585483,
+    lat: 43.2298777,  
+    lng: 76.9335973,
   }
 
 let markerPosition = {};
 
+
  project.id == "luminor" ?  markerPosition = {
-    lat: 43.230993,  
-    lng: 76.934475,
+    lat: 43.2515093,  
+    lng: 76.9671956,
   }: project.id == "icon" ? markerPosition = {
-    lat: 43.2525696, 
-    lng: 76.9614163,
+    lat: 43.2390234, 
+    lng: 76.9564526,
   }: project.id == "norex" ? markerPosition = {
-    lat: 43.239576,  
-    lng: 76.9585483,
+    lat: 43.2298777,  
+    lng: 76.9335973,
   }: null;
 
 

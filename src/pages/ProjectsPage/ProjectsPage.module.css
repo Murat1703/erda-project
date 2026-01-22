@@ -249,14 +249,14 @@ a.linkLocation{
         display: block;
     }
     .projectsPageContent{
-        padding: 96px 0;
+        padding: 24px 0;
         gap: 32px;
     }
     .top{
         padding: 0 20px;
     }
     .title{
-        gap: 32px;
+        gap: 16px;
     }
     .projectTitle > div:nth-child(1) > p:nth-child(1),
     .projectTitle > div:nth-child(2) > p:nth-child(1){
@@ -294,7 +294,7 @@ a.linkLocation{
         text-align: right;
     }
     .projectDescription{
-        margin-top: 64px;
+        margin-top: 0;
         padding: 0 20px;
         gap: 24px;
     }
@@ -318,7 +318,7 @@ a.linkLocation{
         flex-direction: column;
     }
     .descriptionItem{
-        padding: 40px 0;
+        padding: 12px 0;
         align-items: flex-start;
         border-right: none;
         border-bottom: 1px solid var(--Alpha-AD12, rgba(29, 29, 27, 0.12));
@@ -357,7 +357,7 @@ a.linkLocation{
         display: none;
     }
     .projectLocation{
-        margin-bottom: 96px;
+        margin-bottom: 24px;
     }
 }
 

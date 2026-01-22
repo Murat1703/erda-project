@@ -1,8 +1,8 @@
 import { Button } from '../Button'
 import cls from './MainSection.module.css'
-import img1 from './images/ca3838f118c56703133177f24bb1c3523af6d9ae.webp'
-import img2 from './images/2c607706eddfebcddb119930448dbd061279aa40.webp'
-import img3 from './images/f3553da3a3f5284be1699962b8e628b2d175c08f.webp'
+import img1 from '/assets/img/projects/Icon/2.webp'
+import img2 from '/assets/img/projects/Luminor/Scene 1_2_style_transfer02.webp'
+import img3 from '/assets/img/projects/Norex/1.webp'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Modal } from '../Modal'
@@ -71,7 +71,7 @@ export const MainSection = () =>{
                             <div className={cls.bottom}>
                                 <div>
                                     <p>Icon</p>
-                                    <p>Бизнес-центр<br/>ул. Кабанбай батыра стр. 5</p>
+                                    <p>Бизнес-центр<br/>ул. Луганского, 24</p>
                                 </div>
                                 <a href="/projects/icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="9" viewBox="0 0 18 9" fill="none">
@@ -103,7 +103,7 @@ export const MainSection = () =>{
                             <div className={cls.bottom}>
                                 <div>
                                     <p>Luminor</p>
-                                    <p>Бизнес-центр<br/>ул. Тимирязева 107</p>
+                                    <p>Бизнес-центр<br/>ул. Кабанбай батыра, 5/37</p>
                                 </div>
                                 <a href="/projects/luminor">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="9" viewBox="0 0 18 9" fill="none">
@@ -128,7 +128,7 @@ export const MainSection = () =>{
                             <div className={cls.bottom}>
                                 <div>
                                     <p>Norex</p>
-                                    <p>Бизнес-центр<br/>улCатпаева - Луганского</p>
+                                    <p>Бизнес-центр<br/>ул. Байтурсынова, 185</p>
                                 </div>
                                 <a href="/projects/luminor">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="9" viewBox="0 0 18 9" fill="none">
@@ -167,7 +167,7 @@ export const MainSection = () =>{
                             <p>работы</p>
                         </div>
                     </div>
-                    <p>Продажа и аренда офисных пространств в собственных БЦ в Алматы любого масштаба и уровня. Сервис 5* и современное High End оборудование.</p>
+                    <p>Инвестируйте в успех — продажа и аренда офисных пространств в собственных бизнес-центрах Алматы. Уровень сервиса 5★ для вашего максимального комфорта. Современное премиальное технологичное оснащение в каждом пространстве. Подберём площадь под любой запрос — от компактных офисов до масштабных решений. </p>
                 </div>
                 <div className={cls.mobileSlider}>
                     <Swiper 
@@ -188,7 +188,7 @@ export const MainSection = () =>{
                                 </div>
                                 <div className={cls.slideDescription}>
                                     <p>Icon</p>
-                                    <p>пр-кт Сатпаева – уг. ул. Луганского</p>
+                                    <p>ул. Луганского улица, 24 </p>
                                 </div>
                             </a>
                         </SwiperSlide>
@@ -199,7 +199,7 @@ export const MainSection = () =>{
                                 </div>
                                 <div className={cls.slideDescription}>
                                     <p>Luminor</p>
-                                    <p>пр-кт Сатпаева – уг. ул. Луганского</p>
+                                    <p>ул. Кабанбай батыра, 5/37</p>
                                 </div>
                             </a>
                         </SwiperSlide>
@@ -210,7 +210,7 @@ export const MainSection = () =>{
                                 </div>
                                 <div className={cls.slideDescription}>
                                     <p>Norex</p>
-                                    <p>пр-кт Сатпаева – уг. ул. Луганского</p>
+                                    <p>ул. Байтурсынова, 185</p>
                                 </div>
                             </a>
                         </SwiperSlide>

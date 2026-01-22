@@ -124,7 +124,7 @@
         display: block;
     }
     .archSectionInner{
-        padding: 96px 0 96px 20px;
+        padding: 48px 0 48px 20px;
         flex-direction: column;
         gap: 56px;
     }
@@ -138,7 +138,7 @@
         position: relative;
     }
     .archTitleBlock > div:nth-child(1) > svg{
-        position: absolute;
+        /* position: absolute; */
     }
     .archTitleBlock > div:nth-child(2){
         display:  none;

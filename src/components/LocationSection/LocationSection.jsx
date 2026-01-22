@@ -322,7 +322,7 @@ export const LocationSection = () =>{
 
     const mapRef = useRef(null);
     const [zoom, setZoom] = useState(14);
-    {isMobile?()=> setZoom(13): ()=>setZoom(14)}
+    {isMobile?()=> setZoom(12): ()=>setZoom(14)}
   
   
     const handleZoomIn = () => {
@@ -347,17 +347,17 @@ export const LocationSection = () =>{
 
 
     const iconPosition = {
-        lat: 43.2525696, 
-        lng: 76.9614163,
+        lat: 43.2390234, 
+        lng: 76.9564526,
     }
     const norexPosition ={
-        lat: 43.239576,  
-        lng: 76.9585483,
+        lat: 43.2298777,  
+        lng: 76.9335973,
     }
 
     const luminorPosition = {
-        lat: 43.230993,  
-        lng: 76.934475,
+        lat: 43.2515093,  
+        lng: 76.9671956,
     }
 
     const [activeProject, setActiveProject] = useState("icon")

@@ -164,7 +164,7 @@
         padding-top: 394px;
     }
     .footerInner{
-        padding: 48px 20px;
+        padding: 24px 20px;
         flex-direction: column;
         align-items: flex-end;
         gap: 40px;
@@ -207,7 +207,15 @@
         order: 3;
         justify-content: space-between;
     }
-    .mobileLinks > div >a {
+    .mobileLinks > button{
+        padding: 6px 12px;
+        border-radius: 320px;
+        border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.16)) ;
+    }
+    .mobileLinks > button:hover{
+        border: 1px solid var(--Alpha-AL16, rgba(235, 233, 225, 0.84)) 
+    }
+    .mobileLinks > button >a {
         color: var(--text-color-light);
     }
     .bottom > div{
