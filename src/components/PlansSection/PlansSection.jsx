@@ -476,7 +476,7 @@ export const PlansSection = () => {
 
   const [propertyType, setPropertyType] = useState("all");
   const [dealType, setDealType] = useState("all");
-  const [minSquare, setMinSquare] = useState(96.7);
+  const [minSquare, setMinSquare] = useState(47.3);
   const [maxSquare, setMaxSquare] = useState(1680.3);
   const [isOpenBC, setIsOpenBC] = useState(false);
   const [businessCenter, setBusinessCenter] = useState("Все бизнес-центры");
@@ -545,6 +545,7 @@ export const PlansSection = () => {
 
 
   const swiperRef = useRef(null);
+
 
   return (
     <section className={cls.plansWrapper} id="plans">
@@ -642,7 +643,7 @@ export const PlansSection = () => {
                 <input 
                   type="range" 
                   name="min"
-                  min={96.7} 
+                  min={47.3} 
                   max={1680.3}
                   step={0.1}
                   value={minSquare}
@@ -651,7 +652,7 @@ export const PlansSection = () => {
                 <input 
                   type="range" 
                   name="max"
-                  min={96.7} 
+                  min={47.3} 
                   max={1680.3}
                   step={0.1}
                   value={maxSquare}
@@ -687,7 +688,7 @@ export const PlansSection = () => {
                 }
               }}
             >
-              {filtered.map((plan) => (
+              {filtered.slice(0,7).map((plan) => (
                 <SwiperSlide key={plan.id}>
                   <div className={cls.planItemCard}>
                     <div className={cls.planItemImg}>

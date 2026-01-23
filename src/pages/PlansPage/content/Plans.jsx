@@ -8,7 +8,7 @@ export const Plans = ({isPage}) =>{
 
     const [propertyType, setPropertyType] = useState("all");
     const [dealType, setDealType] = useState("all");
-    const [minSquare, setMinSquare] = useState(96.7);
+    const [minSquare, setMinSquare] = useState(47.3);
     const [maxSquare, setMaxSquare] = useState(1680.3);
     const [minFloor, setMinFloor] = useState(1);
     const [maxFloor, setMaxFloor] = useState(12);
@@ -339,7 +339,7 @@ export const Plans = ({isPage}) =>{
                                     name='square'
                                     value={minSquare}
                                     max={1680.3}
-                                    min={96.7}
+                                    min={47.3}
                                     step={0.1}
                                     onChange={(e)=>setMinSquare(e.target.value)}
                                 />
@@ -348,7 +348,7 @@ export const Plans = ({isPage}) =>{
                                     name='square'
                                     value={maxSquare}
                                     max={1680.3}
-                                    min={96.7}
+                                    min={47.3}
                                     step={0.1}
                                     onChange={(e)=>setMaxSquare(e.target.value)}
                                 />
